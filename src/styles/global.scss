@@ -1,0 +1,18 @@
+:root {
+  --zeiss-blau: #134094;
+  --hochschul-blau: #0068b4;
+  --primary-blue: var(--zeiss-blau);
+  --secondary-blue: var(--hochschul-blau);
+  --cyan: #009ee3;
+  --black: #000;
+  --white: #fff;
+
+  --max-width: 1200px;
+}
+
+html * {
+  font-size: 1em;
+  line-height: 1em;
+  color: var(--black);
+  font-family: "Open Sans", sans-serif;
+}

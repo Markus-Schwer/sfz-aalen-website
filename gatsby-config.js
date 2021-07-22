@@ -32,5 +32,17 @@ module.exports = {
       },
       __key: "pages",
     },
+    "gatsby-plugin-sass",
+    "gatsby-plugin-offline",
+    "gatsby-plugin-typescript",
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /\.svg$/
+        }
+      }
+    },
+    "gatsby-plugin-styled-components"
   ],
 };

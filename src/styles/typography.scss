@@ -1,0 +1,8 @@
+// IMPORTANT: this url needs to be allowed by cors policy and is blocked by ublock origin
+@import url("//hello.myfonts.net/count/3eb15e");
+
+@font-face {
+  font-family: "Kardia-Fat";
+  src: url("../fonts/kardia-fat.woff2") format("woff2"),
+    url("../fonts/kardia-fat.woff") format("woff");
+}

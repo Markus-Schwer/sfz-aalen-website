@@ -1,0 +1,68 @@
+.main-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-top: 40px;
+  position: relative;
+  // background-color: var(--white);
+
+  main {
+    margin: 0px 46px 100px 46px;
+  }
+}
+
+.current-page-name {
+  float: right;
+  font-style: italic;
+}
+
+.main-title {
+  position: relative;
+  margin-top: -80px;
+  height: 230px;
+  width: max-content;
+
+  .main-title-background {
+    position: absolute;
+    top: 0;
+    left: 12px;
+  }
+
+  .main-title-text {
+    position: relative;
+    font-family: "Kardia-Fat";
+    padding: 24px 42px;
+    width: max-content;
+    text-transform: uppercase;
+
+    .main-title-primary,
+    .main-title-secondary,
+    .main-title-tertiary {
+      display: block;
+      font-family: inherit;
+    }
+
+    .main-title-primary {
+      color: var(--primary-blue);
+    }
+
+    .main-title-secondary {
+      color: var(--secondary-blue);
+    }
+
+    .main-title-tertiary {
+      color: var(--cyan);
+    }
+
+    .main-title-big {
+      font-size: 4.625em;
+    }
+
+    .main-title-medium {
+      font-size: 3.625em;
+    }
+
+    .main-title-small {
+      font-size: 2.625em;
+    }
+  }
+}
