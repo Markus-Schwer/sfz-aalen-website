@@ -38,12 +38,12 @@ const Footer: FunctionComponent<any> = () => {
           <div className="footer-column col-3">
             <h1>Partner</h1>
             <div className="logo-container">
-              <Link to="https://www.zeiss.de">
+              <a href="https://www.zeiss.de">
                 <ZeissLogo width={44} />
-              </Link>
-              <Link to="https://www.hs-aalen.de">
+              </a>
+              <a href="https://www.hs-aalen.de">
                 <HSAalenLogo width={177} />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
