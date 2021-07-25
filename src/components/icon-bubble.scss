@@ -1,0 +1,59 @@
+.icon-bubble {
+  padding: 25px 20px;
+  position: relative;
+  box-sizing: border-box;
+
+  .bubble-text {
+    position: absolute;
+    bottom: 36px;
+    left: 44px;
+
+    font-family: "Kardia-Fat";
+    font-size: 2.1875em;
+    color: var(--background-color);
+  }
+
+  .bubble-icon-container {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    bottom: 25px;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      width: 30%;
+      margin: auto;
+      padding-bottom: 8%; // offset additional height of text bubble
+    }
+  }
+}
+
+.bubble-color {
+  &-primary {
+    .main-bubble {
+      fill: var(--primary-shade-2);
+    }
+    .text-bubble {
+      fill: var(--primary);
+    }
+  }
+  &-secondary {
+    .main-bubble {
+      fill: var(--secondary-shade-3);
+    }
+    .text-bubble {
+      fill: var(--secondary);
+    }
+  }
+  &-tertiary {
+    .main-bubble {
+      fill: var(--tertiary-shade-2);
+    }
+    .text-bubble {
+      fill: var(--tertiary);
+    }
+  }
+}

@@ -1,18 +1,16 @@
 import React, { FunctionComponent } from "react";
 import { graphql, PageProps, useStaticQuery } from "gatsby";
-import styled from "styled-components";
 
 import Layout from "../components/layout";
 import MainContent from "../components/main-content";
 import IconBubble from "../components/icon-bubble";
 
-import "./index.scss";
+import IconMicroscope from "../images/microscope.svg";
+import IconEinstein from "../images/einstein.svg";
+import IconPlanet from "../images/planet.svg";
+import IconLightBulb from "../images/light-bulb.svg";
 
-const FrontPageHeader = styled.h1`
-  font-size: 4.375em;
-  font-weight: bold;
-  margin-top: 0px;
-`;
+import "./index.scss";
 
 const IndexPage: FunctionComponent<PageProps> = ({ location }) => {
   const data = useStaticQuery(graphql`
@@ -31,7 +29,18 @@ const IndexPage: FunctionComponent<PageProps> = ({ location }) => {
   return (
     <Layout location={location} image={data.file} imageAlt="">
       <MainContent location={location}>
-        <FrontPageHeader>Das Schülerforschungszentrum der Hochschule Aalen</FrontPageHeader>
+        <h1 className="front-page-header">Das Schülerforschungszentrum der Hochschule Aalen</h1>
+        <p className="front-page-text">
+          Interessierst du dich dafür, wie Dinge funktionieren? Tüftelst, experimentierst und forscht du gerne? Dann bist du bei uns richtig!
+        </p>
+        <div className="icon-bubble-container">
+          <IconBubble icon={<IconMicroscope />} text="Mitmachen" color="tertiary" />
+          <IconBubble icon={<IconEinstein />} text="Projekte" color="primary" />
+          <IconBubble icon={<IconPlanet />} text="Workshops" color="secondary" />
+          <IconBubble icon={<IconLightBulb />} text="Aktuelles" color="tertiary" />
+        </div>
+
+        <hr />
         <p>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
