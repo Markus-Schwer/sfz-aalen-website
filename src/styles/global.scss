@@ -1,11 +1,32 @@
 :root {
   --zeiss-blau: #134094;
   --hochschul-blau: #0068b4;
-  --primary-blue: var(--zeiss-blau);
-  --secondary-blue: var(--hochschul-blau);
-  --cyan: #009ee3;
-  --black: #000;
-  --white: #fff;
+
+  --primary: var(--zeiss-blau);
+  --primary-shade-1: #4266a9;
+  --primary-shade-2: #718cbf;
+  --primary-shade-3: #a1b3d4;
+  --primary-shade-4: #d0d9ea;
+
+  --secondary: var(--hochschul-blau);
+  --secondary-shade-1: #2281c4;
+  --secondary-shade-2: #6f9ed4;
+  --secondary-shade-3: #a4bde3;
+  --secondary-shade-4: #d3ddf2;
+
+  --tertiary: #009ee3;
+  --tertiary-shade-1: #00b0eb;
+  --tertiary-shade-2: #5bc5f2;
+  --tertiary-shade-3: #a1daf8;
+  --tertiary-shade-4: #d4edfc;
+
+  --text-color: #000;
+  --text-color-shade-1: #565656;
+  --text-color-shade-2: #878786;
+  --text-color-shade-3: #b1b2b3;
+  --text-color-shade-4: #dadada;
+
+  --background-color: #fff;
 
   --max-width: 1200px;
 }
@@ -13,6 +34,6 @@
 html * {
   font-size: 1em;
   line-height: 1em;
-  color: var(--black);
+  color: var(--text-color);
   font-family: "Open Sans", sans-serif;
 }

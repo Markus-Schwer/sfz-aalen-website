@@ -3,7 +3,7 @@ footer {
 
   a {
     text-decoration: none;
-    color: var(--white);
+    color: var(--background-color);
     cursor: pointer;
 
     &:hover {
@@ -13,7 +13,7 @@ footer {
 
   .footer-main {
     height: 244px;
-    background-color: var(--cyan);
+    background-color: var(--tertiary);
 
     &-container {
       margin: 0 auto;
@@ -39,7 +39,7 @@ footer {
       margin: 0;
       font-size: 1em;
       line-height: 1.5625em;
-      color: var(--white);
+      color: var(--background-color);
     }
 
     .logo-container {
@@ -52,7 +52,7 @@ footer {
 
   .footer-bottom {
     height: 64px;
-    background-color: var(--primary-blue);
+    background-color: var(--primary);
 
     &-container {
       height: 100%;

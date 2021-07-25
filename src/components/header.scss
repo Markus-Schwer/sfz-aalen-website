@@ -2,7 +2,7 @@
   position: sticky;
   top: 0;
   height: 120px;
-  background-color: var(--white);
+  background-color: var(--background-color);
   z-index: 100;
 
   .header-content {
@@ -33,11 +33,11 @@
 
       &:hover,
       &:active {
-        color: var(--cyan);
-        stroke: var(--cyan);
+        color: var(--tertiary);
+        stroke: var(--tertiary);
 
         >a {
-          color: var(--cyan);;
+          color: var(--tertiary);;
         }
       }
     }
@@ -49,7 +49,7 @@
         height: 1em;
         top: .125em;
         padding-left: 8px;
-        stroke: var(--black);
+        stroke: var(--text-color);
       }
 
       .dropdown-content {
@@ -59,7 +59,7 @@
 
       &:hover .dropdown-content {
         display: block;
-        background-color: var(--white);
+        background-color: var(--background-color);
         margin-top: 32px;
         min-width: 100%;
         margin-left: -24px;
@@ -75,8 +75,8 @@
       &:hover,
       &:active,
       &:hover .dropdown-icon {
-        color: var(--cyan);
-        stroke: var(--cyan);
+        color: var(--tertiary);
+        stroke: var(--tertiary);
       }
     }
   }

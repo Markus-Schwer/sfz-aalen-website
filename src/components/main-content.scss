@@ -3,7 +3,7 @@
   margin: 0 auto;
   padding-top: 40px;
   position: relative;
-  // background-color: var(--white);
+  // background-color: var(--background-color);
 
   main {
     margin: 0px 46px 100px 46px;
@@ -42,15 +42,15 @@
     }
 
     .main-title-primary {
-      color: var(--primary-blue);
+      color: var(--primary);
     }
 
     .main-title-secondary {
-      color: var(--secondary-blue);
+      color: var(--secondary);
     }
 
     .main-title-tertiary {
-      color: var(--cyan);
+      color: var(--tertiary);
     }
 
     .main-title-big {
