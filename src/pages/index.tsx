@@ -34,10 +34,10 @@ const IndexPage: FunctionComponent<PageProps> = ({ location }) => {
           Interessierst du dich dafür, wie Dinge funktionieren? Tüftelst, experimentierst und forscht du gerne? Dann bist du bei uns richtig!
         </p>
         <div className="icon-bubble-container">
-          <IconBubble icon={<IconMicroscope />} text="Mitmachen" color="tertiary" />
-          <IconBubble icon={<IconEinstein />} text="Projekte" color="primary" />
-          <IconBubble icon={<IconPlanet />} text="Workshops" color="secondary" />
-          <IconBubble icon={<IconLightBulb />} text="Aktuelles" color="tertiary" />
+          <IconBubble icon={<IconMicroscope />} text="Mitmachen" color="tertiary" to="#" />
+          <IconBubble icon={<IconEinstein />} text="Projekte" color="primary" to="#" />
+          <IconBubble icon={<IconPlanet />} text="Workshops" color="secondary" to="#" />
+          <IconBubble icon={<IconLightBulb />} text="Aktuelles" color="tertiary" to="#" />
         </div>
 
         <hr />
