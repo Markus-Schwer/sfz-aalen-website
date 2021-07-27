@@ -37,8 +37,9 @@ html * {
   font-family: "Open Sans", sans-serif;
 }
 
-html, body {
+html {
   // fix for horizontal scroll bar visible, when 100vw is being
   // https://stackoverflow.com/questions/23367345
+  // consider https://stackoverflow.com/questions/47095596
   overflow-x: hidden;
 }
