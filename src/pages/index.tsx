@@ -33,7 +33,7 @@ const IndexPage: FunctionComponent<PageProps> = ({ location }) => {
   const ideaImage = getImage(data.ideaImage)!;
 
   return (
-    <Layout location={location} image={data.frontPageImage} imageAlt="">
+    <Layout image={data.frontPageImage} imageAlt="" logoScrollEffect={true}>
       <MainContent location={location}>
         <section>
           <h1 className="front-page-header">

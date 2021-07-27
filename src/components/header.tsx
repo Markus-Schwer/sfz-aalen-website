@@ -1,5 +1,4 @@
 import React, { FunctionComponent, useLayoutEffect, useState } from "react";
-import { WindowLocation } from "@reach/router";
 import { Link } from "gatsby";
 import styled from "styled-components";
 
@@ -39,18 +38,15 @@ const StyledLogoText = styled(LogoText)`
 `;
 
 type HeaderProps = {
-  location: WindowLocation<WindowLocation["state"]>;
+  logoScrollEffect?: boolean
 };
 
 const Header: FunctionComponent<HeaderProps> = ({
-  location,
+  logoScrollEffect = false,
 }) => {
-  const isFrontPage = location.pathname === "/";
+  const [logoState, setLogoState] = useState(logoScrollEffect ? 1 : 0);
 
-  // only who scroll effect on front page
-  const [logoState, setLogoState] = useState(isFrontPage ? 1 : 0);
-
-  if (isFrontPage) {
+  if (logoScrollEffect) {
     useLayoutEffect(() => {
       const onScroll = () => {
         const percent = range(0, 184, 1, 0, window.scrollY);
