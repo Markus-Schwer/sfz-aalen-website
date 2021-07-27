@@ -45,4 +45,5 @@ module.exports = {
     },
     "gatsby-plugin-styled-components"
   ],
+  pathPrefix: "/sfz-aalen-website" // only for GitHub Pages
 };
