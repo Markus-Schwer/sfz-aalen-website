@@ -13,16 +13,23 @@ const Footer: FunctionComponent<any> = () => {
         <div className="footer-main-container">
           <div className="footer-column col-3">
             <h1>Schülerforschungszentrum der Hochschule Aalen</h1>
-            <span className="new-line">Beethovenstraße 1</span>
-            <span className="new-line">73430 Aalen</span>
-            <span className="new-line">Baden-Württemberg</span>
-            <span className="new-line">Telefon +49 7361 576-1802</span>
-            <span className="new-line">E-Mail info@sfz-aalen.de</span>
+            Beethovenstraße 1
+            <br />
+            73430 Aalen
+            <br />
+            Baden-Württemberg
+            <br />
+            Telefon +49 7361 576-1802
+            <br />
+            E-Mail info@sfz-aalen.de
+            <br />
           </div>
           <div className="footer-column col-3">
             <h1>Öffnungszeiten</h1>
-            <span className="new-line">Während der Schulzeit:</span>
-            <span className="new-line">Samstag 13.00 –17.00 Uhr</span>
+            Während der Schulzeit
+            <br />
+            Samstag 13.00 –17.00 Uhr
+            <br />
           </div>
           <div className="footer-column col-3">
             <h1>

@@ -25,6 +25,9 @@ footer {
 
   .footer-column {
     padding: 35px 20px;
+    font-size: 1em;
+    line-height: 1.5625;
+    color: var(--background-color);
 
     &:last-child {
       padding-right: 0;
