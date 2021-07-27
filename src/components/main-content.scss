@@ -71,4 +71,21 @@
 hr {
   border-color: #b1b2b3;
   border-top: 0; // make hr 1px thick
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  &.inverted {
+    border-color: #d3ddf2ff;
+  }
+}
+
+h1 {
+  font-size: 2.25em;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.625em;
+  line-height: 1.38;
+  font-weight: normal;
 }
