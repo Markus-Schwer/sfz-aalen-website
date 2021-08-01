@@ -1,12 +1,12 @@
-import React, { FunctionComponent, useLayoutEffect, useState } from "react";
-import { Link } from "gatsby";
+import React, { FunctionComponent, useEffect, useLayoutEffect, useState } from "react";
+import Link from 'next/link';
 import styled from "styled-components";
 
-import "./header.scss";
+import styles from "./header.module.scss";
 
-import Logo from "../images/logo.svg";
-import LogoText from "../images/logo-text.svg";
-import DropdownCaret from "../images/dropdown-caret.svg";
+import Logo from "../../public/logo.svg";
+import LogoText from "../../public/logo-text.svg";
+import DropdownCaret from "../../public/dropdown-caret.svg";
 
 const lerp = (x: number, y: number, a: number): number => x * (1 - a) + y * a;
 const clamp = (a: number, min = 0, max = 1): number =>
@@ -41,75 +41,92 @@ type HeaderProps = {
   logoScrollEffect?: boolean
 };
 
-const Header: FunctionComponent<HeaderProps> = ({
-  logoScrollEffect = false,
-}) => {
-  const [logoState, setLogoState] = useState(logoScrollEffect ? 1 : 0);
+const ScrollingLogo: FunctionComponent<any> = ({}) => {
+  const [logoState, setLogoState] = useState(range(0, 184, 1, 0, window.scrollY));
 
-  if (logoScrollEffect) {
-    useLayoutEffect(() => {
-      const onScroll = () => {
-        const percent = range(0, 184, 1, 0, window.scrollY);
-        setLogoState(percent);
-      };
-      window.addEventListener("scroll", onScroll);
-      return () => window.removeEventListener("scroll", onScroll);
-    }, []);
-  }
+  useLayoutEffect(() => {
+    const onScroll = () => {
+      const percent = range(0, 184, 1, 0, window.scrollY);
+      setLogoState(percent);
+    };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <div className="header">
-      <div className="header-content">
+    <>
+      <StyledLogo percent={logoState} />
+      <StyledLogoText percent={logoState} />
+    </>
+  )
+};
+
+const Header: FunctionComponent<HeaderProps> = ({logoScrollEffect = false}) => {
+  const [showDynamicLogo, setShowDynamicLogo] = useState(false);
+
+  // Wait until after client-side hydration to show
+  useEffect(() => {
+    setShowDynamicLogo(true);
+  }, []);
+
+  return (
+    <div className={styles.header}>
+      <div className={styles.headerContent}>
         {/* only who scroll effect on front page */}
-        <StyledLogo percent={logoState} />
-        <StyledLogoText percent={logoState} />
+        {logoScrollEffect && showDynamicLogo ?
+          (
+            <ScrollingLogo/>
+          ) : (
+              <StyledLogoText percent={0} />
+          )
+        }
         <nav>
-          <div className="dropdown">
-            <Link to="/#">Home</Link>
-            <DropdownCaret className="dropdown-icon" />
-            <div className="dropdown-content">
-              <Link to="/somepagecomponent">Schuelerforschungszentrum</Link>
-              <Link to="/#">Idee</Link>
-              <Link to="/#">Team</Link>
+          <div className={styles.dropdown}>
+            <Link href="/#"><a>Home</a></Link>
+            <DropdownCaret className={styles.dropdownIcon} />
+            <div className={styles.dropdownContent}>
+              <Link href="/#"><a>Schuelerforschungszentrum</a></Link>
+              <Link href="/#"><a>Idee</a></Link>
+              <Link href="/#"><a>Team</a></Link>
             </div>
           </div>
-          <div className="dropdown">
-            <Link to="/#">Mitmachen</Link>
-            <DropdownCaret className="dropdown-icon" />
-            <div className="dropdown-content">
-              <Link to="/#">Link 1</Link>
-              <Link to="/#">Link 2</Link>
-              <Link to="/#">Link 3</Link>
+          <div className={styles.dropdown}>
+            <Link href="/#"><a>Mitmachen</a></Link>
+            <DropdownCaret className={styles.dropdownIcon} />
+            <div className={styles.dropdownContent}>
+              <Link href="/#"><a>Link 1</a></Link>
+              <Link href="/#"><a>Link 2</a></Link>
+              <Link href="/#"><a>Link 3</a></Link>
             </div>
           </div>
-          <div className="dropdown">
-            <Link to="/#">Projekte</Link>
-            <DropdownCaret className="dropdown-icon" />
-            <div className="dropdown-content">
-              <Link to="/#">Link 1</Link>
-              <Link to="/#">Link 2</Link>
-              <Link to="/#">Link 3</Link>
+          <div className={styles.dropdown}>
+            <Link href="/#"><a>Projekte</a></Link>
+            <DropdownCaret className={styles.dropdownIcon} />
+            <div className={styles.dropdownContent}>
+              <Link href="/#"><a>Link 1</a></Link>
+              <Link href="/#"><a>Link 2</a></Link>
+              <Link href="/#"><a>Link 3</a></Link>
             </div>
           </div>
-          <div className="dropdown">
-            <Link to="/#">Workshops</Link>
-            <DropdownCaret className="dropdown-icon" />
-            <div className="dropdown-content">
-              <Link to="/#">Link 1</Link>
-              <Link to="/#">Link 2</Link>
-              <Link to="/#">Link 3</Link>
+          <div className={styles.dropdown}>
+            <Link href="/#"><a>Workshops</a></Link>
+            <DropdownCaret className={styles.dropdownIcon} />
+            <div className={styles.dropdownContent}>
+              <Link href="/#"><a>Link 1</a></Link>
+              <Link href="/#"><a>Link 2</a></Link>
+              <Link href="/#"><a>Link 3</a></Link>
             </div>
           </div>
-          <div className="dropdown">
-            <Link to="/#">Aktuelles</Link>
-            <DropdownCaret className="dropdown-icon" />
-            <div className="dropdown-content">
-              <Link to="/#">Link 1</Link>
-              <Link to="/#">Link 2</Link>
-              <Link to="/#">Link 3</Link>
+          <div className={styles.dropdown}>
+            <Link href="/#"><a>Aktuelles</a></Link>
+            <DropdownCaret className={styles.dropdownIcon} />
+            <div className={styles.dropdownContent}>
+              <Link href="/#"><a>Link 1</a></Link>
+              <Link href="/#"><a>Link 2</a></Link>
+              <Link href="/#"><a>Link 3</a></Link>
             </div>
           </div>
-          <Link to="/#">Kontakt</Link>
+          <Link href="/#"><a>Kontakt</a></Link>
         </nav>
       </div>
     </div>

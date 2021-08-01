@@ -1,26 +1,23 @@
 import React, { FunctionComponent } from "react";
-import { WindowLocation } from "@reach/router";
 
-import "./main-content.scss";
+import styles from "./main-content.module.scss";
 
-import BubbleHeaderBackground from "../images/bubble-header-background.svg";
+import BubbleHeaderBackground from "../../public/bubble-header-background.svg";
 
-type MainContentProps = {
-  location: WindowLocation<WindowLocation["state"]>;
-};
+type MainContentProps = {};
 
 const MainContent: FunctionComponent<MainContentProps> = ({
   children
 }) => {
   return (
-    <div className="main-container">
-      <span className="current-page-name">Home</span>
-      <div className="main-title">
-        <BubbleHeaderBackground className="main-title-background" height={230}/>
-        <div className="main-title-text">
-          <span className="main-title-primary main-title-medium">Wissen.</span>
-          <span className="main-title-tertiary main-title-small">Schafft.</span>
-          <span className="main-title-secondary main-title-big">Spass!</span>
+    <div className={styles.mainContainer}>
+      <span className={styles.currentPageName}>Home</span>
+      <div className={styles.mainTitle}>
+        <BubbleHeaderBackground className={styles.mainTitleBackground} height={230}/>
+        <div className={styles.mainTitleText}>
+          <span className={[styles.mainTitlePrimary, styles.mainTitleMedium].join(" ")}>Wissen.</span>
+          <span className={[styles.mainTitleTertiary, styles.mainTitleSmall].join(" ")}>Schafft.</span>
+          <span className={[styles.mainTitleSecondary, styles.mainTitleBig].join(" ")}>Spass!</span>
         </div>
       </div>
       <main>

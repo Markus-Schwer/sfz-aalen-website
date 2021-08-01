@@ -1,77 +1,55 @@
 import React, { FunctionComponent } from "react";
-import { graphql, PageProps, useStaticQuery } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import Image from 'next/image';
 
 import Layout from "../components/layout";
 import MainContent from "../components/main-content";
 import IconBubble from "../components/icon-bubble";
 import FullWidthSection from "../components/full-width-section";
 
-import IconMicroscope from "../images/microscope.svg";
-import IconEinstein from "../images/einstein.svg";
-import IconPlanet from "../images/planet.svg";
-import IconLightBulb from "../images/light-bulb.svg";
+import styles from "./index.module.scss";
+import mainContentStyles from "../components/main-content.module.scss";
 
-import "./index.scss";
-
-const IndexPage: FunctionComponent<PageProps> = ({ location }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      frontPageImage: file(relativePath: { eq: "front-page-1.png" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
-        }
-      }
-      ideaImage: file(relativePath: { eq: "idea-offene-werkstatt.jpg" }) {
-        childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
-    }
-  `);
-
-  const ideaImage = getImage(data.ideaImage)!;
-
+const IndexPage: FunctionComponent<any> = () => {
   return (
-    <Layout image={data.frontPageImage} imageAlt="" logoScrollEffect={true}>
-      <MainContent location={location}>
+    <Layout image="/front-page-1.png" imageAlt="" logoScrollEffect={true}>
+      <MainContent>
         <section>
-          <h1 className="front-page-header">
+          <h1 className={styles.frontPageHeader}>
             Das Schülerforschungszentrum der Hochschule Aalen
           </h1>
-          <p className="front-page-text">
+          <p className={styles.frontPageText}>
             Interessierst du dich dafür, wie Dinge funktionieren? Tüftelst,
             experimentierst und forscht du gerne? Dann bist du bei uns richtig!
           </p>
-          <div className="icon-bubble-container">
+          <div className={styles.iconBubbleContainer}>
             <IconBubble
-              icon={<IconMicroscope />}
+              icon="/microscope.svg"
               text="Mitmachen"
               color="tertiary"
-              to="#"
+              href="#"
             />
             <IconBubble
-              icon={<IconEinstein />}
+              icon="/einstein.svg"
               text="Projekte"
               color="primary"
-              to="#"
+              href="#"
             />
             <IconBubble
-              icon={<IconPlanet />}
+              icon="/planet.svg"
               text="Workshops"
               color="secondary"
-              to="#"
+              href="#"
             />
             <IconBubble
-              icon={<IconLightBulb />}
+              icon="/light-bulb.svg"
               text="Aktuelles"
               color="tertiary"
-              to="#"
+              href="#"
             />
           </div>
         </section>
 
-        <FullWidthSection className="colored-section">
+        <FullWidthSection className={mainContentStyles.coloredSection}>
           <h1>Die Idee</h1>
           <h2>
             Unser Schülerforschungszentrum der Hochschule Aalen, gefördert durch
@@ -79,10 +57,10 @@ const IndexPage: FunctionComponent<PageProps> = ({ location }) => {
             professionellen Rahmen und einen Raum für eigene, kreative
             Forschung.
           </h2>
-          <hr className="inverted" />
+          <hr className={mainContentStyles.inverted} />
           <div className="row">
-            <div className="col-6">
-              <GatsbyImage image={ideaImage} alt="offene werkstatt" />
+            <div className="col-6" style={{position: "relative", alignSelf: "stretch"}}>
+              <Image src="/idea-offene-werkstatt.jpg" alt="offene werkstatt" layout="fill" objectFit="cover" />
             </div>
             <p className="col-6" style={{ margin: 0, lineHeight: "1.5625" }}>
               Bei uns geht die Beschäftigung mit MINT weit über den

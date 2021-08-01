@@ -1,65 +1,88 @@
-import { Link } from "gatsby";
 import React, { FunctionComponent } from "react";
+import Link from 'next/link';
 
-import "./footer.scss";
+import styles from "./footer.module.scss";
 
-import ZeissLogo from "../images/zeiss-logo.svg";
-import HSAalenLogo from "../images/hs-aalen-logo.svg";
+import Image from "next/image";
 
 const Footer: FunctionComponent<any> = () => {
   return (
-    <footer>
-      <div className="footer-main">
-        <div className="footer-main-container">
-          <div className="footer-column col-3">
+    <footer className={styles.footer}>
+      <div className={styles.footerMain}>
+        <div className={styles.footerMainContainer}>
+          <div className={styles.footerColumn}>
             <h1>Schülerforschungszentrum der Hochschule Aalen</h1>
             Beethovenstraße 1
-            <br />
+            <br/>
             73430 Aalen
-            <br />
+            <br/>
             Baden-Württemberg
-            <br />
+            <br/>
             Telefon +49 7361 576-1802
-            <br />
+            <br/>
             E-Mail info@sfz-aalen.de
-            <br />
+            <br/>
           </div>
-          <div className="footer-column col-3">
+          <div className={styles.footerColumn}>
             <h1>Öffnungszeiten</h1>
             Während der Schulzeit
-            <br />
+            <br/>
             Samstag 13.00 –17.00 Uhr
-            <br />
+            <br/>
           </div>
-          <div className="footer-column col-3">
+          <div className={styles.footerColumn}>
             <h1>
-              <Link to="#">FAQ</Link>
+              <Link href="#">
+                <a>
+                  FAQ
+                </a>
+              </Link>
             </h1>
             <h1>
-              <Link to="#">Unterstützen</Link>
+              <Link href="#">
+                <a>
+                  Unterstützen
+                </a>
+              </Link>
             </h1>
             <h1>
-              <Link to="#">Karriere</Link>
+              <Link href="#">
+                <a>
+                  Karriere
+                </a>
+              </Link>
             </h1>
           </div>
-          <div className="footer-column col-3">
+          <div className={styles.footerColumn}>
             <h1>Partner</h1>
-            <div className="logo-container">
+            <div className={styles.logoContainer}>
               <a href="https://www.zeiss.de">
-                <ZeissLogo width={44} />
+                <Image src="/zeiss-logo.svg" alt="Zeiss" width={44} height={44}/>
               </a>
               <a href="https://www.hs-aalen.de">
-                <HSAalenLogo width={177} />
+                <Image src="/hs-aalen-logo.svg" alt="Hochschule Aalen" width={177} height={22}/>
               </a>
             </div>
           </div>
         </div>
       </div>
-      <div className="footer-bottom">
-        <div className="footer-bottom-container">
-          <Link to="#">Impressum</Link>
-          <Link to="#">Datenschutz</Link>
-          <Link to="#">Haftungsausschluss</Link>
+      <div className={styles.footerBottom}>
+        <div className={styles.footerBottomContainer}>
+          <Link href="#">
+            <a>
+              Impressum
+            </a>
+          </Link>
+          <Link href="#">
+            <a>
+              Datenschutz
+            </a>
+          </Link>
+          <Link href="#">
+            <a>
+              Haftungsausschluss
+            </a>
+          </Link>
         </div>
       </div>
     </footer>

@@ -1,34 +1,33 @@
 import React, { FunctionComponent } from "react";
-import { GatsbyImage, getImage, ImageDataLike } from "gatsby-plugin-image"
-import { WindowLocation } from "@reach/router";
+import Image from 'next/image';
 
 import Header from "./header";
 import Footer from "./footer";
 
-import "./layout.scss";
+import styles from "./layout.module.scss";
 
 type LayoutProps = {
-  image: ImageDataLike;
+  image?: string;
   imageAlt: string;
   logoScrollEffect?: boolean;
 };
 
 const Layout: FunctionComponent<LayoutProps> = ({
-  image,
-  imageAlt,
-  children,
-  logoScrollEffect,
-}) => {
-  const imageData = getImage(image)!!;
-
+                                                  image,
+                                                  imageAlt,
+                                                  children,
+                                                  logoScrollEffect
+                                                }) => {
   return (
     <div>
-      <Header logoScrollEffect={logoScrollEffect} />
-      <div className="main-image-container">
-        <GatsbyImage image={imageData} alt={imageAlt} />
-      </div>
+      <Header logoScrollEffect={logoScrollEffect}/>
+      {image ? (
+        <div className={styles.mainImageContainer}>
+          <Image src={image} alt={imageAlt} layout="fill" objectFit="cover"/>
+        </div>
+      ) : null}
       {children}
-      <Footer />
+      <Footer/>
     </div>
   );
 };

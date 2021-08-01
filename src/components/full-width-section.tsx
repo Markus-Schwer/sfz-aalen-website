@@ -1,11 +1,11 @@
 import React, { FunctionComponent } from "react";
 
-import "./full-width-section.scss";
+import styles from "./full-width-section.module.scss";
 
 const FullWidthSection: FunctionComponent<any> = ({ children, className }) => {
   return (
-    <div className={"full-width-section " + className}>
-      <section className="full-width-section-content">{children}</section>
+    <div className={styles.fullWidthSection + " " + className}>
+      <section className={styles.fullWidthSectionContent}>{children}</section>
     </div>
   );
 };

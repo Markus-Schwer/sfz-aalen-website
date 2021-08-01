@@ -1,0 +1,91 @@
+.mainContainer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-top: 40px;
+  position: relative;
+  // background-color: var(--background-color);
+
+  main {
+    margin: 0 46px 100px 46px;
+
+    hr {
+      border-color: #b1b2b3;
+      border-top: 0; // make hr 1px thick
+      margin-top: 40px;
+      margin-bottom: 40px;
+
+      &.inverted {
+        border-color: #d3ddf2ff;
+      }
+    }
+
+    h1 {
+      font-size: 2.25em;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 1.625em;
+      line-height: 1.38;
+      font-weight: normal;
+    }
+  }
+}
+
+.currentPageName {
+  float: right;
+  font-style: italic;
+}
+
+.mainTitle {
+  position: relative;
+  margin-top: -80px;
+  height: 230px;
+  width: max-content;
+
+  .mainTitleBackground {
+    position: absolute;
+    top: 0;
+    left: 12px;
+  }
+
+  .mainTitleText {
+    position: relative;
+    font-family: "Kardia-Fat";
+    padding: 24px 42px;
+    width: max-content;
+    text-transform: uppercase;
+    line-height: 1;
+
+    .mainTitlePrimary,
+    .mainTitleSecondary,
+    .mainTitleTertiary {
+      display: block;
+      font-family: inherit;
+    }
+
+    .mainTitlePrimary {
+      color: var(--primary);
+    }
+
+    .mainTitleSecondary {
+      color: var(--secondary);
+    }
+
+    .mainTitleTertiary {
+      color: var(--tertiary);
+    }
+
+    .mainTitleBig {
+      font-size: 4.625em;
+    }
+
+    .mainTitleMedium {
+      font-size: 3.625em;
+    }
+
+    .mainTitleSmall {
+      font-size: 2.625em;
+    }
+  }
+}

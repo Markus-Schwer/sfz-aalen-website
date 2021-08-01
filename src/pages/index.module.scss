@@ -1,0 +1,20 @@
+.iconBubbleContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 50%;
+}
+
+.frontPageHeader {
+  font-size: 3em;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.frontPageText {
+  font-size: 2em;
+  font-weight: normal;
+}
+
+.colored-section {
+  background-color: var(--secondary-shade-3);
+}
