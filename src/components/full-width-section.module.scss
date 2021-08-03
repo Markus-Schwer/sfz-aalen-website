@@ -4,12 +4,14 @@
   margin-left: -50vw;
   left: 50%;
 
-  .fullWidthSectionContent {
-    max-width: calc(
-      var(--max-width) - 94px
-    ); // includes 46px of margin on both sides
-    margin: 100px auto;
-    padding-top: 80px;
-    padding-bottom: 80px;
+  .innerContainer {
+    max-width: var(--max-width);
+    margin: 0 auto;
+
+    .fullWidthSectionContent {
+      margin: 100px 46px;
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
   }
 }

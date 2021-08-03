@@ -1,3 +1,7 @@
 node_modules/
 .idea/
 .next/
+.tina/__generated__/
+out/
+.env.development
+.env.local

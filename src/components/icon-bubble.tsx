@@ -10,10 +10,17 @@ type IconBubbleProps = {
   icon: string;
   text: string;
   color?: "primary" | "secondary" | "tertiary";
-  href?: string
+  href?: string;
+  columnWidth?: number;
 }
 
-const IconBubble: FunctionComponent<IconBubbleProps> = ({icon, text, color = "primary", href}) => {
+const IconBubble: FunctionComponent<IconBubbleProps> = ({
+                                                          icon,
+                                                          text,
+                                                          color = "primary",
+                                                          href,
+                                                          columnWidth = 50
+                                                        }) => {
   const colorNameMap = {
     "primary": styles.bubbleColorPrimary,
     "secondary": styles.bubbleColorSecondary,
@@ -27,16 +34,18 @@ const IconBubble: FunctionComponent<IconBubbleProps> = ({icon, text, color = "pr
           <Image src={icon} alt={text} layout="fill" objectFit="contain"/>
         </div>
       </div>
-      <IconBubbleBackground className={colorNameMap[color]} />
+      <IconBubbleBackground className={colorNameMap[color]}/>
       <span className={styles.bubbleText}>{text}</span>
     </>
   );
 
   if (href !== undefined) {
-    return <Link href={href}><a className={styles.iconBubble}>{bubbleContent}</a></Link>;
+    return <Link href={href}><a className={styles.iconBubble}
+                                style={{width: `${columnWidth}%`}}>{bubbleContent}</a></Link>;
   }
 
-  return <div className={styles.iconBubble}>{bubbleContent}</div>;
+  return <div className={styles.iconBubble}
+              style={{width: `${columnWidth}%`}}>{bubbleContent}</div>;
 };
 
 export default IconBubble;
