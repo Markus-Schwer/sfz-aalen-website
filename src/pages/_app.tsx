@@ -1,14 +1,14 @@
 import { FunctionComponent } from "react";
 import { AppProps } from "next/app";
-import dynamic from 'next/dynamic'
-import { TinaEditProvider } from 'tinacms/dist/edit-state'
+import dynamic from "next/dynamic";
+import { TinaEditProvider } from "tinacms/dist/edit-state";
 import "normalize.css";
 import "@fontsource/open-sans";
 import "@fontsource/open-sans/700.css";
 import "../styles/typography.scss"
 import "../styles/global.scss";
 
-const TinaCMS = dynamic(() => import('tinacms'), {ssr: false})
+const TinaCMS = dynamic(() => import("tinacms"), {ssr: false});
 
 const App: FunctionComponent<AppProps> = ({Component, pageProps}) => {
   return (
