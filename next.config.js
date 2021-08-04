@@ -7,6 +7,13 @@ module.exports = {
 
     return config;
   },
-  basePath: '/index',
+  async rewrites() {
+    return [
+      {
+        source: '/',
+        destination: '/home',
+      },
+    ]
+  },
   target: 'serverless'
 };
