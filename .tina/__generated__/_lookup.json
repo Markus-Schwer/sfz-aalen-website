@@ -1,0 +1,74 @@
+{
+  "DocumentConnection": {
+    "type": "DocumentConnection",
+    "resolveType": "multiCollectionDocumentList",
+    "collections": [
+      "pages"
+    ]
+  },
+  "Node": {
+    "type": "Node",
+    "resolveType": "nodeDocument"
+  },
+  "DocumentNode": {
+    "type": "DocumentNode",
+    "resolveType": "multiCollectionDocument"
+  },
+  "PagesPageSections": {
+    "type": "PagesPageSections",
+    "resolveType": "unionData",
+    "typeMap": {
+      "bigHeader": "PagesPageSectionsBigHeader",
+      "headerOnlySection": "PagesPageSectionsHeaderOnlySection",
+      "twoColumnSection": "PagesPageSectionsTwoColumnSection",
+      "iconBubbleSection": "PagesPageSectionsIconBubbleSection"
+    }
+  },
+  "PagesDocument": {
+    "type": "PagesDocument",
+    "resolveType": "collectionDocument",
+    "collection": "pages"
+  },
+  "PagesConnection": {
+    "type": "PagesConnection",
+    "resolveType": "collectionDocumentList",
+    "collection": "pages"
+  },
+  "PagesPageSectionsDefaultSection": {
+    "type": "PagesPageSectionsDefaultSection",
+    "resolveType": "unionData",
+    "typeMap": {}
+  },
+  "PagesPageSectionsDefaultSectionTwoColumsColumn": {
+    "type": "PagesPageSectionsDefaultSectionTwoColumsColumn",
+    "resolveType": "unionData",
+    "typeMap": {
+      "picture": "PagesPageSectionsDefaultSectionTwoColumsColumnPicture",
+      "paragraph": "PagesPageSectionsDefaultSectionTwoColumsColumnParagraph"
+    }
+  },
+  "PagesPageSectionsDefaultSectionTwoColumnsColumn": {
+    "type": "PagesPageSectionsDefaultSectionTwoColumnsColumn",
+    "resolveType": "unionData",
+    "typeMap": {
+      "picture": "PagesPageSectionsDefaultSectionTwoColumnsColumnPicture",
+      "paragraph": "PagesPageSectionsDefaultSectionTwoColumnsColumnParagraph"
+    }
+  },
+  "PagesPageSectionsDefaultSectionTwoColumnsColumns": {
+    "type": "PagesPageSectionsDefaultSectionTwoColumnsColumns",
+    "resolveType": "unionData",
+    "typeMap": {
+      "picture": "PagesPageSectionsDefaultSectionTwoColumnsColumnsPicture",
+      "paragraph": "PagesPageSectionsDefaultSectionTwoColumnsColumnsParagraph"
+    }
+  },
+  "PagesPageSectionsTwoColumnSectionColumns": {
+    "type": "PagesPageSectionsTwoColumnSectionColumns",
+    "resolveType": "unionData",
+    "typeMap": {
+      "picture": "PagesPageSectionsTwoColumnSectionColumnsPicture",
+      "paragraph": "PagesPageSectionsTwoColumnSectionColumnsParagraph"
+    }
+  }
+}

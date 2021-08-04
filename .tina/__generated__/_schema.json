@@ -1,0 +1,477 @@
+{
+  "collections": [
+    {
+      "label": "Seiten",
+      "name": "pages",
+      "path": "content/pages",
+      "fields": [
+        {
+          "label": "Breadcrumbs",
+          "name": "breadcrumbs",
+          "type": "string",
+          "list": true,
+          "namespace": [
+            "pages",
+            "breadcrumbs"
+          ]
+        },
+        {
+          "label": "Logo scroll Effect",
+          "name": "logoScrollEffect",
+          "type": "boolean",
+          "namespace": [
+            "pages",
+            "logoScrollEffect"
+          ]
+        },
+        {
+          "type": "image",
+          "label": "Titelbild",
+          "name": "coverImages",
+          "list": true,
+          "namespace": [
+            "pages",
+            "coverImages"
+          ]
+        },
+        {
+          "type": "object",
+          "label": "Motto",
+          "name": "motto",
+          "list": true,
+          "fields": [
+            {
+              "type": "string",
+              "label": "Text",
+              "name": "mottoText",
+              "namespace": [
+                "pages",
+                "motto",
+                "mottoText"
+              ]
+            },
+            {
+              "type": "string",
+              "label": "Farbe",
+              "name": "color",
+              "options": [
+                "primary",
+                "secondary",
+                "tertiary"
+              ],
+              "namespace": [
+                "pages",
+                "motto",
+                "color"
+              ]
+            },
+            {
+              "type": "string",
+              "label": "Größe",
+              "name": "size",
+              "options": [
+                "small",
+                "medium",
+                "big"
+              ],
+              "namespace": [
+                "pages",
+                "motto",
+                "size"
+              ]
+            }
+          ],
+          "namespace": [
+            "pages",
+            "motto"
+          ]
+        },
+        {
+          "type": "object",
+          "label": "Seiten Abschnitte",
+          "name": "pageSections",
+          "list": true,
+          "templates": [
+            {
+              "label": "Große Überschrift",
+              "name": "bigHeader",
+              "fields": [
+                {
+                  "label": "Überschrift",
+                  "name": "headerText",
+                  "type": "string",
+                  "namespace": [
+                    "pages",
+                    "pageSections",
+                    "bigHeader",
+                    "headerText"
+                  ]
+                }
+              ],
+              "namespace": [
+                "pages",
+                "pageSections",
+                "bigHeader"
+              ]
+            },
+            {
+              "label": "Text Abschnitt",
+              "name": "headerOnlySection",
+              "fields": [
+                {
+                  "label": "Überschrift",
+                  "name": "header",
+                  "type": "object",
+                  "required": true,
+                  "fields": [
+                    {
+                      "label": "Haupt-Überschrift",
+                      "name": "mainHeader",
+                      "type": "string",
+                      "namespace": [
+                        "pages",
+                        "pageSections",
+                        "headerOnlySection",
+                        "header",
+                        "mainHeader"
+                      ]
+                    },
+                    {
+                      "label": "Unter-Überschrift",
+                      "name": "subHeader",
+                      "type": "string",
+                      "ui": {
+                        "component": "textarea"
+                      },
+                      "namespace": [
+                        "pages",
+                        "pageSections",
+                        "headerOnlySection",
+                        "header",
+                        "subHeader"
+                      ]
+                    },
+                    {
+                      "label": "Trennstrich",
+                      "name": "divider",
+                      "type": "boolean",
+                      "namespace": [
+                        "pages",
+                        "pageSections",
+                        "headerOnlySection",
+                        "header",
+                        "divider"
+                      ]
+                    }
+                  ],
+                  "namespace": [
+                    "pages",
+                    "pageSections",
+                    "headerOnlySection",
+                    "header"
+                  ]
+                }
+              ],
+              "namespace": [
+                "pages",
+                "pageSections",
+                "headerOnlySection"
+              ]
+            },
+            {
+              "label": "Abschnitt mit zwei Spalten",
+              "name": "twoColumnSection",
+              "fields": [
+                {
+                  "label": "Überschrift",
+                  "name": "header",
+                  "type": "object",
+                  "fields": [
+                    {
+                      "label": "Haupt-Überschrift",
+                      "name": "mainHeader",
+                      "type": "string",
+                      "namespace": [
+                        "pages",
+                        "pageSections",
+                        "twoColumnSection",
+                        "header",
+                        "mainHeader"
+                      ]
+                    },
+                    {
+                      "label": "Unter-Überschrift",
+                      "name": "subHeader",
+                      "type": "string",
+                      "ui": {
+                        "component": "textarea"
+                      },
+                      "namespace": [
+                        "pages",
+                        "pageSections",
+                        "twoColumnSection",
+                        "header",
+                        "subHeader"
+                      ]
+                    },
+                    {
+                      "label": "Trennstrich",
+                      "name": "divider",
+                      "type": "boolean",
+                      "namespace": [
+                        "pages",
+                        "pageSections",
+                        "twoColumnSection",
+                        "header",
+                        "divider"
+                      ]
+                    }
+                  ],
+                  "namespace": [
+                    "pages",
+                    "pageSections",
+                    "twoColumnSection",
+                    "header"
+                  ]
+                },
+                {
+                  "label": "Hintergrundfarbe",
+                  "name": "backgroundColor",
+                  "type": "string",
+                  "ui": {
+                    "component": "color",
+                    "colorFormat": "hex"
+                  },
+                  "namespace": [
+                    "pages",
+                    "pageSections",
+                    "twoColumnSection",
+                    "backgroundColor"
+                  ]
+                },
+                {
+                  "label": "Spalten",
+                  "name": "columns",
+                  "type": "object",
+                  "list": true,
+                  "required": true,
+                  "templates": [
+                    {
+                      "label": "Bild",
+                      "name": "picture",
+                      "fields": [
+                        {
+                          "label": "Bild",
+                          "name": "picture",
+                          "type": "image",
+                          "required": true,
+                          "namespace": [
+                            "pages",
+                            "pageSections",
+                            "twoColumnSection",
+                            "columns",
+                            "picture",
+                            "picture"
+                          ]
+                        },
+                        {
+                          "label": "Alt Text",
+                          "name": "altText",
+                          "type": "string",
+                          "namespace": [
+                            "pages",
+                            "pageSections",
+                            "twoColumnSection",
+                            "columns",
+                            "picture",
+                            "altText"
+                          ]
+                        },
+                        {
+                          "label": "Breite",
+                          "name": "width",
+                          "type": "number",
+                          "required": true,
+                          "namespace": [
+                            "pages",
+                            "pageSections",
+                            "twoColumnSection",
+                            "columns",
+                            "picture",
+                            "width"
+                          ]
+                        },
+                        {
+                          "label": "Höhe",
+                          "name": "height",
+                          "type": "number",
+                          "required": true,
+                          "namespace": [
+                            "pages",
+                            "pageSections",
+                            "twoColumnSection",
+                            "columns",
+                            "picture",
+                            "height"
+                          ]
+                        }
+                      ],
+                      "namespace": [
+                        "pages",
+                        "pageSections",
+                        "twoColumnSection",
+                        "columns",
+                        "picture"
+                      ]
+                    },
+                    {
+                      "label": "Paragraph",
+                      "name": "paragraph",
+                      "fields": [
+                        {
+                          "label": "Paragraph",
+                          "name": "paragraph",
+                          "type": "string",
+                          "required": true,
+                          "ui": {
+                            "component": "textarea"
+                          },
+                          "namespace": [
+                            "pages",
+                            "pageSections",
+                            "twoColumnSection",
+                            "columns",
+                            "paragraph",
+                            "paragraph"
+                          ]
+                        }
+                      ],
+                      "namespace": [
+                        "pages",
+                        "pageSections",
+                        "twoColumnSection",
+                        "columns",
+                        "paragraph"
+                      ]
+                    }
+                  ],
+                  "namespace": [
+                    "pages",
+                    "pageSections",
+                    "twoColumnSection",
+                    "columns"
+                  ]
+                }
+              ],
+              "namespace": [
+                "pages",
+                "pageSections",
+                "twoColumnSection"
+              ]
+            },
+            {
+              "label": "Abschnitt mit Icon Blasen",
+              "name": "iconBubbleSection",
+              "fields": [
+                {
+                  "label": "Anzahl Spalten",
+                  "name": "numberColumns",
+                  "type": "number",
+                  "namespace": [
+                    "pages",
+                    "pageSections",
+                    "iconBubbleSection",
+                    "numberColumns"
+                  ]
+                },
+                {
+                  "label": "Blasen",
+                  "name": "bubbles",
+                  "type": "object",
+                  "list": true,
+                  "required": true,
+                  "fields": [
+                    {
+                      "label": "Text",
+                      "name": "text",
+                      "type": "string",
+                      "namespace": [
+                        "pages",
+                        "pageSections",
+                        "iconBubbleSection",
+                        "bubbles",
+                        "text"
+                      ]
+                    },
+                    {
+                      "label": "Icon",
+                      "name": "icon",
+                      "type": "image",
+                      "namespace": [
+                        "pages",
+                        "pageSections",
+                        "iconBubbleSection",
+                        "bubbles",
+                        "icon"
+                      ]
+                    },
+                    {
+                      "label": "Hintergrundfarbe",
+                      "name": "backgroundColor",
+                      "type": "string",
+                      "required": true,
+                      "options": [
+                        "primary",
+                        "secondary",
+                        "tertiary"
+                      ],
+                      "namespace": [
+                        "pages",
+                        "pageSections",
+                        "iconBubbleSection",
+                        "bubbles",
+                        "backgroundColor"
+                      ]
+                    },
+                    {
+                      "label": "Link",
+                      "name": "href",
+                      "type": "string",
+                      "required": false,
+                      "namespace": [
+                        "pages",
+                        "pageSections",
+                        "iconBubbleSection",
+                        "bubbles",
+                        "href"
+                      ]
+                    }
+                  ],
+                  "namespace": [
+                    "pages",
+                    "pageSections",
+                    "iconBubbleSection",
+                    "bubbles"
+                  ]
+                }
+              ],
+              "namespace": [
+                "pages",
+                "pageSections",
+                "iconBubbleSection"
+              ]
+            }
+          ],
+          "namespace": [
+            "pages",
+            "pageSections"
+          ]
+        }
+      ],
+      "namespace": [
+        "pages"
+      ]
+    }
+  ],
+  "namespace": []
+}
