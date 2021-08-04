@@ -7,5 +7,6 @@ module.exports = {
 
     return config;
   },
+  basePath: '/index',
   target: 'serverless'
 };
