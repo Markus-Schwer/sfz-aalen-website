@@ -1,0 +1,23 @@
+{
+  "motto": [
+    {
+      "text": "Wissen.",
+      "size": "medium",
+      "color": "primary"
+    },
+    {
+      "text": "Schafft.",
+      "size": "medium",
+      "color": "tertiary"
+    },
+    {
+      "text": "Spass!",
+      "size": "big",
+      "color": "secondary"
+    }
+  ],
+  "breadcrumbs": [
+    "Home"
+  ],
+  "title": "Home"
+}
