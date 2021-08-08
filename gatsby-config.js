@@ -43,7 +43,15 @@ module.exports = {
         }
       }
     },
-    "gatsby-plugin-styled-components"
+    "gatsby-plugin-styled-components",
+    "gatsby-plugin-netlify-cms",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: "./content/pages/",
+        name: "markdown-pages",
+      },
+    },
   ],
   pathPrefix: "/sfz-aalen-website" // only for GitHub Pages
 };

@@ -1,0 +1,44 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: "static/images/uploads"
+collections:
+  - label: "Seite"
+    name: "page"
+    folder: "content/pages"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    fields:
+      - { label: "Titel", name: "title", widged: "string" }
+      - label: "Motto"
+        name: "motto"
+        widget: "list"
+        allow_add: false
+        fields:
+          - { label: "Text", name: "text", widget: "text" }
+          - label: "Größe"
+            name: "size"
+            widget: "select"
+            options:
+              - { label: "Klein", value: "small" }
+              - { label: "Medium", value: "medium" }
+              - { label: "Groß", value: "big" }
+          - label: "Farbe"
+            name: "color"
+            widget: "select"
+            options:
+              - { label: "Zeiss-Blau", value: "primary" }
+              - { label: "Hochschuhl-Blau", value: "secondary" }
+              - { label: "Cyan", value: "tertiary" }
+        default:
+          - { text: "Wissen.", size: "medium", color: "primary" }
+          - { text: "Schafft.", size: "medium", color: "tertiary" }
+          - { text: "Spass!", size: "big", color: "secondary" }
+      - label: "Featured Images"
+        name: "thumbnail"
+        widget: "list"
+        field: { label: "Bild", name: "image", widget: "image" }
+      - label: "Breadcrumbs"
+        name: "breadcrumbs"
+        widget: "list"
