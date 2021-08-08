@@ -70,5 +70,26 @@
       "picture": "PagesPageSectionsTwoColumnSectionColumnsPicture",
       "paragraph": "PagesPageSectionsTwoColumnSectionColumnsParagraph"
     }
+  },
+  "PagesPageSectionsIconBubbleSectionBubbles": {
+    "type": "PagesPageSectionsIconBubbleSectionBubbles",
+    "resolveType": "unionData",
+    "typeMap": {
+      "bubble": "PagesPageSectionsIconBubbleSectionBubblesBubble"
+    }
+  },
+  "PagesMotto": {
+    "type": "PagesMotto",
+    "resolveType": "unionData",
+    "typeMap": {
+      "motto": "PagesMottoMotto"
+    }
+  },
+  "PagesBreadcrumbs": {
+    "type": "PagesBreadcrumbs",
+    "resolveType": "unionData",
+    "typeMap": {
+      "breadcrumb": "PagesBreadcrumbsBreadcrumb"
+    }
   }
 }

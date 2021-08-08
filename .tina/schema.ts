@@ -1,4 +1,28 @@
-import { defineSchema } from "@tinacms/cli";
+import { defineSchema, TinaField } from "@tinacms/cli";
+
+const header: TinaField = {
+  label: "Überschrift",
+  name: "header",
+  type: "object",
+  required: true,
+  fields: [
+    {
+      label: "Haupt-Überschrift",
+      name: "mainHeader",
+      type: "string"
+    },
+    {
+      label: "Unter-Überschrift",
+      name: "subHeader",
+      type: "string"
+    },
+    {
+      label: "Trennstrich",
+      name: "divider",
+      type: "boolean"
+    }
+  ]
+};
 
 export default defineSchema({
   collections: [
@@ -67,66 +91,17 @@ export default defineSchema({
               ]
             },
             {
-              label: "Text Abschnitt",
+              label: "Überschrift",
               name: "headerOnlySection",
               fields: [
-                {
-                  label: "Überschrift",
-                  name: "header",
-                  type: "object",
-                  required: true,
-                  fields: [
-                    {
-                      label: "Haupt-Überschrift",
-                      name: "mainHeader",
-                      type: "string"
-                    },
-                    {
-                      label: "Unter-Überschrift",
-                      name: "subHeader",
-                      type: "string",
-                      ui: {
-                        component: "textarea"
-                      }
-                    },
-                    {
-                      label: "Trennstrich",
-                      name: "divider",
-                      type: "boolean"
-                    }
-                  ]
-                }
+                header
               ]
             },
             {
               label: "Abschnitt mit zwei Spalten",
               name: "twoColumnSection",
               fields: [
-                {
-                  label: "Überschrift",
-                  name: "header",
-                  type: "object",
-                  fields: [
-                    {
-                      label: "Haupt-Überschrift",
-                      name: "mainHeader",
-                      type: "string"
-                    },
-                    {
-                      label: "Unter-Überschrift",
-                      name: "subHeader",
-                      type: "string",
-                      ui: {
-                        component: "textarea"
-                      }
-                    },
-                    {
-                      label: "Trennstrich",
-                      name: "divider",
-                      type: "boolean"
-                    }
-                  ]
-                },
+                header,
                 {
                   label: "Hintergrundfarbe",
                   name: "backgroundColor",
@@ -182,7 +157,7 @@ export default defineSchema({
                           type: "string",
                           required: true,
                           ui: {
-                            component: "textarea"
+                            component: "markdown"
                           }
                         }
                       ]

@@ -114,7 +114,7 @@ type PagesPageSectionsTwoColumnSectionColumnsParagraph {
 union PagesPageSectionsTwoColumnSectionColumns = PagesPageSectionsTwoColumnSectionColumnsPicture | PagesPageSectionsTwoColumnSectionColumnsParagraph
 
 type PagesPageSectionsTwoColumnSection {
-  header: PagesPageSectionsTwoColumnSectionHeader
+  header: PagesPageSectionsTwoColumnSectionHeader!
   backgroundColor: String
   columns: [PagesPageSectionsTwoColumnSectionColumns!]!
 }

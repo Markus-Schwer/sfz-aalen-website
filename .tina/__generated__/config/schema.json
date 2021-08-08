@@ -73,7 +73,7 @@
               ]
             },
             {
-              "label": "Text Abschnitt",
+              "label": "Überschrift",
               "name": "headerOnlySection",
               "fields": [
                 {
@@ -90,10 +90,7 @@
                     {
                       "label": "Unter-Überschrift",
                       "name": "subHeader",
-                      "type": "string",
-                      "ui": {
-                        "component": "textarea"
-                      }
+                      "type": "string"
                     },
                     {
                       "label": "Trennstrich",
@@ -112,6 +109,7 @@
                   "label": "Überschrift",
                   "name": "header",
                   "type": "object",
+                  "required": true,
                   "fields": [
                     {
                       "label": "Haupt-Überschrift",
@@ -121,10 +119,7 @@
                     {
                       "label": "Unter-Überschrift",
                       "name": "subHeader",
-                      "type": "string",
-                      "ui": {
-                        "component": "textarea"
-                      }
+                      "type": "string"
                     },
                     {
                       "label": "Trennstrich",
@@ -188,7 +183,7 @@
                           "type": "string",
                           "required": true,
                           "ui": {
-                            "component": "textarea"
+                            "component": "markdown"
                           }
                         }
                       ]

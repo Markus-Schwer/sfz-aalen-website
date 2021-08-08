@@ -1454,10 +1454,13 @@
           },
           "arguments": [],
           "type": {
-            "kind": "NamedType",
-            "name": {
-              "kind": "Name",
-              "value": "PagesPageSectionsTwoColumnSectionHeader"
+            "kind": "NonNullType",
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "PagesPageSectionsTwoColumnSectionHeader"
+              }
             }
           }
         },

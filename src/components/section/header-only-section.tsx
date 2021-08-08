@@ -1,17 +1,14 @@
 import { FunctionComponent } from "react";
-import { HeaderOnlySectionType } from "../../pages/[filename]";
+import { BlockComponentProps, BlocksControls } from "react-tinacms-inline";
+import InlineHeader from "../inline-header";
 
-type HeaderOnlySectionProps = {
-  pageSection: HeaderOnlySectionType
-}
-
-const HeaderOnlySection: FunctionComponent<HeaderOnlySectionProps> = ({pageSection}) => {
+const HeaderOnlySection: FunctionComponent<BlockComponentProps> = ({data, index}) => {
   return (
-    <section>
-      <h1>{pageSection.headerOnlyHeader.mainHeader}</h1>
-      <h2>{pageSection.headerOnlyHeader.subHeader}</h2>
-      {pageSection.headerOnlyHeader.divider ? <hr /> : null}
-    </section>
+    <BlocksControls index={index}>
+      <section>
+        <InlineHeader data={data}/>
+      </section>
+    </BlocksControls>
   );
 }
 

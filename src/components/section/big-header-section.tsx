@@ -1,14 +1,18 @@
 import { FunctionComponent } from "react";
 
 import styles from "./big-header-section.module.scss";
-import { BigHeaderSectionType } from "../../pages/[filename]";
+import { BlockComponentProps, InlineTextarea, BlocksControls } from "react-tinacms-inline";
 
-type BigHeaderSectionProps = {
-  pageSection: BigHeaderSectionType
-}
-
-const BigHeaderSection: FunctionComponent<BigHeaderSectionProps> = ({pageSection}) => {
-  return <h1 className={styles.bigHeader}>{pageSection.headerText}</h1>;
+const BigHeaderSection: FunctionComponent<BlockComponentProps> = ({data, index}) => {
+  return (
+    <BlocksControls index={index}>
+      <h1 className={styles.bigHeader}>
+        <InlineTextarea name="headerText">
+          {data.headerText}
+        </InlineTextarea>
+      </h1>
+    </BlocksControls>
+  );
 }
 
 export default BigHeaderSection;

@@ -1,113 +1,150 @@
 import { FunctionComponent } from "react";
+import { GetStaticPaths, GetStaticProps } from "next";
+import {
+  getStaticPropsForTina,
+  gql,
+  staticRequest,
+  useForm,
+  usePlugin
+} from "tinacms";
+import { Block, InlineBlocks, InlineForm } from 'react-tinacms-inline';
+import type { PagesDocument } from "../../.tina/__generated__/types";
 
 import Layout from "../components/layout";
 import MainContent from "../components/main-content";
-import { GetStaticPaths, GetStaticProps } from "next";
-import { getStaticPropsForTina, gql, staticRequest } from "tinacms";
 import BigHeaderSection from "../components/section/big-header-section";
 import HeaderOnlySection from "../components/section/header-only-section";
 import TwoColumnSection from "../components/section/two-column-section";
 import IconBubbleSection from "../components/section/icon-bubble-section";
 
-export type HeaderOnlySectionType = {
-  __typename: "PagesPageSectionsHeaderOnlySection",
-  headerOnlyHeader: {
-    mainHeader: string,
-    subHeader: string,
-    divider?: boolean
-  }
-}
+type CMSPageProps = PagesDocument;
 
-export type TwoColumnSectionType = {
-  __typename: "PagesPageSectionsTwoColumnSection",
-  twoColumnHeader?: {
-    mainHeader: string,
-    subHeader: string,
-    divider?: boolean
-  },
-  backgroundColor?: string,
-  columns: {
-    __typename: "PagesPageSectionsTwoColumnSectionColumnsPicture",
-    picture: string,
-    altText: string,
-    width: number,
-    height: number
-  }[] | {
-    __typename: "PagesPageSectionsTwoColumnSectionColumnsParagraph",
-    paragraph: string
-  }[]
-}
+const CMSPage: FunctionComponent<CMSPageProps> = (props) => {
+  const [data, form] = useForm({...props.form, initialValues: props.values});
+  usePlugin(form);
 
-export type BigHeaderSectionType = {
-  __typename: "PagesPageSectionsBigHeader",
-  headerText: string
-}
-
-export type IconBubbleSectionType = {
-  __typename: "PagesPageSectionsIconBubbleSection",
-  numberColumns: number
-  bubbles: {
-    text: string
-    icon: string
-    backgroundColor: "primary" | "secondary" | "tertiary",
-    href?: string
-  }[]
-}
-
-type CMSPageProps = {
-  pageData: {
-    title: string,
-    breadcrumbs: string[],
-    logoScrollEffect: boolean,
-    coverImages: string[],
-    motto: {
-      mottoText: string,
-      color: "primary" | "secondary" | "tertiary",
-      size: "small" | "medium" | "big"
-    }[],
-    pageSections: HeaderOnlySectionType[] | TwoColumnSectionType[] | BigHeaderSectionType[] | IconBubbleSectionType[]
-  }
-}
-
-const CMSPage: FunctionComponent<CMSPageProps> = ({pageData}) => {
-  let sectionComponents = [];
-  for (const index in pageData.pageSections) {
-    const pageSection = pageData.pageSections[index];
-    switch (pageSection.__typename) {
-      case "PagesPageSectionsBigHeader": {
-        sectionComponents.push(<BigHeaderSection pageSection={pageSection} key={index}/>);
-        break;
-      }
-      case "PagesPageSectionsHeaderOnlySection": {
-        sectionComponents.push(<HeaderOnlySection pageSection={pageSection} key={index}/>);
-        break;
-      }
-      case "PagesPageSectionsTwoColumnSection": {
-        sectionComponents.push(<TwoColumnSection pageSection={pageSection} key={index}/>);
-        break;
-      }
-      case "PagesPageSectionsIconBubbleSection": {
-        sectionComponents.push(<IconBubbleSection pageSection={pageSection} key={index}/>);
-        break;
-      }
-    }
-  }
+  const BlogPostCreatorPlugin = {
+    __type: 'content-creator',
+    name: "Seite erstellen",
+    fields: [
+      {
+        label: 'Titel',
+        name: 'title',
+        component: 'text'
+      },
+      {
+        label: 'Breadcrumbs',
+        name: 'breadcrumbs',
+        component: 'list',
+        field: {
+          component: "text"
+        },
+        validate(title: any) {
+          if (!title) return 'Required.'
+        },
+      },
+      {
+        label: 'Titelbild',
+        name: 'coverImages',
+        component: 'image'
+      },
+    ],
+    onSubmit(values: any, cms: any) {
+      // Call functions that create the new blog post. For example:
+      cms.apis.someBackend.createPost(values);
+    },
+  };
+  usePlugin(BlogPostCreatorPlugin);
 
   return (
-    <Layout image={pageData.coverImages[0]} imageAlt=""
-            logoScrollEffect={pageData.logoScrollEffect}>
-      <MainContent motto={pageData.motto} breadcrumbs={pageData.breadcrumbs}>
-        {sectionComponents}
-      </MainContent>
-    </Layout>
+    <InlineForm form={form}>
+      <Layout image={data.coverImages[0]} imageAlt=""
+              logoScrollEffect={data.logoScrollEffect}>
+        <MainContent data={data}>
+          <InlineBlocks name="pageSections" blocks={PageSectionBlocks}/>
+        </MainContent>
+      </Layout>
+    </InlineForm>
   );
 };
 
+const PageSectionBlocks: { [key: string]: Block } = {
+  bigHeader: {
+    Component: BigHeaderSection,
+    template: {
+      label: "Große Überschrift",
+      defaultItem: {
+        headerText: "Große Überschrift"
+      }
+    }
+  },
+  headerOnlySection: {
+    Component: HeaderOnlySection,
+    template: {
+      label: "Überschrift",
+      defaultItem: {
+        header: {
+          mainHeader: "Überschrift",
+          subHeader: "Unter-Überschrift",
+          divider: true
+        },
+      }
+    }
+  },
+  twoColumnSection: {
+    Component: TwoColumnSection,
+    template: {
+      label: "Abschnitt mit zwei Spalten",
+      defaultItem: {
+        header: {
+          mainHeader: "Überschrift",
+          subHeader: "Unter-Überschrift",
+          divider: true
+        },
+        columns: []
+      }
+    }
+  },
+  iconBubbleSection: {
+    Component: IconBubbleSection,
+    template: {
+      label: "Abschnitt mit Icon Blasen",
+      defaultItem: {
+        numberColumns: 2,
+        bubbles: [
+          {
+            text: "Text 1",
+            icon: "/microscope.svg",
+            backgroundColor: "tertiary"
+          },
+          {
+            text: "Text 2",
+            icon: "/microscope.svg",
+            backgroundColor: "tertiary"
+          },
+          {
+            text: "Text 3",
+            icon: "/microscope.svg",
+            backgroundColor: "tertiary"
+          },
+          {
+            text: "Text 4",
+            icon: "/microscope.svg",
+            backgroundColor: "tertiary"
+          }
+        ]
+      }
+    }
+  }
+}
+
 export const getStaticProps: GetStaticProps<CMSPageProps> = async ({params}) => {
   const tinaProps = await getStaticPropsForTina({
-    query: gql`
+    query: `#graphql
       query PagesQuery($relativePath: String!) {
         getPagesDocument(relativePath: $relativePath) {
+          form
+          values
           data {
             breadcrumbs
             logoScrollEffect
@@ -162,11 +199,12 @@ export const getStaticProps: GetStaticProps<CMSPageProps> = async ({params}) => 
         }
       }
     `,
-    variables: {relativePath: `${params?.filename}.md`},
-  })
+    variables: {relativePath: `${params?.filename}.json`},
+  }) as { data: { getPagesDocument: PagesDocument } };
+
   return {
     props: {
-      pageData: (tinaProps.data as any).getPagesDocument.data
+      ...tinaProps.data.getPagesDocument
     },
   }
 }

@@ -1,0 +1,26 @@
+{
+  "breadcrumbs": [
+    "Home"
+  ],
+  "logoScrollEffect": true,
+  "coverImages": [
+    "/front-page-1.png"
+  ],
+  "motto": [
+    {
+      "mottoText": "Wissen.",
+      "color": "primary",
+      "size": "medium"
+    },
+    {
+      "mottoText": "Schafft.",
+      "color": "tertiary",
+      "size": "small"
+    },
+    {
+      "mottoText": "Spass!",
+      "color": "secondary",
+      "size": "big"
+    }
+  ]
+}

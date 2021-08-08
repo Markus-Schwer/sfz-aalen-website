@@ -1,71 +1,89 @@
 import { FunctionComponent } from "react";
-import mainContentStyles from "../main-content.module.scss";
+import ReactMarkdown from 'react-markdown';
 import FullWidthSection from "../full-width-section";
 import Image from "next/image";
-import { TwoColumnSectionType } from "../../pages/[filename]";
+import { Block, BlockComponentProps, BlocksControls, InlineBlocks, InlineGroup } from "react-tinacms-inline";
+import InlineWysiwyg from "../inline-wysiwyg";
+import InlineHeader from "../inline-header";
 
-type TwoColumnSectionProps = {
-  pageSection: TwoColumnSectionType
-}
+const ParagraphColumn: FunctionComponent<BlockComponentProps> = ({data, index}) => (
+  <div className="col-6" style={{lineHeight: "1.5625"}}>
+    <BlocksControls index={index}>
+      <InlineWysiwyg name="paragraph" format="markdown">
+        <ReactMarkdown>{data.paragraph}</ReactMarkdown>
+      </InlineWysiwyg>
+    </BlocksControls>
+  </div>
+);
 
-const TwoColumnSection: FunctionComponent<TwoColumnSectionProps> = ({pageSection}) => {
-  let columns = [];
-  for (const index in pageSection.columns) {
-    const column = pageSection.columns[index];
-    switch (column.__typename) {
-      case "PagesPageSectionsTwoColumnSectionColumnsPicture":
-        columns.push((
-          <div className="col-6" style={{position: "relative"}} key={index}>
-            <Image src={column.picture}
-                   alt={column.altText}
-                   layout="responsive"
-                   objectFit="fill"
-                   width={column.width}
-                   height={column.height}/>
-          </div>
-        ));
-        break;
-      case "PagesPageSectionsTwoColumnSectionColumnsParagraph":
-        columns.push((
-          <p className="col-6" style={{margin: 0, lineHeight: "1.5625"}} key={index}>
-            {column.paragraph}
-          </p>
-        ));
-        break;
-    }
-  }
+const PictureColumn: FunctionComponent<BlockComponentProps> = ({data, index}) => (
+  <div className="col-6" style={{position: "relative"}}>
+    <BlocksControls index={index}>
+      <Image src={data.picture}
+             alt={data.altText}
+             layout="responsive"
+             objectFit="fill"
+             width={data.width}
+             height={data.height}/>
+    </BlocksControls>
+  </div>
+);
 
-  const sectionChildren = (
+const TwoColumnSection: FunctionComponent<BlockComponentProps> = ({data, index}) => {
+  const sectionContent = (
     <>
-      {pageSection.twoColumnHeader !== undefined ? (
-        <>
-          <h1>{pageSection.twoColumnHeader.mainHeader}</h1>
-          <h2>{pageSection.twoColumnHeader.subHeader}</h2>
-          {pageSection.twoColumnHeader.divider ? <hr
-            className={pageSection.backgroundColor ? mainContentStyles.inverted : null}/> : null}
-        </>
+      {data.header !== undefined ? (
+        <InlineHeader data={data}/>
       ) : null}
-      {pageSection.columns.length == 2 ? (
-        <div className="row">
-          {columns}
-        </div>
-      ) : null}
+      <InlineBlocks className="row" name="columns" blocks={ColumnsBlocks} direction="horizontal"/>
     </>
   );
 
-  if (pageSection.backgroundColor != undefined) {
+  if (data.backgroundColor != undefined) {
     return (
-      <FullWidthSection style={{backgroundColor: pageSection.backgroundColor}}>
-        {sectionChildren}
-      </FullWidthSection>
+      <BlocksControls index={index}>
+        <InlineGroup name="" fields={TwoColumnFields}>
+          <FullWidthSection style={{backgroundColor: data.backgroundColor}}>
+            {sectionContent}
+          </FullWidthSection>
+        </InlineGroup>
+      </BlocksControls>
     );
   } else {
     return (
-      <section>
-        {sectionChildren}
-      </section>
+      <BlocksControls index={index}>
+        <InlineGroup name="" fields={TwoColumnFields}>
+          <section>
+            {sectionContent}
+          </section>
+        </InlineGroup>
+      </BlocksControls>
     );
   }
 }
+
+const TwoColumnFields = [
+  {
+    name: "backgroundColor",
+    label: "Hintergrund Farbe",
+    component: "color",
+    colorFormat: "hex"
+  }
+];
+
+const ColumnsBlocks: { [key: string]: Block } = {
+  picture: {
+    Component: PictureColumn,
+    template: {
+      label: "Bild"
+    }
+  },
+  paragraph: {
+    Component: ParagraphColumn,
+    template: {
+      label: "Paragraph"
+    }
+  }
+};
 
 export default TwoColumnSection;

@@ -6,7 +6,7 @@ const GoToEditPage: FunctionComponent<any> = () => {
   const cms = useCMS();
   const router = useRouter();
   useEffect(() => {
-    cms.enable();
+    cms.disable();
     router.back();
   }, []);
   return <div>Entering edit mode..</div>;

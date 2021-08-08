@@ -7,6 +7,7 @@ import styles from "./header.module.scss";
 import Logo from "../../public/logo.svg";
 import LogoText from "../../public/logo-text.svg";
 import DropdownCaret from "../../public/dropdown-caret.svg";
+import { useCMS } from "tinacms";
 
 const lerp = (x: number, y: number, a: number): number => x * (1 - a) + y * a;
 const clamp = (a: number, min = 0, max = 1): number =>
@@ -62,6 +63,7 @@ const ScrollingLogo: FunctionComponent<any> = ({}) => {
 };
 
 const Header: FunctionComponent<HeaderProps> = ({logoScrollEffect = false}) => {
+  const cms = useCMS();
   const [showDynamicLogo, setShowDynamicLogo] = useState(false);
 
   // Wait until after client-side hydration to show
@@ -127,6 +129,9 @@ const Header: FunctionComponent<HeaderProps> = ({logoScrollEffect = false}) => {
             </div>
           </div>
           <Link href="/#"><a>Kontakt</a></Link>
+          <button onClick={() => cms.toggle()}>
+            {cms.enabled ? 'Exit Edit Mode' : 'Edit This Site'}
+          </button>
         </nav>
       </div>
     </div>

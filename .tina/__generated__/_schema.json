@@ -115,7 +115,7 @@
               ]
             },
             {
-              "label": "Text Abschnitt",
+              "label": "Überschrift",
               "name": "headerOnlySection",
               "fields": [
                 {
@@ -140,9 +140,6 @@
                       "label": "Unter-Überschrift",
                       "name": "subHeader",
                       "type": "string",
-                      "ui": {
-                        "component": "textarea"
-                      },
                       "namespace": [
                         "pages",
                         "pageSections",
@@ -186,6 +183,7 @@
                   "label": "Überschrift",
                   "name": "header",
                   "type": "object",
+                  "required": true,
                   "fields": [
                     {
                       "label": "Haupt-Überschrift",
@@ -203,9 +201,6 @@
                       "label": "Unter-Überschrift",
                       "name": "subHeader",
                       "type": "string",
-                      "ui": {
-                        "component": "textarea"
-                      },
                       "namespace": [
                         "pages",
                         "pageSections",
@@ -334,7 +329,7 @@
                           "type": "string",
                           "required": true,
                           "ui": {
-                            "component": "textarea"
+                            "component": "markdown"
                           },
                           "namespace": [
                             "pages",

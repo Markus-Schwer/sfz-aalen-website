@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 import IconBubbleBackground from "../../public/icon-bubble-background.svg";
 
-import styles from "./icon-bubble.module.scss"
+import styles from "./icon-bubble.module.scss";
 
 type IconBubbleProps = {
   icon: string;

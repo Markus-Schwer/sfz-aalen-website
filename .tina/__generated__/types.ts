@@ -188,7 +188,7 @@ export type PagesPageSectionsTwoColumnSectionColumns = PagesPageSectionsTwoColum
 
 export type PagesPageSectionsTwoColumnSection = {
   __typename?: 'PagesPageSectionsTwoColumnSection';
-  header?: Maybe<PagesPageSectionsTwoColumnSectionHeader>;
+  header: PagesPageSectionsTwoColumnSectionHeader;
   backgroundColor?: Maybe<Scalars['String']>;
   columns: Array<PagesPageSectionsTwoColumnSectionColumns>;
 };

@@ -33,6 +33,7 @@
 }
 
 .currentPageName {
+  display: inline;
   float: right;
   font-style: italic;
   margin-right: 46px;
@@ -52,7 +53,6 @@
 
   .mainTitleText {
     position: relative;
-    font-family: "Kardia-Fat";
     padding: 24px 42px;
     width: max-content;
     text-transform: uppercase;
@@ -62,7 +62,7 @@
     .mainTitleSecondary,
     .mainTitleTertiary {
       display: block;
-      font-family: inherit;
+      font-family: "Kardia-Fat";
     }
 
     .mainTitlePrimary {
