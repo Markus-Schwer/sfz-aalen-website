@@ -31,8 +31,10 @@
     "gatsby-plugin-sharp": "^3.10.2",
     "gatsby-plugin-sitemap": "^4.5.0",
     "gatsby-plugin-styled-components": "^4.10.0",
+    "gatsby-plugin-ts-config": "^1.1.6",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^3.10.0",
+    "gatsby-transformer-json": "^3.11.0",
     "gatsby-transformer-remark": "^4.6.0",
     "gatsby-transformer-sharp": "^3.10.0",
     "netlify-cms-app": "^2.15.33",
@@ -41,7 +43,8 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "sass": "^1.35.2",
-    "styled-components": "^5.3.0"
+    "styled-components": "^5.3.0",
+    "typescript": "^4.3.5"
   },
   "devDependencies": {
     "@types/styled-components": "^5.1.11"

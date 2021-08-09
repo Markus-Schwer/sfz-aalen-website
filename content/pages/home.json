@@ -1,4 +1,9 @@
 {
+  "title": "Home",
+  "path": "home",
+  "breadcrumbs": [
+    "Home"
+  ],
   "motto": [
     {
       "text": "Wissen.",
@@ -15,9 +20,5 @@
       "size": "big",
       "color": "secondary"
     }
-  ],
-  "breadcrumbs": [
-    "Home"
-  ],
-  "title": "Home"
+  ]
 }

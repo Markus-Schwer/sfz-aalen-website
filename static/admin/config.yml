@@ -2,6 +2,7 @@ backend:
   name: git-gateway
   branch: main
 media_folder: "static/images/uploads"
+public_folder: "images/uploads"
 collections:
   - label: "Seite"
     name: "page"
@@ -10,6 +11,7 @@ collections:
     slug: "{{slug}}"
     extension: "json"
     fields:
+      - { name: "path", label: "URL", widged: "string" }
       - { label: "Titel", name: "title", widged: "string" }
       - label: "Motto"
         name: "motto"
