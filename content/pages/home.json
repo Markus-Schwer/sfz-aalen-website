@@ -20,5 +20,8 @@
       "size": "big",
       "color": "secondary"
     }
+  ],
+  "thumbnail": [
+    "images/uploads/front-page-1.jpg"
   ]
 }
