@@ -1,50 +1,56 @@
 import { Link } from "gatsby";
 import React, { FunctionComponent } from "react";
 
-import "./footer.scss";
+import * as styles from "./footer.module.scss";
 
 import ZeissLogo from "../images/zeiss-logo.svg";
 import HSAalenLogo from "../images/hs-aalen-logo.svg";
 
 const Footer: FunctionComponent<any> = () => {
   return (
-    <footer>
-      <div className="footer-main">
-        <div className="footer-main-container">
-          <div className="footer-column col-3">
+    <footer className={styles.footer}>
+      <div className={styles.footerMain}>
+        <div className={styles.footerMainContainer}>
+          <div className={styles.footerColumn}>
             <h1>Schülerforschungszentrum der Hochschule Aalen</h1>
             Beethovenstraße 1
-            <br />
+            <br/>
             73430 Aalen
-            <br />
+            <br/>
             Baden-Württemberg
-            <br />
+            <br/>
             Telefon +49 7361 576-1802
-            <br />
+            <br/>
             E-Mail info@sfz-aalen.de
-            <br />
+            <br/>
           </div>
-          <div className="footer-column col-3">
+          <div className={styles.footerColumn}>
             <h1>Öffnungszeiten</h1>
             Während der Schulzeit
-            <br />
+            <br/>
             Samstag 13.00 –17.00 Uhr
-            <br />
+            <br/>
           </div>
-          <div className="footer-column col-3">
+          <div className={styles.footerColumn}>
             <h1>
-              <Link to="#">FAQ</Link>
+              <Link to="#">
+                FAQ
+              </Link>
             </h1>
             <h1>
-              <Link to="#">Unterstützen</Link>
+              <Link to="#">
+                Unterstützen
+              </Link>
             </h1>
             <h1>
-              <Link to="#">Karriere</Link>
+              <Link to="#">
+                Karriere
+              </Link>
             </h1>
           </div>
-          <div className="footer-column col-3">
+          <div className={styles.footerColumn}>
             <h1>Partner</h1>
-            <div className="logo-container">
+            <div className={styles.logoContainer}>
               <a href="https://www.zeiss.de">
                 <ZeissLogo width={44} />
               </a>
@@ -55,11 +61,17 @@ const Footer: FunctionComponent<any> = () => {
           </div>
         </div>
       </div>
-      <div className="footer-bottom">
-        <div className="footer-bottom-container">
-          <Link to="#">Impressum</Link>
-          <Link to="#">Datenschutz</Link>
-          <Link to="#">Haftungsausschluss</Link>
+      <div className={styles.footerBottom}>
+        <div className={styles.footerBottomContainer}>
+          <Link to="#">
+              Impressum
+          </Link>
+          <Link to="#">
+              Datenschutz
+          </Link>
+          <Link to="#">
+              Haftungsausschluss
+          </Link>
         </div>
       </div>
     </footer>

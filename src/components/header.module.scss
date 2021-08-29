@@ -7,7 +7,7 @@
   background-color: var(--background-color);
   z-index: 100;
 
-  .header-content {
+  .headerContent {
     max-width: var(--max-width);
     margin: 0 auto;
     height: 100%;
@@ -46,7 +46,7 @@
 
 
     .dropdown {
-      .dropdown-icon {
+      .dropdownIcon {
         position: relative;
         height: 1em;
         top: .125em;
@@ -54,12 +54,12 @@
         stroke: var(--text-color);
       }
 
-      .dropdown-content {
+      .dropdownContent {
         display: none;
         position: absolute;
       }
 
-      &:hover .dropdown-content {
+      &:hover .dropdownContent {
         display: block;
         background-color: var(--background-color);
         margin-top: 32px;
@@ -76,7 +76,7 @@
 
       &:hover,
       &:active,
-      &:hover .dropdown-icon {
+      &:hover .dropdownIcon {
         color: var(--tertiary);
         stroke: var(--tertiary);
       }

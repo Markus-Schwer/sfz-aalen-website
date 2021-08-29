@@ -1,33 +1,56 @@
-import React, { FunctionComponent, ReactNode } from "react";
 import { Link } from "gatsby";
+import React, { FunctionComponent } from "react";
 
-import IconBubbleBackground from "../images/icon-bubble-background.svg";
+import IconBubbleBackground from "../../public/icon-bubble-background.svg";
 
-import "./icon-bubble.scss"
+import * as styles from "./icon-bubble.module.scss";
 
 type IconBubbleProps = {
-  icon: ReactNode;
+  icon: string;
   text: string;
   color?: "primary" | "secondary" | "tertiary";
-  to?: string
-}
+  href?: string;
+  columnWidth?: number;
+};
 
-const IconBubble: FunctionComponent<IconBubbleProps> = ({ icon, text, color = "primary", to }) => {
+const IconBubble: FunctionComponent<IconBubbleProps> = ({
+  icon,
+  text,
+  color = "primary",
+  href,
+  columnWidth = 50,
+}) => {
+  const colorNameMap = {
+    primary: styles.bubbleColorPrimary,
+    secondary: styles.bubbleColorSecondary,
+    tertiary: styles.bubbleColorTertiary,
+  };
+
   const bubbleContent = (
     <>
-      <div className="bubble-icon-container">
-        {icon}
-      </div>
-      <IconBubbleBackground className={"bubble-color-" + color} />
-      <span className="bubble-text">{text}</span>
+      <div className={styles.bubbleIconContainer}>{icon}</div>
+      <IconBubbleBackground className={colorNameMap[color]} />
+      <span className={styles.bubbleText}>{text}</span>
     </>
   );
 
-  if (to !== undefined) {
-    return <Link className="icon-bubble col-6" to={to}>{bubbleContent}</Link>;
+  if (href !== undefined) {
+    return (
+      <Link
+        className={styles.iconBubble}
+        style={{ width: `${columnWidth}%` }}
+        to={href}
+      >
+        {bubbleContent}
+      </Link>
+    );
   }
 
-  return <div className="icon-bubble col-6">{bubbleContent}</div>;
+  return (
+    <div className={styles.iconBubble} style={{ width: `${columnWidth}%` }}>
+      {bubbleContent}
+    </div>
+  );
 };
 
 export default IconBubble;

@@ -1,0 +1,17 @@
+.fullWidthSection {
+  width: 100vw;
+  position: relative;
+  margin-left: -50vw;
+  left: 50%;
+
+  .innerContainer {
+    max-width: var(--max-width);
+    margin: 0 auto;
+
+    .fullWidthSectionContent {
+      margin: 100px 46px;
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+  }
+}

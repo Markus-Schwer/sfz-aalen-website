@@ -1,9 +1,10 @@
-.icon-bubble {
+.iconBubble {
   padding: 25px 20px !important;
   position: relative;
   box-sizing: border-box;
+  width: 50%;
 
-  .bubble-text {
+  .bubbleText {
     position: absolute;
     bottom: 36px;
     left: 44px;
@@ -13,7 +14,7 @@
     color: var(--background-color);
   }
 
-  .bubble-icon-container {
+  .bubbleIconContainer {
     position: absolute;
     top: 25px;
     right: 20px;
@@ -31,28 +32,28 @@
   }
 }
 
-.bubble-color {
-  &-primary {
-    .main-bubble {
+.bubbleColor {
+  &Primary {
+    [class*="main-bubble"] {
       fill: var(--primary-shade-2);
     }
-    .text-bubble {
+    [class*="text-bubble"] {
       fill: var(--primary);
     }
   }
-  &-secondary {
-    .main-bubble {
+  &Secondary {
+    [class*="main-bubble"] {
       fill: var(--secondary-shade-3);
     }
-    .text-bubble {
+    [class*="text-bubble"] {
       fill: var(--secondary);
     }
   }
-  &-tertiary {
-    .main-bubble {
+  &Tertiary {
+    [class*="main-bubble"] {
       fill: var(--tertiary-shade-2);
     }
-    .text-bubble {
+    [class*="text-bubble"] {
       fill: var(--tertiary);
     }
   }

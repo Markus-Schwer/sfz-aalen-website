@@ -1,4 +1,4 @@
-footer {
+.footer {
   margin-top: 160px;
 
   a {
@@ -11,11 +11,11 @@ footer {
     }
   }
 
-  .footer-main {
+  .footerMain {
     height: 244px;
     background-color: var(--tertiary);
 
-    &-container {
+    &Container {
       margin: 0 auto;
       padding: 0 46px;
       max-width: var(--max-width);
@@ -23,11 +23,12 @@ footer {
     }
   }
 
-  .footer-column {
+  .footerColumn {
     padding: 35px 20px;
     font-size: 1em;
     line-height: 1.5625;
     color: var(--background-color);
+    width: 33.33%;
 
     &:last-child {
       padding-right: 0;
@@ -45,7 +46,7 @@ footer {
       color: var(--background-color);
     }
 
-    .logo-container {
+    .logoContainer {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -53,11 +54,11 @@ footer {
     }
   }
 
-  .footer-bottom {
+  .footerBottom {
     height: 64px;
     background-color: var(--primary);
 
-    &-container {
+    &Container {
       height: 100%;
       margin: 0 auto;
       padding: 0 46px;
