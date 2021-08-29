@@ -82,10 +82,10 @@ collections:
                 widget: "list"
                 types:
                   - label: "Bild"
-                    name: "picture"
+                    name: "image"
                     widget: "object"
                     fields:
-                      - { label: "Bild", name: "picture", widget: "image" }
+                      - { label: "Bild", name: "imageUrl", widget: "image" }
                       - { label: "Alternativ Text", name: "altText", widget: "text" }
                   - label: "Paragraph"
                     name: "paragraph"

@@ -23,17 +23,15 @@ const mainTitleSizeMap: any = {
 
 type LayoutProps = {
   pageData: PageData;
-  location: WindowLocation<WindowLocation["state"]>;
 };
 
 const Layout: FunctionComponent<LayoutProps> = ({
   pageData,
-  location,
   children,
 }) => {
   return (
     <div>
-      <Header logoScrollEffect={location.href === "/home"} />
+      <Header logoScrollEffect={pageData.path === "home"} />
       {pageData.thumbnails ? (
         <div className={styles.mainImageContainer}>
           <GatsbyImage image={getImage(pageData.thumbnails[0])!!} alt="" />

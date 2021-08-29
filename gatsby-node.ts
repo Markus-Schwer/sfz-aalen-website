@@ -14,9 +14,11 @@ export interface HeaderOnlySection {
   divider: boolean;
 }
 
-export interface PictureColumn {
-  type: "picture";
-  picture: string;
+export interface ImageColumn {
+  type: "image";
+  image?: ImageDataLike;
+  imageUrl?: string;
+  previewImage?: string;
   altText: string;
 }
 
@@ -33,7 +35,7 @@ export interface TwoColumnSection {
     mainHeader: string;
     subHeader: string;
   };
-  columns: PictureColumn[] | ParagraphColumn[];
+  columns: ImageColumn[] | ParagraphColumn[];
 }
 
 export interface PageData {
@@ -128,6 +130,22 @@ export const createResolvers: GatsbyNode["createResolvers"] = ({
             },
             type: "File",
             firstOnly: false,
+          });
+        },
+      },
+    },
+    PagesJsonPageSectionsColumns: {
+      image: {
+        type: "File",
+        resolve(source: any, args: any, context: any, info: any) {
+          return context.nodeModel.runQuery({
+            query: {
+              filter: {
+                relativePath: { eq: source.imageUrl },
+              },
+            },
+            type: "File",
+            firstOnly: true,
           });
         },
       },

@@ -4,14 +4,29 @@ import { graphql, PageProps } from "gatsby";
 import Layout from "../components/layout";
 import { PageData } from "../../gatsby-node";
 
+import BigHeaderSection from "../components/sections/big-header-section";
+import HeaderOnlySection from "../components/sections/header-only-section";
+import TwoColumnSection from "../components/sections/two-column-section";
+
 type PageTemplateProps = {
   pagesJson: PageData
 }
 
-const PageTemplate: FunctionComponent<PageProps<PageTemplateProps>> = ({ location, data }) => {
+const PageTemplate: FunctionComponent<PageProps<PageTemplateProps>> = ({ data }) => {
   return (
-    <Layout pageData={data.pagesJson} location={location}>
-      {/* <InlineBlocks name="pageSections" blocks={PageSectionBlocks}/> */}
+    <Layout pageData={data.pagesJson}>
+      {data.pagesJson.pageSections.map((section, index) => {
+        switch (section.type) {
+          case "bigHeaderSection":
+            return <BigHeaderSection data={section} key={index} />;
+          case "headerOnlySection":
+            return <HeaderOnlySection data={section} key={index} />;
+          case "twoColumnSection":
+            return <TwoColumnSection data={section} key={index} />;
+          default:
+            break;
+        }
+      })}
     </Layout>
   );
 };
@@ -47,7 +62,11 @@ export const query = graphql`
           subHeader
         }
         columns {
-          picture
+          image {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+            }
+          }
           type
           altText
           text

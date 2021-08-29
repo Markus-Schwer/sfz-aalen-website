@@ -12,7 +12,7 @@
     },
     {
       "text": "Schafft.",
-      "size": "medium",
+      "size": "small",
       "color": "tertiary"
     },
     {
@@ -27,33 +27,33 @@
   "pageSections": [
     {
       "type": "bigHeaderSection",
-      "text": "Große Überschrift"
-    },
-    {
-      "type": "headerOnlySection",
-      "mainHeader": "Haupt-Überschrift",
-      "subHeader": "Unter-Überschrift",
-      "divider": true
+      "text": "Das Schülerforschungszentrum der Hochschule Aalen"
     },
     {
       "type": "twoColumnSection",
       "header": {
-        "mainHeader": "Haupt-Überschrift",
-        "subHeader": "Unter-Überschrift",
+        "mainHeader": "Die Idee",
+        "subHeader": "Unser Schülerforschungszentrum der Hochschule Aalen, gefördert durch die Carl ZEISS AG, bietet MINT-interessierten Jugendlichen einen professionellen Rahmen und einen Raum für eigene, kreative Forschung.",
         "divider": true
       },
-      "backgroundColor": "#25a1d5",
+      "backgroundColor": "#a4bde3",
       "columns": [
         {
-          "type": "picture",
-          "picture": "images/uploads/idea-offene-werkstatt.jpg",
+          "type": "image",
+          "imageUrl": "images/uploads/idea-offene-werkstatt.jpg",
           "altText": "offene Werkstatt"
         },
         {
           "type": "paragraph",
-          "text": "something... something..."
+          "text": "Bei uns geht die Beschäftigung mit MINT weit über den Schulunterricht hinaus und die Jugendlichen gehen selbstständig und eigenverantwortlich einer eigenen Forschungs-fragestellung auf den Grund. Sie entwickeln Problemstellungen und Hypothesen, planen Experimente und werten sie aus, erarbeiten Modelle, finden Erklärungen und hinterfragen diese kritisch.\n\nDie Jugendlichen arbeiten über längere Zeit in Teams zusammen und werden von kompetenten Mentoren unterstützt.\n\nGerade für Jüngere oder Neueinsteiger gibt es die Möglichkeit, bei bestehenden Teams mitzuarbeiten, die sich bereits mit einem Thema auseinandersetzen; dadurch kommen sie leichter ins selbständige Forschen."
         }
       ]
+    },
+    {
+      "type": "headerOnlySection",
+      "mainHeader": "Unser Team",
+      "subHeader": "Unser Team besteht aus Schülern, Azubis, Lehrern, wissenschaftlichen Mitarbeitern und manchmal auch Studierenden, die ehrenamtlich für das SFZ tätig sind. Wir können euch in den Bereichen Informatik, 3D-Druck, Holz-/Metallbearbeitung, Physik und noch einiges mehr Unterstützung bieten. Wenn eure Fragen über unser Wissen und Können hinausge- hen, können wir Experten vermitteln.",
+      "divider": true
     }
   ]
 }
