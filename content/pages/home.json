@@ -23,5 +23,37 @@
   ],
   "thumbnailUrls": [
     "images/uploads/front-page-1.jpg"
+  ],
+  "pageSections": [
+    {
+      "type": "bigHeaderSection",
+      "text": "Große Überschrift"
+    },
+    {
+      "type": "headerOnlySection",
+      "mainHeader": "Haupt-Überschrift",
+      "subHeader": "Unter-Überschrift",
+      "divider": true
+    },
+    {
+      "type": "twoColumnSection",
+      "header": {
+        "mainHeader": "Haupt-Überschrift",
+        "subHeader": "Unter-Überschrift",
+        "divider": true
+      },
+      "backgroundColor": "#25a1d5",
+      "columns": [
+        {
+          "type": "picture",
+          "picture": "images/uploads/idea-offene-werkstatt.jpg",
+          "altText": "offene Werkstatt"
+        },
+        {
+          "type": "paragraph",
+          "text": "something... something..."
+        }
+      ]
+    }
   ]
 }

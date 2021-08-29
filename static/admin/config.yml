@@ -45,3 +45,50 @@ collections:
       - label: "Breadcrumbs"
         name: "breadcrumbs"
         widget: "list"
+      - label: "Seiten Abschnitte"
+        name: "pageSections"
+        widget: "list"
+        types:
+          - label: "Große Überschrift"
+            name: "bigHeaderSection"
+            widget: "object"
+            summary: "{{fields.text}}"
+            fields:
+              - { label: "Überschrift", name: "text", widget: "text", default: "Große Überschrift" }
+          - label: "Überschrift"
+            name: "headerOnlySection"
+            widget: "object"
+            fields:
+              - { label: "Haupt-Überschrift", name: "mainHeader", widget: "text", default: "Haupt-Überschrift" }
+              - { label: "Unter-Überschrift", name: "subHeader", widget: "text", default: "Unter-Überschrift" }
+              - { label: "Trennstrich", name: "divider", widget: "boolean", default: true }
+          - label: "Abschnitt mit zwei Spalten"
+            name: "twoColumnSection"
+            widget: "object"
+            fields:
+              - label: "Überschrift"
+                name: "header"
+                widget: "object"
+                fields:
+                  - { label: "Haupt-Überschrift", name: "mainHeader", widget: "text", default: "Haupt-Überschrift" }
+                  - { label: "Unter-Überschrift", name: "subHeader", widget: "text", default: "Unter-Überschrift" }
+                  - { label: "Trennstrich", name: "divider", widget: "boolean", default: true }
+              - label: "Hintergrundfarbe"
+                name: "backgroundColor"
+                widget: "color"
+                allowInput: true
+              - label: "Spalten"
+                name: "columns"
+                widget: "list"
+                types:
+                  - label: "Bild"
+                    name: "picture"
+                    widget: "object"
+                    fields:
+                      - { label: "Bild", name: "picture", widget: "image" }
+                      - { label: "Alternativ Text", name: "altText", widget: "text" }
+                  - label: "Paragraph"
+                    name: "paragraph"
+                    widget: "object"
+                    fields:
+                      - { label: "Text", name: "text", widget: "markdown" }

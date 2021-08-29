@@ -34,6 +34,25 @@ export const query = graphql`
         size
         color
       }
+      pageSections {
+        type
+        text
+        subHeader
+        mainHeader
+        divider
+        backgroundColor
+        header {
+          divider
+          mainHeader
+          subHeader
+        }
+        columns {
+          picture
+          type
+          altText
+          text
+        }
+      }
     }
   }
 `;

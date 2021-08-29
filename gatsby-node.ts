@@ -2,6 +2,40 @@ import { GatsbyNode } from "gatsby";
 import { resolve } from "path";
 import { ImageDataLike } from "gatsby-plugin-image";
 
+export interface BigHeaderSection {
+  type: "bigHeaderSection";
+  text: string;
+}
+
+export interface HeaderOnlySection {
+  type: "headerOnlySection";
+  mainHeader: string;
+  subHeader: string;
+  divider: boolean;
+}
+
+export interface PictureColumn {
+  type: "picture";
+  picture: string;
+  altText: string;
+}
+
+export interface ParagraphColumn {
+  type: "paragraph";
+  text: string;
+}
+
+export interface TwoColumnSection {
+  type: "twoColumnSection";
+  backgroundColor: string;
+  header: {
+    divider: boolean;
+    mainHeader: string;
+    subHeader: string;
+  };
+  columns: PictureColumn[] | ParagraphColumn[];
+}
+
 export interface PageData {
   title: string;
   path: string;
@@ -14,6 +48,7 @@ export interface PageData {
     size: string;
     color: string;
   }[];
+  pageSections: BigHeaderSection[] | HeaderOnlySection[] | TwoColumnSection[];
 }
 
 interface QueryResult {
@@ -77,7 +112,9 @@ export const createPages: GatsbyNode["createPages"] = async ({
   });
 };
 
-export const createResolvers: GatsbyNode["createResolvers"] = ({createResolvers}) => {
+export const createResolvers: GatsbyNode["createResolvers"] = ({
+  createResolvers,
+}) => {
   createResolvers({
     PagesJson: {
       thumbnails: {
@@ -90,7 +127,7 @@ export const createResolvers: GatsbyNode["createResolvers"] = ({createResolvers}
               },
             },
             type: "File",
-            firstOnly: false
+            firstOnly: false,
           });
         },
       },
