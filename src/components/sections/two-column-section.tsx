@@ -47,7 +47,7 @@ const TwoColumnSection: FunctionComponent<TwoColumnSectionProps> = ({ data }) =>
             );
           if (column.type === "paragraph")
             return (
-              <ReactMarkdown className={styles.paragraphColumn} key={index}>{column.text}</ReactMarkdown>
+              <ReactMarkdown className={["col-6", styles.paragraphColumn].join(" ")} key={index}>{column.text}</ReactMarkdown>
             );
         })}
       </div>
