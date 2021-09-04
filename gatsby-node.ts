@@ -7,6 +7,11 @@ export interface BigHeaderSection {
   text: string;
 }
 
+export interface BigTextSection {
+  type: "bigTextSection";
+  text: string;
+}
+
 export interface HeaderOnlySection {
   type: "headerOnlySection";
   mainHeader: string;
@@ -63,7 +68,7 @@ export interface PageData {
     size: string;
     color: string;
   }[];
-  pageSections: BigHeaderSection[] | HeaderOnlySection[] | TwoColumnSection[] | IconBubbleSection[];
+  pageSections: BigHeaderSection[] | BigTextSection[] | HeaderOnlySection[] | TwoColumnSection[] | IconBubbleSection[];
 }
 
 interface QueryResult {

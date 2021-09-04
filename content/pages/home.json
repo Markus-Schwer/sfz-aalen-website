@@ -30,6 +30,10 @@
       "text": "Das Schülerforschungszentrum der Hochschule Aalen"
     },
     {
+      "type": "bigTextSection",
+      "text": "Interessierst du dich dafür, wie Dinge funktionieren? Tüftelst, experimentierst und forscht du gerne? Dann bist du bei uns richtig!"
+    },
+    {
       "type": "iconBubbleSection",
       "numberColumns": 2,
       "bubbles": [

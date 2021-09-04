@@ -55,6 +55,12 @@ collections:
             summary: "{{fields.text}}"
             fields:
               - { label: "Überschrift", name: "text", widget: "text", default: "Große Überschrift" }
+          - label: "Großer Text"
+            name: "bigTextSection"
+            widget: "object"
+            summary: "{{fields.text}}"
+            fields:
+              - { label: "Text", name: "text", widget: "text", default: "Großer Text" }
           - label: "Überschrift"
             name: "headerOnlySection"
             widget: "object"

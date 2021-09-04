@@ -8,6 +8,7 @@ import BigHeaderSection from "../components/sections/big-header-section";
 import HeaderOnlySection from "../components/sections/header-only-section";
 import TwoColumnSection from "../components/sections/two-column-section";
 import IconBubbleSection from "../components/sections/icon-bubble-section";
+import BigTextSection from "../components/sections/big-text-section";
 
 type PageTemplateProps = {
   pagesJson: PageData
@@ -20,6 +21,8 @@ const PageTemplate: FunctionComponent<PageProps<PageTemplateProps>> = ({ data })
         switch (section.type) {
           case "bigHeaderSection":
             return <BigHeaderSection data={section} key={index} />;
+            case "bigTextSection":
+              return <BigTextSection data={section} key={index} />;
           case "headerOnlySection":
             return <HeaderOnlySection data={section} key={index} />;
           case "twoColumnSection":
