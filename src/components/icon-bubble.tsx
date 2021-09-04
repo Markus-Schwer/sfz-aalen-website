@@ -6,7 +6,7 @@ import IconBubbleBackground from "../../public/icon-bubble-background.svg";
 import * as styles from "./icon-bubble.module.scss";
 
 type IconBubbleProps = {
-  icon: string;
+  icon?: string;
   text: string;
   color?: "primary" | "secondary" | "tertiary";
   href?: string;
@@ -28,7 +28,9 @@ const IconBubble: FunctionComponent<IconBubbleProps> = ({
 
   const bubbleContent = (
     <>
-      <div className={styles.bubbleIconContainer}>{icon}</div>
+      <div className={styles.bubbleIconContainer}>
+        <img src={icon} alt={text} />
+      </div>
       <IconBubbleBackground className={colorNameMap[color]} />
       <span className={styles.bubbleText}>{text}</span>
     </>

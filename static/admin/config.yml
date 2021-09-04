@@ -92,3 +92,25 @@ collections:
                     widget: "object"
                     fields:
                       - { label: "Text", name: "text", widget: "markdown" }
+          - label: "Icon Blasen Abschnitt"
+            name: "iconBubbleSection"
+            widget: "object"
+            fields:
+              - { label: "Spaltenanzahl", name: "numberColumns", widget: "number", default: 2 }
+              - label: "Blasen"
+                name: "bubbles"
+                widget: "list"
+                fields:
+                  - { label: "Text", name: "text", widget: "text", default: "Text" }
+                  - label: "Icon"
+                    name: "iconUrl"
+                    widget: "image"
+                    config:
+                  - label: "Farbe"
+                    name: "color"
+                    widget: "select"
+                    options:
+                      - { label: "Zeiss-Blau", value: "primary" }
+                      - { label: "Hochschuhl-Blau", value: "secondary" }
+                      - { label: "Cyan", value: "tertiary" }
+                  - { label: "Link", name: "href", widget: "string", required: false }

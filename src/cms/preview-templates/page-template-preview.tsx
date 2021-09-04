@@ -21,6 +21,12 @@ const PageTemplatePreview: FunctionComponent<PreviewTemplateComponentProps> = ({
           column.previewImage = getAsset(column.imageUrl).url;
         }
       }
+    } else if (section.type === "iconBubbleSection" && section.bubbles) {
+      for (const bubble of section.bubbles) {
+        if (bubble.iconUrl) {
+          bubble.previewIcon = getAsset(bubble.iconUrl).url;
+        }
+      }
     }
   }
 

@@ -7,6 +7,7 @@ import { PageData } from "../../gatsby-node";
 import BigHeaderSection from "../components/sections/big-header-section";
 import HeaderOnlySection from "../components/sections/header-only-section";
 import TwoColumnSection from "../components/sections/two-column-section";
+import IconBubbleSection from "../components/sections/icon-bubble-section";
 
 type PageTemplateProps = {
   pagesJson: PageData
@@ -23,6 +24,8 @@ const PageTemplate: FunctionComponent<PageProps<PageTemplateProps>> = ({ data })
             return <HeaderOnlySection data={section} key={index} />;
           case "twoColumnSection":
             return <TwoColumnSection data={section} key={index} />;
+          case "iconBubbleSection":
+            return <IconBubbleSection data={section} key={index} />;
           default:
             break;
         }
@@ -70,6 +73,14 @@ export const query = graphql`
           type
           altText
           text
+        }
+        numberColumns
+        bubbles {
+          text
+          icon {
+            publicURL
+          }
+          color
         }
       }
     }

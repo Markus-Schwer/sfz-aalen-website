@@ -30,6 +30,32 @@
       "text": "Das Schülerforschungszentrum der Hochschule Aalen"
     },
     {
+      "type": "iconBubbleSection",
+      "numberColumns": 2,
+      "bubbles": [
+        {
+          "text": "Mitmachen",
+          "iconUrl": "images/uploads/microscope.svg",
+          "color": "tertiary"
+        },
+        {
+          "text": "Projekte",
+          "iconUrl": "images/uploads/einstein.svg",
+          "color": "primary"
+        },
+        {
+          "text": "Workshops",
+          "color": "secondary",
+          "iconUrl": "images/uploads/planet.svg"
+        },
+        {
+          "text": "Aktuelles",
+          "iconUrl": "images/uploads/light-bulb.svg",
+          "color": "tertiary"
+        }
+      ]
+    },
+    {
       "type": "twoColumnSection",
       "header": {
         "mainHeader": "Die Idee",
