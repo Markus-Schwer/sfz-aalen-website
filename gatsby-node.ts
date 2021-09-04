@@ -87,10 +87,17 @@ export const createPages: GatsbyNode["createPages"] = async ({
   graphql,
   actions,
 }) => {
-  const { createPage } = actions;
+  const { createPage, createRedirect } = actions;
+
+  createRedirect({
+    fromPath: '/',
+    toPath: '/home',
+    isPermanent: true,
+    redirectInBrowser: true,
+ });
 
   // Ensure the path now points to TSX template
-  const blogPostTemplate = resolve(`./src/templates/page-template.tsx`);
+  const pageTemplate = resolve(`./src/templates/page-template.tsx`);
 
   /**
    * Pass the query structure generic for complete type-check coverage
@@ -124,10 +131,10 @@ export const createPages: GatsbyNode["createPages"] = async ({
 
   const pages = result.data.allPagesJson.edges;
 
-  pages.forEach((post: any) => {
+  pages.forEach((page: any) => {
     createPage({
-      path: post.node.path,
-      component: blogPostTemplate,
+      path: page.node.path,
+      component: pageTemplate,
       context: {},
     });
   });
