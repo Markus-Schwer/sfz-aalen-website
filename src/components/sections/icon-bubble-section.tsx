@@ -5,6 +5,8 @@ import IconBubble from "../icon-bubble";
 
 import * as styles from "./icon-bubble-section.module.scss";
 
+import FullWidthSection from "../full-width-section";
+
 type IconBubbleSectionProps = {
   data: IconBubbleSectionData
 }
@@ -12,7 +14,7 @@ type IconBubbleSectionProps = {
 const IconBubbleSection: FunctionComponent<IconBubbleSectionProps> = ({data}) => {
   const numberOfColumns = data.numberColumns || 2;
   const columnWidth = 100 / numberOfColumns;
-  return (
+  const sectionChildren = (
     <div className={styles.iconBubbleContainer} style={{flexBasis: `${columnWidth}%`}}>
       {data.bubbles.map((bubble, index) => (
         <IconBubble
@@ -26,6 +28,16 @@ const IconBubbleSection: FunctionComponent<IconBubbleSectionProps> = ({data}) =>
       ))}
     </div>
   );
+
+  if (!!data.backgroundColor) {
+    return (
+      <FullWidthSection style={{ backgroundColor: data.backgroundColor }}>
+        {sectionChildren}
+      </FullWidthSection>
+    );
+  } else {
+    return <section>{sectionChildren}</section>;
+  }
 }
 
 export default IconBubbleSection;

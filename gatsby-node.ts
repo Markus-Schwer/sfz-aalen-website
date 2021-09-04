@@ -34,7 +34,7 @@ export interface ParagraphColumn {
 
 export interface TwoColumnSection {
   type: "twoColumnSection";
-  backgroundColor: string;
+  backgroundColor?: string;
   header: {
     divider: boolean;
     mainHeader: string;
@@ -46,6 +46,7 @@ export interface TwoColumnSection {
 export type IconBubbleSection = {
   type: "iconBubbleSection";
   numberColumns: number;
+  backgroundColor?: string;
   bubbles: {
     text: string;
     icon?: { publicURL: string };

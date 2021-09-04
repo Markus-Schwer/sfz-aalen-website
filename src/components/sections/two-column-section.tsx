@@ -54,7 +54,7 @@ const TwoColumnSection: FunctionComponent<TwoColumnSectionProps> = ({ data }) =>
     </>
   );
 
-  if (data.backgroundColor != undefined) {
+  if (!!data.backgroundColor) {
     return (
       <FullWidthSection style={{ backgroundColor: data.backgroundColor }}>
         {sectionChildren}

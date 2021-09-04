@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import React, { FunctionComponent } from "react";
 
-import IconBubbleBackground from "../../public/icon-bubble-background.svg";
+import IconBubbleBackground from "../images/icon-bubble-background.svg";
 
 import * as styles from "./icon-bubble.module.scss";
 

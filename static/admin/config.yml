@@ -82,6 +82,7 @@ collections:
               - label: "Hintergrundfarbe"
                 name: "backgroundColor"
                 widget: "color"
+                required: false
                 allowInput: true
               - label: "Spalten"
                 name: "columns"
@@ -103,6 +104,11 @@ collections:
             widget: "object"
             fields:
               - { label: "Spaltenanzahl", name: "numberColumns", widget: "number", default: 2 }
+              - label: "Hintergrundfarbe"
+                name: "backgroundColor"
+                widget: "color"
+                required: false
+                allowInput: true
               - label: "Blasen"
                 name: "bubbles"
                 widget: "list"

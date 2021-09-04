@@ -9,9 +9,9 @@ import { Link } from "gatsby";
 
 import * as styles from "./header.module.scss";
 
-import Logo from "../../public/logo.svg";
-import LogoText from "../../public/logo-text.svg";
-import DropdownCaret from "../../public/dropdown-caret.svg";
+import Logo from "../images/logo.svg";
+import LogoText from "../images/logo-text.svg";
+import DropdownCaret from "../images/dropdown-caret.svg";
 
 const lerp = (x: number, y: number, a: number): number => x * (1 - a) + y * a;
 const clamp = (a: number, min = 0, max = 1): number =>
