@@ -1,0 +1,110 @@
+{
+  "motto": [
+    {
+      "text": "Forsch",
+      "size": "medium",
+      "color": "primary"
+    },
+    {
+      "text": "Dir das mal",
+      "size": "small",
+      "color": "tertiary"
+    },
+    {
+      "text": "Rein!",
+      "size": "big",
+      "color": "secondary"
+    }
+  ],
+  "path": "mitmachen",
+  "title": "Mitmachen",
+  "thumbnailUrls": [
+    "images/uploads/front-page-2.jpg"
+  ],
+  "breadcrumbs": [
+    "Mitmachen"
+  ],
+  "pageSections": [
+    {
+      "type": "headerOnlySection",
+      "mainHeader": "Wofür interessierst du dich?",
+      "subHeader": "Wir bieten dir die Möglichkeit, dich in den unterschiedlichen MINT-Themenbereichen aus-\nzuprobieren und unterstützen dich bei der Umsetzung deiner Experimente.",
+      "divider": false
+    },
+    {
+      "type": "bubbleSection",
+      "numberColumns": 3,
+      "bubbles": [
+        {
+          "text": "Technik",
+          "imageUrl": "images/uploads/pexels-pixabay-414860_technik.jpg",
+          "color": "tertiary"
+        },
+        {
+          "text": "Elektronik",
+          "imageUrl": "images/uploads/pexels-jã©shoots-4316-technik.jpg",
+          "color": "secondary"
+        },
+        {
+          "text": "Physik",
+          "imageUrl": "images/uploads/pexels-pixabay-60582_physik.jpg",
+          "color": "primary"
+        },
+        {
+          "text": "Informatik",
+          "color": "secondary",
+          "imageUrl": "images/uploads/pexels-markus-spiske-2004161_informatik.jpg"
+        },
+        {
+          "text": "Biologie",
+          "color": "tertiary",
+          "imageUrl": "images/uploads/pexels-egor-kamelev-920157_biologie.jpg"
+        },
+        {
+          "text": "Chemie",
+          "color": "secondary",
+          "imageUrl": "images/uploads/pexels-chokniti-khongchum-2280549_chemie.jpg"
+        }
+      ],
+      "backgroundColor": "#d4edfc"
+    },
+    {
+      "type": "headerOnlySection",
+      "mainHeader": "Anmeldung",
+      "subHeader": "Die Teilnahme an allen Angeboten des SFZ ist kostenlos. Damit wir wissen, wie wir dich un-\nterstützen können, musst du dich anmelden. Wir nehmen dann Kontakt mit dir auf.",
+      "divider": true
+    },
+    {
+      "type": "columnSection",
+      "header": {
+        "mainHeader": "Jugend forscht",
+        "subHeader": "Jugend forscht gilt als Deutschlands bekanntester Nachwuchswettbewerb im Bereich Na-\nturwissenschaft und Technik. Jugend forscht wurde 1965 von Henri Nannen initiiert.",
+        "divider": true
+      },
+      "columns": [
+        {
+          "type": "paragraph",
+          "text": "Die Teilnehmer werden in zwei Altersgruppen eingeteilt: Schüler experimentieren (< 15 Jahre) und Jugend forscht (≥ 15 Jahre).\\\nDie Wettbewerbsteilnehmer präsentieren ihre Arbeit in schriftlicher und mündlicher Form einer Jury. Diese setzt sich aus Lehrern sowie Vertretern aus Hochschulen und Industrie zusammen.\\\nArbeiten können in einem der sieben Fachgebiete abgegeben werden:\n\n* **Arbeitswelt**\n* **Biologie**\n* **Chemie**\n* **Geo- und Raumwissenschaften**\n* **Mathematik/Informatik**\n* **Physik und**\n* **Technik**"
+        },
+        {
+          "type": "paragraph",
+          "text": "Anmelden kann man sich in jedem Jahr bis zum 30. November.\\\nDie Anmeldung erfolgt online unter: [www.jugend-forscht.de](www.jugend-forscht.de)\\\nHier sind auch alle wichtigen Informationen zum Wettbewerb zu finden.\n\n\n\n![Jugend forscht plakat 2021](images/uploads/image_200_jufo2021_plakat.jpg \"Jugend forscht plakat 2021\")"
+        },
+        {
+          "type": "divider",
+          "divider": true
+        },
+        {
+          "type": "paragraph",
+          "text": "**Regionalwettbewerb Ostwürttemberg**\n\nVon 1998 bis 2020 war ZEISS Pate bei Deutschlands ältestem und be-\nkanntestem Wettbewerb für Nachwuchsforscher. Das Hightech-Unternehmen hat mit dem Regionalwettbewerb Ostwürttemberg den Kindern und Jugendlichen der Region eine Plattform für die Präsentation\nihrer wissenschaftlichen Fragestellungen und Arbeiten geboten. Seit\n2020 ist ZEISS Hauptförderer des Schülerforschungszentrums an der\nHochschule Aalen und bietet den Kindern und Jugendlichen der Region\neine Plattform für die Präsentation ihrer wissenschaftlichen Fragestel-\nlungen und Arbeiten. Auch das SFZ ist eng verbunden mit der Initiative\nJugend forscht. Im Rahmen der Bündelung des gemeinsamen Engage-\nments ist die Hochschule Aalen daher ab 2021 der Austragungsort des\nRegionalwettbewerbs Ostwürttemberg."
+        },
+        {
+          "type": "paragraph",
+          "text": "Am 26./27. Februar 2021 findet der Regionalwettbewerb komplett di-\ngital statt. Am 26.02. ist Jurytag, am 27.02. wird die Wettbewerbsfeier\nüber Zoom und einen Youtube-Livestream stattfinden. Die virtuelle Fei-\nerstunde können Sie hier ansehen.\n\n[Wettbewerbsfeier Jugend forscht Regionalwettbewerb\nOstwürttemberg](https://google.com)\n\nAuf dieser Seite finden Sie nach dem Wettbewerb die Broschüre und\ndie Liste der Preisträger."
+        }
+      ],
+      "numberColumns": 2,
+      "backgroundColor": ""
+    }
+  ]
+}
