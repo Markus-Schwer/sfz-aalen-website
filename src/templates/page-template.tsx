@@ -9,6 +9,7 @@ import HeaderOnlySection from "../components/sections/header-only-section";
 import TwoColumnSection from "../components/sections/two-column-section";
 import IconBubbleSection from "../components/sections/icon-bubble-section";
 import BigTextSection from "../components/sections/big-text-section";
+import GridSection from "../components/sections/grid-section";
 
 type PageTemplateProps = {
   pagesJson: PageData
@@ -29,6 +30,8 @@ const PageTemplate: FunctionComponent<PageProps<PageTemplateProps>> = ({ data })
             return <TwoColumnSection data={section} key={index} />;
           case "iconBubbleSection":
             return <IconBubbleSection data={section} key={index} />;
+          case "gridSection":
+            return <GridSection data={section} key={index} />;
           default:
             break;
         }
@@ -84,6 +87,15 @@ export const query = graphql`
             publicURL
           }
           color
+        }
+        items {
+          image {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH, aspectRatio: 0.83)
+            }
+          }
+          altText
+          description
         }
       }
     }

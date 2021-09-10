@@ -27,6 +27,12 @@ const PageTemplatePreview: FunctionComponent<PreviewTemplateComponentProps> = ({
           bubble.previewIcon = getAsset(bubble.iconUrl).url;
         }
       }
+    } else if (section.type === "gridSection" && section.items) {
+      for (const item of section.items) {
+        if (item.imageUrl) {
+          item.previewImage = getAsset(item.imageUrl).url;
+        }
+      }
     }
   }
 

@@ -126,3 +126,15 @@ collections:
                       - { label: "Hochschuhl-Blau", value: "secondary" }
                       - { label: "Cyan", value: "tertiary" }
                   - { label: "Link", name: "href", widget: "string", required: false }
+          - label: "Porträts Abschnitt"
+            name: "gridSection"
+            widget: "object"
+            fields:
+              - label: "Elemente"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.altText}}"
+                fields:
+                  - { label: "Bild", name: "imageUrl", widget: "image" }
+                  - { label: "Alternativ Text", name: "altText", widget: "text" }
+                  - { label: "Beschreibung", name: "description", widget: "markdown" }

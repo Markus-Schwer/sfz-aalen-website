@@ -84,6 +84,51 @@
       "mainHeader": "Unser Team",
       "subHeader": "Unser Team besteht aus Schülern, Azubis, Lehrern, wissenschaftlichen Mitarbeitern und manchmal auch Studierenden, die ehrenamtlich für das SFZ tätig sind. Wir können euch in den Bereichen Informatik, 3D-Druck, Holz-/Metallbearbeitung, Physik und noch einiges mehr Unterstützung bieten. Wenn eure Fragen über unser Wissen und Können hinausge- hen, können wir Experten vermitteln.",
       "divider": true
+    },
+    {
+      "type": "gridSection",
+      "items": [
+        {
+          "imageUrl": "images/uploads/portrait-8.jpg",
+          "altText": "Erika Lahnsteiner",
+          "description": "__Erika Lahnsteiner__  \n_Leitung_  \nTelefon +49 7361 576-1802  \nerika.lahnsteiner@hs-aalen.de"
+        },
+        {
+          "imageUrl": "images/uploads/portrait-2.png",
+          "altText": "Max Mustermann",
+          "description": "**Max Mustermann**\\\n*Mitarbeiter*\\\nTelefon +49 7361 576-1802\\\nmax.mustermann@sfz-aalen.de"
+        },
+        {
+          "description": "**Maxi Musterfrau**\\\n*Mitarbeiter*\\\nTelefon +49 7361 576-1802\\\nmaxi.musterfrau@sfz-aalen.de",
+          "altText": "Maxi Musterfrau",
+          "imageUrl": "images/uploads/portrait-1.png"
+        },
+        {
+          "altText": "Max Mustermann",
+          "description": "**Max Mustermann**\\\n*Mitarbeiter*\\\nTelefon +49 7361 576-1802\\\nmax.mustermann@sfz-aalen.de",
+          "imageUrl": "images/uploads/portrait-4.png"
+        },
+        {
+          "description": "**Max Mustermann**\\\n*Mitarbeiter*\\\nTelefon +49 7361 576-1802\\\nmax.mustermann@sfz-aalen.de",
+          "altText": "Max Mustermann",
+          "imageUrl": "images/uploads/portrait-3.png"
+        },
+        {
+          "description": "**Maxi Musterfrau**\\\n*Mitarbeiter*\\\nTelefon +49 7361 576-1802\\\nmaxi.musterfrau@sfz-aalen.de",
+          "altText": "Maxi Musterfrau",
+          "imageUrl": "images/uploads/portrait-5.png"
+        },
+        {
+          "description": "**Max Mustermann**\\\n*Mitarbeiter*\\\nTelefon +49 7361 576-1802\\\nmax.mustermann@sfz-aalen.de",
+          "altText": "Max Mustermann",
+          "imageUrl": "images/uploads/portrait-6.png"
+        },
+        {
+          "description": "**Maxi Musterfrau**\\\n*Mitarbeiter*\\\nTelefon +49 7361 576-1802\\\nmaxi.musterfrau@sfz-aalen.de",
+          "altText": "Maxi Musterfrau",
+          "imageUrl": "images/uploads/portrait-7.png"
+        }
+      ]
     }
   ]
 }

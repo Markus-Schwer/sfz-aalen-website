@@ -57,6 +57,17 @@ export type IconBubbleSection = {
   }[];
 }
 
+export interface GridSection {
+  type: "gridSection";
+  items: {
+    image?: ImageDataLike;
+    imageUrl?: string;
+    previewImage?: string;
+    altText: string;
+    description: string;
+  }[];
+}
+
 export interface PageData {
   title: string;
   path: string;
@@ -69,7 +80,7 @@ export interface PageData {
     size: string;
     color: string;
   }[];
-  pageSections: BigHeaderSection[] | BigTextSection[] | HeaderOnlySection[] | TwoColumnSection[] | IconBubbleSection[];
+  pageSections: BigHeaderSection[] | BigTextSection[] | HeaderOnlySection[] | TwoColumnSection[] | IconBubbleSection[] | GridSection[];
 }
 
 interface QueryResult {
@@ -184,6 +195,22 @@ export const createResolvers: GatsbyNode["createResolvers"] = ({
             query: {
               filter: {
                 relativePath: { eq: source.iconUrl },
+              },
+            },
+            type: "File",
+            firstOnly: true,
+          });
+        },
+      },
+    },
+    PagesJsonPageSectionsItems: {
+      image: {
+        type: "File",
+        resolve(source: any, args: any, context: any, info: any) {
+          return context.nodeModel.runQuery({
+            query: {
+              filter: {
+                relativePath: { eq: source.imageUrl },
               },
             },
             type: "File",
