@@ -34,33 +34,33 @@
       "text": "Interessierst du dich dafür, wie Dinge funktionieren? Tüftelst, experimentierst und forscht du gerne? Dann bist du bei uns richtig!"
     },
     {
-      "type": "iconBubbleSection",
+      "type": "bubbleSection",
       "numberColumns": 2,
       "bubbles": [
         {
           "text": "Mitmachen",
-          "iconUrl": "images/uploads/microscope.svg",
+          "imageUrl": "images/uploads/microscope.svg",
           "color": "tertiary"
         },
         {
           "text": "Projekte",
-          "iconUrl": "images/uploads/einstein.svg",
+          "imageUrl": "images/uploads/einstein.svg",
           "color": "primary"
         },
         {
           "text": "Workshops",
           "color": "secondary",
-          "iconUrl": "images/uploads/planet.svg"
+          "imageUrl": "images/uploads/planet.svg"
         },
         {
           "text": "Aktuelles",
-          "iconUrl": "images/uploads/light-bulb.svg",
+          "imageUrl": "images/uploads/light-bulb.svg",
           "color": "tertiary"
         }
       ]
     },
     {
-      "type": "twoColumnSection",
+      "type": "columnSection",
       "header": {
         "mainHeader": "Die Idee",
         "subHeader": "Unser Schülerforschungszentrum der Hochschule Aalen, gefördert durch die Carl ZEISS AG, bietet MINT-interessierten Jugendlichen einen professionellen Rahmen und einen Raum für eigene, kreative Forschung.",
@@ -77,7 +77,8 @@
           "type": "paragraph",
           "text": "Bei uns geht die Beschäftigung mit MINT weit über den Schulunterricht hinaus und die Jugendlichen gehen selbstständig und eigenverantwortlich einer eigenen Forschungs-fragestellung auf den Grund. Sie entwickeln Problemstellungen und Hypothesen, planen Experimente und werten sie aus, erarbeiten Modelle, finden Erklärungen und hinterfragen diese kritisch.\n\nDie Jugendlichen arbeiten über längere Zeit in Teams zusammen und werden von kompetenten Mentoren unterstützt.\n\nGerade für Jüngere oder Neueinsteiger gibt es die Möglichkeit, bei bestehenden Teams mitzuarbeiten, die sich bereits mit einem Thema auseinandersetzen; dadurch kommen sie leichter ins selbständige Forschen."
         }
-      ]
+      ],
+      "numberColumns": 2
     },
     {
       "type": "headerOnlySection",

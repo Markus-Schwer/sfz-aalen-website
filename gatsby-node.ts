@@ -32,30 +32,36 @@ export interface ParagraphColumn {
   text: string;
 }
 
-export interface TwoColumnSection {
-  type: "twoColumnSection";
+export interface DividerColumn {
+  type: "divider";
+  divider: boolean;
+}
+
+export interface ColumnSection {
+  type: "columnSection";
   backgroundColor?: string;
   header: {
     divider: boolean;
     mainHeader: string;
     subHeader: string;
   };
-  columns: ImageColumn[] | ParagraphColumn[];
+  numberColumns: number;
+  columns: ImageColumn[] | ParagraphColumn[] | DividerColumn[];
 }
 
-export type IconBubbleSection = {
-  type: "iconBubbleSection";
+export type BubbleSection = {
+  type: "bubbleSection";
   numberColumns: number;
   backgroundColor?: string;
   bubbles: {
     text: string;
-    icon?: { publicURL: string };
-    iconUrl?: string;
-    previewIcon?: string;
+    image?: { publicURL: string; extension: string } & ImageDataLike;
+    imageUrl?: string;
+    previewImage?: string;
     color: "primary" | "secondary" | "tertiary";
     href?: string;
   }[];
-}
+};
 
 export interface GridSection {
   type: "gridSection";
@@ -69,6 +75,7 @@ export interface GridSection {
 }
 
 export interface PageData {
+  id?: string;
   title: string;
   path: string;
   thumbnails?: ImageDataLike[];
@@ -80,14 +87,18 @@ export interface PageData {
     size: string;
     color: string;
   }[];
-  pageSections: BigHeaderSection[] | BigTextSection[] | HeaderOnlySection[] | TwoColumnSection[] | IconBubbleSection[] | GridSection[];
+  pageSections:
+    | BigHeaderSection[]
+    | BigTextSection[]
+    | HeaderOnlySection[]
+    | ColumnSection[]
+    | BubbleSection[]
+    | GridSection[];
 }
 
 interface QueryResult {
   allPagesJson: {
-    edges: {
-      node: PageData;
-    }[];
+    nodes: PageData[];
   };
 }
 
@@ -101,11 +112,11 @@ export const createPages: GatsbyNode["createPages"] = async ({
   const { createPage, createRedirect } = actions;
 
   createRedirect({
-    fromPath: '/',
-    toPath: '/home',
+    fromPath: "/",
+    toPath: "/home",
     isPermanent: true,
     redirectInBrowser: true,
- });
+  });
 
   // Ensure the path now points to TSX template
   const pageTemplate = resolve(`./src/templates/page-template.tsx`);
@@ -116,17 +127,10 @@ export const createPages: GatsbyNode["createPages"] = async ({
   const result = await graphql<QueryResult>(`
     {
       allPagesJson {
-        edges {
-          node {
-            title
-            path
-            breadcrumbs
-            motto {
-              text
-              size
-              color
-            }
-          }
+        nodes {
+          id
+          title
+          path
         }
       }
     }
@@ -140,13 +144,15 @@ export const createPages: GatsbyNode["createPages"] = async ({
     throw new Error("ERROR: Could not fetch pages on build");
   }
 
-  const pages = result.data.allPagesJson.edges;
+  const pages = result.data.allPagesJson.nodes;
 
-  pages.forEach((page: any) => {
+  pages.forEach((page) => {
     createPage({
-      path: page.node.path,
+      path: page.path,
       component: pageTemplate,
-      context: {},
+      context: {
+        id: page.id,
+      },
     });
   });
 };
@@ -188,13 +194,13 @@ export const createResolvers: GatsbyNode["createResolvers"] = ({
       },
     },
     PagesJsonPageSectionsBubbles: {
-      icon: {
+      image: {
         type: "File",
         resolve(source: any, args: any, context: any, info: any) {
           return context.nodeModel.runQuery({
             query: {
               filter: {
-                relativePath: { eq: source.iconUrl },
+                relativePath: { eq: source.imageUrl },
               },
             },
             type: "File",

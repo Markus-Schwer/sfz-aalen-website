@@ -1,0 +1,20 @@
+.previewImage {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.paragraphColumn {
+  margin-top: -16px;
+  line-height: 1.5625;
+}
+
+.inverted {
+  border-color: #d3ddf2ff !important;
+}
+
+.divider {
+  grid-column: 1 / -1;
+  width: 100%;
+  margin: 0 !important;
+}

@@ -6,8 +6,8 @@ import { PageData } from "../../gatsby-node";
 
 import BigHeaderSection from "../components/sections/big-header-section";
 import HeaderOnlySection from "../components/sections/header-only-section";
-import TwoColumnSection from "../components/sections/two-column-section";
-import IconBubbleSection from "../components/sections/icon-bubble-section";
+import ColumnSection from "../components/sections/column-section";
+import BubbleSection from "../components/sections/bubble-section";
 import BigTextSection from "../components/sections/big-text-section";
 import GridSection from "../components/sections/grid-section";
 
@@ -18,7 +18,7 @@ type PageTemplateProps = {
 const PageTemplate: FunctionComponent<PageProps<PageTemplateProps>> = ({ data }) => {
   return (
     <Layout pageData={data.pagesJson}>
-      {data.pagesJson.pageSections.map((section, index) => {
+      {data.pagesJson.pageSections?.map((section, index) => {
         switch (section.type) {
           case "bigHeaderSection":
             return <BigHeaderSection data={section} key={index} />;
@@ -26,10 +26,10 @@ const PageTemplate: FunctionComponent<PageProps<PageTemplateProps>> = ({ data })
               return <BigTextSection data={section} key={index} />;
           case "headerOnlySection":
             return <HeaderOnlySection data={section} key={index} />;
-          case "twoColumnSection":
-            return <TwoColumnSection data={section} key={index} />;
-          case "iconBubbleSection":
-            return <IconBubbleSection data={section} key={index} />;
+          case "columnSection":
+            return <ColumnSection data={section} key={index} />;
+          case "bubbleSection":
+            return <BubbleSection data={section} key={index} />;
           case "gridSection":
             return <GridSection data={section} key={index} />;
           default:
@@ -83,8 +83,12 @@ export const query = graphql`
         numberColumns
         bubbles {
           text
-          icon {
+          image {
             publicURL
+            extension
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+            }
           }
           color
         }

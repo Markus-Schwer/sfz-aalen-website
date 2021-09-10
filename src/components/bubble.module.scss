@@ -1,0 +1,84 @@
+.iconBubble {
+  padding: 25px 20px !important;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.bubbleText {
+  font-family: "Kardia-Fat";
+  font-size: 46.667px;
+  color: var(--background-color);
+}
+
+.bubbleIconContainer {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  bottom: 25px;
+  left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 30%;
+    margin: auto;
+    padding-bottom: 8%; // offset additional height of text bubble
+  }
+}
+
+.bubbleImageContainer {
+  position: absolute;
+  top: 26px;
+  right: 19px;
+  bottom: 25px;
+  left: 19px;
+
+  div {
+    width: 100%;
+    height: 100%;
+
+    img {
+      mask: url("!file-loader!../images/icon-bubble-image-mask.svg") no-repeat;
+    }
+
+    &>img {
+      // only needed for preview
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.bubbleBackground {
+  width: 100%;
+  height: 100%;
+}
+
+.bubbleColor {
+  &Primary {
+    [class*="main-bubble"] {
+      fill: var(--primary-shade-2);
+    }
+    [class*="text-bubble"] {
+      fill: var(--primary);
+    }
+  }
+  &Secondary {
+    [class*="main-bubble"] {
+      fill: var(--secondary-shade-3);
+    }
+    [class*="text-bubble"] {
+      fill: var(--secondary);
+    }
+  }
+  &Tertiary {
+    [class*="main-bubble"] {
+      fill: var(--tertiary-shade-2);
+    }
+    [class*="text-bubble"] {
+      fill: var(--tertiary);
+    }
+  }
+}

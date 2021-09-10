@@ -14,23 +14,26 @@ const PageTemplatePreview: FunctionComponent<PreviewTemplateComponentProps> = ({
   data.previewThumbnails =
     data.thumbnailUrls?.map((path) => getAsset(path).url) || [];
 
-  for (const section of data.pageSections) {
-    if (section.type === "twoColumnSection" && section.columns) {
-      for (const column of section.columns) {
-        if (column.type === "image" && column.imageUrl) {
-          column.previewImage = getAsset(column.imageUrl).url;
+  if (data.pageSections) {
+    for (const section of data.pageSections) {
+      if (section.type === "columnSection" && section.columns) {
+        for (const column of section.columns) {
+          if (column.type === "image" && column.imageUrl) {
+            column.previewImage = getAsset(column.imageUrl).url;
+          }
         }
-      }
-    } else if (section.type === "iconBubbleSection" && section.bubbles) {
-      for (const bubble of section.bubbles) {
-        if (bubble.iconUrl) {
-          bubble.previewIcon = getAsset(bubble.iconUrl).url;
+      } else if (section.type === "bubbleSection" && section.bubbles) {
+        for (const bubble of section.bubbles) {
+          if (bubble.imageUrl) {
+            bubble.previewImage = getAsset(bubble.imageUrl).url;
+            bubble.image = { extension: "svg" } as any;
+          }
         }
-      }
-    } else if (section.type === "gridSection" && section.items) {
-      for (const item of section.items) {
-        if (item.imageUrl) {
-          item.previewImage = getAsset(item.imageUrl).url;
+      } else if (section.type === "gridSection" && section.items) {
+        for (const item of section.items) {
+          if (item.imageUrl) {
+            item.previewImage = getAsset(item.imageUrl).url;
+          }
         }
       }
     }
