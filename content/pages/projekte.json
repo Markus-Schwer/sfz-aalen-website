@@ -1,0 +1,77 @@
+{
+  "motto": [
+    {
+      "text": "voll",
+      "size": "medium",
+      "color": "secondary"
+    },
+    {
+      "text": "Virtuell",
+      "size": "big",
+      "color": "tertiary"
+    },
+    {
+      "text": "Am Start",
+      "size": "small",
+      "color": "primary"
+    }
+  ],
+  "path": "projekte",
+  "title": "Projekte",
+  "breadcrumbs": [
+    "Projekte"
+  ],
+  "thumbnailUrls": [
+    "images/uploads/_DSC3625.jpg"
+  ],
+  "pageSections": [
+    {
+      "type": "headerOnlySection",
+      "mainHeader": "Aktuelle Projekte",
+      "subHeader": "Im SFZ könnt ihr an euren eigenen Ideen arbeiten, ihr könnt euch aber auch in bereits bestehende Projekte einbringen.",
+      "divider": true
+    },
+    {
+      "type": "bubbleSection",
+      "numberColumns": 2,
+      "bubbles": [
+        {
+          "text": "Corona\nWarn Chip",
+          "imageUrl": "images/uploads/pexels-pixabay-459411.jpg",
+          "color": "tertiary"
+        },
+        {
+          "text": "»Schleuder-Physik«",
+          "color": "primary",
+          "imageUrl": "images/uploads/adobe-stock_115299443_bearb.jpg"
+        },
+        {
+          "text": "Süssigkeiten-Box auf Rädern",
+          "color": "secondary",
+          "imageUrl": "images/uploads/image_678_suessigkeitenbox_auf_raedern.jpg"
+        },
+        {
+          "text": "Holografie-Mikroskop",
+          "color": "tertiary",
+          "imageUrl": "images/uploads/pexels-cdc-3992930_bearb.jpg"
+        }
+      ]
+    },
+    {
+      "type": "columnSection",
+      "header": {
+        "mainHeader": "Ausstattung",
+        "subHeader": "Hier seht ihr unsere Austattung, die wir euch für eure Projekte zur Verfügung stellen. Damit habt die Möglichkeit zu experimentieren und eure Forschung voranzutreiben.",
+        "divider": true
+      },
+      "numberColumns": 2,
+      "backgroundColor": "#0069b4"
+    },
+    {
+      "type": "bannerSection",
+      "color": "secondary",
+      "mainText": "Workstops geben\nIst dein Ding?",
+      "subText": "Dann bereichere uns mit deiner Expertiese. Hier Informieren!"
+    }
+  ]
+}
