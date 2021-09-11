@@ -10,9 +10,12 @@ import Grid from "../grid";
 import ConditionalWrapper from "../conditional-wrapper";
 
 import * as styles from "./column-section.module.scss";
+import * as layoutStyles from "../layout.module.scss";
 
-const StyledReactMarkdown = styled(ReactMarkdown).attrs((props: { color: string }) => props)`
-  color: ${props => props.color};
+const StyledReactMarkdown = styled(ReactMarkdown).attrs(
+  (props: { color: string }) => props
+)`
+  color: ${(props) => props.color};
 `;
 
 type ColumnSectionProps = {
@@ -32,8 +35,14 @@ const ColumnSection: FunctionComponent<ColumnSectionProps> = ({ data }) => {
       <section>
         {data.header && (
           <>
-            <h1 style={{color: data.textColor}}>{data.header.mainHeader}</h1>
-            <h2 style={{color: data.textColor}}>{data.header.subHeader}</h2>
+            {data.header.sectionId && (
+              <a
+                className={layoutStyles.sectionAnchor}
+                id={data.header.sectionId}
+              ></a>
+            )}
+            <h1 style={{ color: data.textColor }}>{data.header.mainHeader}</h1>
+            <h2 style={{ color: data.textColor }}>{data.header.subHeader}</h2>
             {data.header.divider ? (
               <hr className={data.backgroundColor ? styles.inverted : null} />
             ) : null}
@@ -65,7 +74,11 @@ const ColumnSection: FunctionComponent<ColumnSectionProps> = ({ data }) => {
                 break;
               case "paragraph":
                 return (
-                  <StyledReactMarkdown color={data.textColor} className={styles.paragraphColumn} key={index}>
+                  <StyledReactMarkdown
+                    color={data.textColor}
+                    className={styles.paragraphColumn}
+                    key={index}
+                  >
                     {column.text}
                   </StyledReactMarkdown>
                 );

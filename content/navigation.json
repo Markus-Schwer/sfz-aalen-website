@@ -5,15 +5,15 @@
       "links": [
         {
           "name": "Schülerforschungszentrum",
-          "href": "#"
+          "href": "/home#sfz"
         },
         {
           "name": "Idee",
-          "href": "/idee"
+          "href": "/home#idee"
         },
         {
           "name": "Team",
-          "href": "/team"
+          "href": "/home#team"
         }
       ],
       "href": "/home"

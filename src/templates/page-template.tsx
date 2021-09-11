@@ -63,7 +63,7 @@ export const query = graphql`
       }
       pageSections {
         type
-        text
+        sectionId
         subHeader
         mainHeader
         divider
@@ -73,6 +73,7 @@ export const query = graphql`
           divider
           mainHeader
           subHeader
+          sectionId
         }
         columns {
           image {

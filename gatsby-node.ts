@@ -14,6 +14,7 @@ export interface BigTextSection {
 
 export interface HeaderOnlySection {
   type: "headerOnlySection";
+  sectionId?: string;
   mainHeader: string;
   subHeader: string;
   divider: boolean;
@@ -43,6 +44,7 @@ export interface ColumnSection {
   textColor: string;
   header: {
     divider: boolean;
+    sectionId?: string;
     mainHeader: string;
     subHeader: string;
   };

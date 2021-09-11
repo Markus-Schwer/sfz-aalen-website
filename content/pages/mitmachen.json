@@ -22,14 +22,15 @@
     "images/uploads/front-page-2.jpg"
   ],
   "breadcrumbs": [
-    "Home / Mitmachen"
+    "Mitmachen"
   ],
   "pageSections": [
     {
       "type": "headerOnlySection",
       "mainHeader": "Wofür interessierst du dich?",
       "subHeader": "Wir bieten dir die Möglichkeit, dich in den unterschiedlichen MINT-Themenbereichen aus-\nzuprobieren und unterstützen dich bei der Umsetzung deiner Experimente.",
-      "divider": false
+      "divider": false,
+      "sectionId": "themen"
     },
     {
       "type": "bubbleSection",
@@ -73,7 +74,8 @@
       "type": "headerOnlySection",
       "mainHeader": "Anmeldung",
       "subHeader": "Die Teilnahme an allen Angeboten des SFZ ist kostenlos. Damit wir wissen, wie wir dich un-\nterstützen können, musst du dich anmelden. Wir nehmen dann Kontakt mit dir auf.",
-      "divider": true
+      "divider": true,
+      "sectionId": "anmelden"
     },
     {
       "type": "bannerSection",
@@ -86,7 +88,8 @@
       "header": {
         "mainHeader": "Jugend forscht",
         "subHeader": "Jugend forscht gilt als Deutschlands bekanntester Nachwuchswettbewerb im Bereich Na-\nturwissenschaft und Technik. Jugend forscht wurde 1965 von Henri Nannen initiiert.",
-        "divider": true
+        "divider": true,
+        "sectionId": "jugend-forscht"
       },
       "columns": [
         {

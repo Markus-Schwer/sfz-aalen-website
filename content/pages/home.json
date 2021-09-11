@@ -26,12 +26,11 @@
   ],
   "pageSections": [
     {
-      "type": "bigHeaderSection",
-      "text": "Das Schülerforschungszentrum der Hochschule Aalen"
-    },
-    {
-      "type": "bigTextSection",
-      "text": "Interessierst du dich dafür, wie Dinge funktionieren? Tüftelst, experimentierst und forscht du gerne? Dann bist du bei uns richtig!"
+      "type": "headerOnlySection",
+      "mainHeader": "Das Schülerforschungszentrum der Hochschule Aalen",
+      "subHeader": "Interessierst du dich dafür, wie Dinge funktionieren? Tüftelst, experimentierst und forscht du gerne? Dann bist du bei uns richtig!",
+      "divider": false,
+      "sectionId": "sfz"
     },
     {
       "type": "bubbleSection",
@@ -66,7 +65,8 @@
       "header": {
         "mainHeader": "Die Idee",
         "subHeader": "Unser Schülerforschungszentrum der Hochschule Aalen, gefördert durch die Carl ZEISS AG, bietet MINT-interessierten Jugendlichen einen professionellen Rahmen und einen Raum für eigene, kreative Forschung.",
-        "divider": true
+        "divider": true,
+        "sectionId": "idee"
       },
       "backgroundColor": "#a4bde3",
       "textColor": "#000000",
@@ -87,7 +87,8 @@
       "type": "headerOnlySection",
       "mainHeader": "Unser Team",
       "subHeader": "Unser Team besteht aus Schülern, Azubis, Lehrern, wissenschaftlichen Mitarbeitern und manchmal auch Studierenden, die ehrenamtlich für das SFZ tätig sind. Wir können euch in den Bereichen Informatik, 3D-Druck, Holz-/Metallbearbeitung, Physik und noch einiges mehr Unterstützung bieten. Wenn eure Fragen über unser Wissen und Können hinausge- hen, können wir Experten vermitteln.",
-      "divider": true
+      "divider": true,
+      "sectionId": "team"
     },
     {
       "type": "gridSection",

@@ -29,7 +29,8 @@
       "type": "headerOnlySection",
       "mainHeader": "Aktuelle Projekte",
       "subHeader": "Im SFZ könnt ihr an euren eigenen Ideen arbeiten, ihr könnt euch aber auch in bereits bestehende Projekte einbringen.",
-      "divider": true
+      "divider": true,
+      "sectionId": "aktuelle-projekte"
     },
     {
       "type": "bubbleSection",
@@ -62,7 +63,8 @@
       "header": {
         "mainHeader": "Ausstattung",
         "subHeader": "Hier seht ihr unsere Austattung, die wir euch für eure Projekte zur Verfügung stellen. Damit habt die Möglichkeit zu experimentieren und eure Forschung voranzutreiben.",
-        "divider": true
+        "divider": true,
+        "sectionId": "ausstattung"
       },
       "numberColumns": 2,
       "backgroundColor": "#0069b4",
@@ -71,7 +73,7 @@
     {
       "type": "bannerSection",
       "color": "secondary",
-      "mainText": "Workstops geben\nIst dein Ding?",
+      "mainText": "Workshops geben\nIst dein Ding?",
       "subText": "Dann bereichere uns mit deiner Expertiese. Hier Informieren!"
     }
   ]
