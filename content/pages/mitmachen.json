@@ -38,7 +38,8 @@
         {
           "text": "Technik",
           "imageUrl": "images/uploads/pexels-pixabay-414860_technik.jpg",
-          "color": "tertiary"
+          "color": "tertiary",
+          "href": "/mitmachen/technik"
         },
         {
           "text": "Elektronik",
