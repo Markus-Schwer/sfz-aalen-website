@@ -85,7 +85,9 @@ const Header: FunctionComponent<HeaderProps> = ({
         {logoScrollEffect && showDynamicLogo ? (
           <ScrollingLogo />
         ) : (
-          <StyledLogoText percent={0} />
+          <Link to="/home">
+            <StyledLogoText percent={0} />
+          </Link>
         )}
         <nav>
           <div className={styles.dropdown}>
