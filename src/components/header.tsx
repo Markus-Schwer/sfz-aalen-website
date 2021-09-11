@@ -44,6 +44,16 @@ const StyledLogoText = styled(LogoText)`
 
 type HeaderProps = {
   logoScrollEffect?: boolean;
+  navigationData: {
+    categories: {
+      name: string;
+      href?: string;
+      links?: {
+        name: string;
+        href: string;
+      }[];
+    }[];
+  };
 };
 
 const ScrollingLogo: FunctionComponent<any> = ({}) => {
@@ -70,6 +80,7 @@ const ScrollingLogo: FunctionComponent<any> = ({}) => {
 
 const Header: FunctionComponent<HeaderProps> = ({
   logoScrollEffect = false,
+  navigationData,
 }) => {
   const [showDynamicLogo, setShowDynamicLogo] = useState(false);
 
@@ -90,52 +101,26 @@ const Header: FunctionComponent<HeaderProps> = ({
           </Link>
         )}
         <nav>
-          <div className={styles.dropdown}>
-            <Link to="/#">Home</Link>
-            <DropdownCaret className={styles.dropdownIcon} />
-            <div className={styles.dropdownContent}>
-              <Link to="/#">Schuelerforschungszentrum</Link>
-              <Link to="/#">Idee</Link>
-              <Link to="/#">Team</Link>
-            </div>
-          </div>
-          <div className={styles.dropdown}>
-            <Link to="/#">Mitmachen</Link>
-            <DropdownCaret className={styles.dropdownIcon} />
-            <div className={styles.dropdownContent}>
-              <Link to="/#">Link 1</Link>
-              <Link to="/#">Link 2</Link>
-              <Link to="/#">Link 3</Link>
-            </div>
-          </div>
-          <div className={styles.dropdown}>
-            <Link to="/#">Projekte</Link>
-            <DropdownCaret className={styles.dropdownIcon} />
-            <div className={styles.dropdownContent}>
-              <Link to="/#">Link 1</Link>
-              <Link to="/#">Link 2</Link>
-              <Link to="/#">Link 3</Link>
-            </div>
-          </div>
-          <div className={styles.dropdown}>
-            <Link to="/#">Workshops</Link>
-            <DropdownCaret className={styles.dropdownIcon} />
-            <div className={styles.dropdownContent}>
-              <Link to="/#">Link 1</Link>
-              <Link to="/#">Link 2</Link>
-              <Link to="/#">Link 3</Link>
-            </div>
-          </div>
-          <div className={styles.dropdown}>
-            <Link to="/#">Aktuelles</Link>
-            <DropdownCaret className={styles.dropdownIcon} />
-            <div className={styles.dropdownContent}>
-              <Link to="/#">Link 1</Link>
-              <Link to="/#">Link 2</Link>
-              <Link to="/#">Link 3</Link>
-            </div>
-          </div>
-          <Link to="/#">Kontakt</Link>
+          {navigationData.categories.map((category, i) =>
+            category.links ? (
+              <div className={styles.dropdown} key={i}>
+                {category.href && (
+                  <Link to={category.href}>{category.name}</Link>
+                )}
+                {!category.href && <a>{category.name}</a>}
+                <DropdownCaret className={styles.dropdownIcon} />
+                <div className={styles.dropdownContent}>
+                  {category.links.map((link, j) => (
+                    <Link to={link.href} key={j}>{link.name}</Link>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <Link to={category.href!!} key={i}>
+                {category.name}
+              </Link>
+            )
+          )}
         </nav>
       </div>
     </div>

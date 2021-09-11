@@ -63,6 +63,11 @@
   height: 100%;
 }
 
+a .bubbleBackground {
+  // dirty hack because position changes when wrapped inside anchor tag
+  margin-top: 2px;
+}
+
 .bubbleColor {
   &Primary {
     [class*="main-bubble"] {

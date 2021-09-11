@@ -1,0 +1,86 @@
+{
+  "categories": [
+    {
+      "name": "Home",
+      "links": [
+        {
+          "name": "Schülerforschungszentrum",
+          "href": "#"
+        },
+        {
+          "name": "Idee",
+          "href": "/idee"
+        },
+        {
+          "name": "Team",
+          "href": "/team"
+        }
+      ],
+      "href": "/home"
+    },
+    {
+      "name": "Mitmachen",
+      "href": "/mitmachen",
+      "links": [
+        {
+          "name": "MINT-Themen",
+          "href": "/mitmachen#themen"
+        },
+        {
+          "name": "Anmeldung",
+          "href": "/mitmachen#anmelden"
+        },
+        {
+          "name": "Jugend forscht",
+          "href": "/mitmachen#jugend-forscht"
+        }
+      ]
+    },
+    {
+      "name": "Projekte",
+      "href": "/projekte",
+      "links": [
+        {
+          "name": "Aktuelle Projekte",
+          "href": "/projekte#aktuelle-projekte"
+        },
+        {
+          "name": "Ausstattung",
+          "href": "/projekte#ausstattung"
+        }
+      ]
+    },
+    {
+      "name": "Workshops",
+      "href": "/workshops",
+      "links": [
+        {
+          "name": "Aktuelle Workshops",
+          "href": "/workshops#aktuelle-workshops"
+        },
+        {
+          "name": "Anmeldung",
+          "href": "/workshops#anmeldung"
+        }
+      ]
+    },
+    {
+      "name": "Aktuelles",
+      "href": "/aktuelles",
+      "links": [
+        {
+          "name": "News",
+          "href": "/aktuelles#news"
+        },
+        {
+          "name": "Archiv",
+          "href": "/aktuelles#archiv"
+        }
+      ]
+    },
+    {
+      "name": "Kontakt",
+      "href": "/kontakt"
+    }
+  ]
+}

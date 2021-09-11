@@ -163,3 +163,35 @@ collections:
               - { label: "Haupt-Text", name: "mainText", widget: "text", default: "Erste Zeile\nzweite Zeile" }
               - { label: "Unter-Text", name: "subText", widget: "text", default: "Beschreibung" }
               - { label: "Link", name: "href", widget: "string", required: false }
+  - label: "Einstellungen"
+    name: "settings"
+    extension: "json"
+    files:
+      - label: "Navigation"
+        name: "navigation"
+        file: "content/navigation.json"
+        fields:
+          - label: "Kategorien"
+            name: "categories"
+            widget: "list"
+            fields:
+              - label: "Name"
+                name: "name"
+                widget: "string"
+                default: "Kategorie"
+              - label: "Kategorie Link"
+                name: "href"
+                widget: "string"
+                required: false
+              - label: "Links"
+                name: "links"
+                widget: "list"
+                fields:
+                  - label: "Name"
+                    name: "name"
+                    widget: "string"
+                    default: "Link"
+                  - label: "Link"
+                    name: "href"
+                    widget: "string"
+                    default: "/"

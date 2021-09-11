@@ -46,7 +46,8 @@
         {
           "text": "Projekte",
           "imageUrl": "images/uploads/einstein.svg",
-          "color": "primary"
+          "color": "primary",
+          "href": "/projekte"
         },
         {
           "text": "Workshops",

@@ -9,6 +9,8 @@ import BubbleHeaderBackground from "../images/bubble-header-background.svg";
 
 import * as styles from "./layout.module.scss";
 
+import NavigationData from "../../content/navigation.json";
+
 const MainImageContainer = styled.div.attrs(
   (props: { height: number }) => props
 )`
@@ -37,7 +39,7 @@ type LayoutProps = {
 const Layout: FunctionComponent<LayoutProps> = ({ pageData, children }) => {
   return (
     <div>
-      <Header logoScrollEffect={pageData.path === "home"} />
+      <Header logoScrollEffect={pageData.path === "home"} navigationData={NavigationData} />
       <MainImageContainer height={pageData.path === "home" ? 666 : 450}>
         {pageData.thumbnails ? (
           <GatsbyImage image={getImage(pageData.thumbnails[0])!!} alt="" />
