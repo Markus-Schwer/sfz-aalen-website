@@ -40,7 +40,8 @@
         {
           "text": "Mitmachen",
           "imageUrl": "images/uploads/microscope.svg",
-          "color": "tertiary"
+          "color": "tertiary",
+          "href": "/mitmachen"
         },
         {
           "text": "Projekte",

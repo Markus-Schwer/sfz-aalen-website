@@ -94,6 +94,7 @@ export const query = graphql`
             }
           }
           color
+          href
         }
         items {
           image {

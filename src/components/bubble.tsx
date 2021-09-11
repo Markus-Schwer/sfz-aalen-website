@@ -30,6 +30,8 @@ const Bubble: FunctionComponent<BubbleProps> = ({
   color = "primary",
   href,
 }) => {
+  const imageData = image ? getImage(image) : undefined;
+
   return (
     <ConditionalWrapper
       condition={!!href}
@@ -41,10 +43,10 @@ const Bubble: FunctionComponent<BubbleProps> = ({
             <img src={iconPreview || icon} alt={text} />
           </div>
         )}
-        {(image || previewImage) && (
+        {(imageData || previewImage) && (
           <div className={styles.bubbleImageContainer}>
             <div>
-              {image && <GatsbyImage image={getImage(image)!!} alt={text} />}
+              {imageData && <GatsbyImage image={imageData} alt={text} />}
               {previewImage && <img src={previewImage} alt={text} />}
             </div>
           </div>
@@ -66,11 +68,11 @@ const Bubble: FunctionComponent<BubbleProps> = ({
           <text
             x="28.466"
             y="416.413"
-            font-weight="400"
-            font-size="46.667"
-            font-family="Kardia-Fat"
+            fontWeight="400"
+            fontSize="46.667"
+            fontFamily="Kardia-Fat"
             fill="#fff"
-            stroke-width="1.333"
+            strokeWidth="1.333"
             className={styles.bubbleText}
           >
             {text}
