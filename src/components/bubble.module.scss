@@ -8,6 +8,7 @@
   font-family: "Kardia-Fat";
   font-size: 46.667px;
   color: var(--background-color);
+  white-space: pre-line;
 }
 
 .bubbleIconContainer {
@@ -48,6 +49,12 @@
       height: 100%;
       object-fit: cover;
     }
+  }
+}
+
+.large {
+  img {
+    mask: url("!file-loader!../images/large-icon-bubble-image-mask.svg") no-repeat !important;
   }
 }
 
