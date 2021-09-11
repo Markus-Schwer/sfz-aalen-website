@@ -42,6 +42,16 @@
       line-height: 1.38;
       font-weight: normal;
     }
+
+    a {
+      font-weight: bold;
+      text-decoration: none;
+      color: var(--tertiary);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 
