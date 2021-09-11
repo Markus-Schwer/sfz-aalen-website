@@ -68,6 +68,7 @@
         "divider": true
       },
       "backgroundColor": "#a4bde3",
+      "textColor": "#000000",
       "columns": [
         {
           "type": "image",

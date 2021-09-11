@@ -40,6 +40,7 @@ export interface DividerColumn {
 export interface ColumnSection {
   type: "columnSection";
   backgroundColor?: string;
+  textColor: string;
   header: {
     divider: boolean;
     mainHeader: string;

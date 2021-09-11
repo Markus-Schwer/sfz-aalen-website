@@ -84,6 +84,11 @@ collections:
                 widget: "color"
                 required: false
                 allowInput: true
+              - label: "Textfarbe"
+                name: "textColor"
+                widget: "color"
+                default: "#000000"
+                allowInput: true
               - { label: "Spaltenanzahl", name: "numberColumns", widget: "number", default: 2 }
               - label: "Spalten"
                 name: "columns"

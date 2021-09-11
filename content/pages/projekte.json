@@ -65,7 +65,8 @@
         "divider": true
       },
       "numberColumns": 2,
-      "backgroundColor": "#0069b4"
+      "backgroundColor": "#0069b4",
+      "textColor": "#ffffff"
     },
     {
       "type": "bannerSection",

@@ -68,6 +68,7 @@ export const query = graphql`
         mainHeader
         divider
         backgroundColor
+        textColor
         header {
           divider
           mainHeader

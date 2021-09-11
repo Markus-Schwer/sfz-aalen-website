@@ -33,6 +33,7 @@
         "divider": true
       },
       "numberColumns": 2,
+      "textColor": "#000000",
       "columns": [
         {
           "type": "paragraph",

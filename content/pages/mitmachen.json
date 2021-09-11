@@ -111,7 +111,7 @@
         }
       ],
       "numberColumns": 2,
-      "backgroundColor": ""
+      "textColor": "#000000"
     }
   ]
 }
