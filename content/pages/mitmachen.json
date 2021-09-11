@@ -22,7 +22,7 @@
     "images/uploads/front-page-2.jpg"
   ],
   "breadcrumbs": [
-    "Mitmachen"
+    "Home / Mitmachen"
   ],
   "pageSections": [
     {
@@ -94,7 +94,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Anmelden kann man sich in jedem Jahr bis zum 30. November.\\\nDie Anmeldung erfolgt online unter: [www.jugend-forscht.de](www.jugend-forscht.de)\\\nHier sind auch alle wichtigen Informationen zum Wettbewerb zu finden.\n\n\n\n![Jugend forscht plakat 2021](images/uploads/image_200_jufo2021_plakat.jpg \"Jugend forscht plakat 2021\")"
+          "text": "Anmelden kann man sich in jedem Jahr bis zum 30. November.\\\nDie Anmeldung erfolgt online unter: [www.jugend-forscht.de](https://www.jugend-forscht.de)\\\nHier sind auch alle wichtigen Informationen zum Wettbewerb zu finden.\n\n![Jugend forscht plakat 2021](images/uploads/image_200_jufo2021_plakat.jpg \"Jugend forscht plakat 2021\")"
         },
         {
           "type": "divider",
