@@ -143,3 +143,18 @@ collections:
                   - { label: "Bild", name: "imageUrl", widget: "image" }
                   - { label: "Alternativ Text", name: "altText", widget: "text" }
                   - { label: "Beschreibung", name: "description", widget: "markdown" }
+          - label: "Banner Abschnitt"
+            name: "bannerSection"
+            widget: "object"
+            fields:
+              - label: "Farbe"
+                name: "color"
+                widget: "select"
+                default: "tertiary"
+                options:
+                  - { label: "Zeiss-Blau", value: "primary" }
+                  - { label: "Hochschuhl-Blau", value: "secondary" }
+                  - { label: "Cyan", value: "tertiary" }
+              - { label: "Haupt-Text", name: "mainText", widget: "text", default: "Erste Zeile\nzweite Zeile" }
+              - { label: "Unter-Text", name: "subText", widget: "text", default: "Beschreibung" }
+              - { label: "Link", name: "href", widget: "string", required: false }

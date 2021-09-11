@@ -74,6 +74,14 @@ export interface GridSection {
   }[];
 }
 
+export interface BannerSection {
+  type: "bannerSection";
+  color: "primary" | "secondary" | "tertiary";
+  mainText: string;
+  subText: string;
+  href?: string;
+}
+
 export interface PageData {
   id?: string;
   title: string;
@@ -93,7 +101,8 @@ export interface PageData {
     | HeaderOnlySection[]
     | ColumnSection[]
     | BubbleSection[]
-    | GridSection[];
+    | GridSection[]
+    | BannerSection[];
 }
 
 interface QueryResult {

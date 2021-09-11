@@ -10,6 +10,7 @@ import ColumnSection from "../components/sections/column-section";
 import BubbleSection from "../components/sections/bubble-section";
 import BigTextSection from "../components/sections/big-text-section";
 import GridSection from "../components/sections/grid-section";
+import BannerSection from "../components/sections/banner-section";
 
 type PageTemplateProps = {
   pagesJson: PageData
@@ -32,6 +33,8 @@ const PageTemplate: FunctionComponent<PageProps<PageTemplateProps>> = ({ data })
             return <BubbleSection data={section} key={index} />;
           case "gridSection":
             return <GridSection data={section} key={index} />;
+            case "bannerSection":
+              return <BannerSection data={section} key={index} />;
           default:
             break;
         }
@@ -101,6 +104,9 @@ export const query = graphql`
           altText
           description
         }
+        mainText
+        subText
+        color
       }
     }
   }
