@@ -15,7 +15,12 @@ module.exports = {
     },
     "gatsby-transformer-remark",
     "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
+    {
+      resolve: "gatsby-transformer-sharp",
+      options: {
+        checkSupportedExtensions: false,
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -35,7 +40,7 @@ module.exports = {
     "gatsby-plugin-sass",
     "gatsby-plugin-offline",
     {
-      resolve: 'gatsby-plugin-typescript',
+      resolve: "gatsby-plugin-typescript",
       options: {
         isTSX: true,
         allExtensions: true,
@@ -45,16 +50,16 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /\.svg$/
-        }
-      }
+          include: /\.svg$/,
+        },
+      },
     },
     "gatsby-plugin-styled-components",
     {
       resolve: "gatsby-source-filesystem",
       options: {
         path: "./content/pages/",
-        name: "pages"
+        name: "pages",
       },
     },
     {
@@ -67,12 +72,12 @@ module.exports = {
     },
     "gatsby-transformer-json",
     {
-      resolve: 'gatsby-plugin-netlify-cms',
+      resolve: "gatsby-plugin-netlify-cms",
       options: {
         modulePath: "./src/cms/netlify-cms.ts",
       },
     },
-    "gatsby-plugin-netlify" // make sure to keep it last in the array
+    "gatsby-plugin-netlify", // make sure to keep it last in the array
   ],
-  pathPrefix: "/sfz-aalen-website" // only for GitHub Pages
+  pathPrefix: "/sfz-aalen-website", // only for GitHub Pages
 };
