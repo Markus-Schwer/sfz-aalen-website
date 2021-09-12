@@ -1,5 +1,5 @@
 .footer {
-  margin-top: 160px;
+  margin-top: 10em;
 
   a {
     text-decoration: none;
@@ -12,31 +12,22 @@
   }
 
   .footerMain {
-    height: 244px;
+    // height: 244px;
     background-color: var(--tertiary);
 
     &Container {
       margin: 0 auto;
-      padding: 0 46px;
-      max-width: var(--max-width);
+      padding: 1em 2.875em;
+      max-width: calc(var(--max-width) - 2.875em);
       display: flex;
     }
   }
 
   .footerColumn {
-    padding: 35px 20px;
+    padding: 1.25em;
     font-size: 1em;
     line-height: 1.5625;
     color: var(--background-color);
-    width: 33.33%;
-
-    &:last-child {
-      padding-right: 0;
-    }
-
-    &:first-child {
-      padding-left: 0;
-    }
 
     h1,
     span {
@@ -50,18 +41,18 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin: 16px 0;
+      margin: 1em 0;
     }
   }
 
   .footerBottom {
-    height: 64px;
+    height: 4em;
     background-color: var(--primary);
 
     &Container {
       height: 100%;
       margin: 0 auto;
-      padding: 0 46px;
+      padding: 0 2.875em;
       max-width: var(--max-width);
       display: flex;
       justify-content: flex-end;
@@ -78,4 +69,15 @@
 .new-line::after {
   content: "\a";
   white-space: pre;
+}
+
+.footerRow {
+  width: 100%;
+  margin: 0 !important;
+}
+
+@media screen and (max-width: 64em) {
+  .footerRow {
+    margin: 0 -1.25em !important;
+  }
 }

@@ -3,7 +3,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import ReactMarkdown from 'react-markdown';
 import { GridSection as GridSectionData } from "../../../gatsby-node";
 
-import Grid from "../grid";
+import { Row, Column } from "../grid";
 
 import * as styles from "./grid-section.module.scss";
 
@@ -13,9 +13,9 @@ export interface GridSectionProps {
 
 const GridSection: FunctionComponent<GridSectionProps> = ({ data }) => {
   return (
-    <Grid columns={4} gap={36}>
+    <Row>
       {data.items.map((item, index) => (
-        <div key={index}>
+        <Column sm={6} md={4} lg={3} key={index}>
           {item.image && <GatsbyImage image={getImage(item.image)!!} alt={item.altText} />}
           {item.previewImage && (
             <div className={styles.previewImageContainer}>
@@ -27,9 +27,9 @@ const GridSection: FunctionComponent<GridSectionProps> = ({ data }) => {
           <ReactMarkdown className={styles.imageDescription}>
             {item.description}
           </ReactMarkdown>
-        </div>
+        </Column>
       ))}
-    </Grid>
+    </Row>
   );
 };
 

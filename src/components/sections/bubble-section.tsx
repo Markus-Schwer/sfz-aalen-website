@@ -5,7 +5,7 @@ import Bubble from "../bubble";
 import ConditionalWrapper from "../conditional-wrapper";
 
 import FullWidthSection from "../full-width-section";
-import Grid from "../grid";
+import { Row, Column } from "../grid";
 
 type BubbleSectionProps = {
   data: BubbleSectionData;
@@ -24,32 +24,33 @@ const BubbleSection: FunctionComponent<BubbleSectionProps> = ({ data }) => {
       )}
     >
       <section>
-        <Grid columns={numberOfColumns} gap={0}>
+        <Row>
           {data.bubbles?.map((bubble, index) => (
-            <Bubble
-              icon={
-                bubble.image?.extension === "svg"
-                  ? bubble.image?.publicURL
-                  : undefined
-              }
-              iconPreview={
-                bubble.imageUrl?.endsWith("svg")
-                  ? bubble.previewImage
-                  : undefined
-              }
-              image={bubble.image}
-              previewImage={
-                !bubble.imageUrl?.endsWith("svg")
-                  ? bubble.previewImage
-                  : undefined
-              }
-              text={bubble.text}
-              color={bubble.color}
-              href={bubble.href}
-              key={index}
-            />
+            <Column sm={12} md={6} lg={(12/data.numberColumns) as any} key={index}>
+              <Bubble
+                icon={
+                  bubble.image?.extension === "svg"
+                    ? bubble.image?.publicURL
+                    : undefined
+                }
+                iconPreview={
+                  bubble.imageUrl?.endsWith("svg")
+                    ? bubble.previewImage
+                    : undefined
+                }
+                image={bubble.image}
+                previewImage={
+                  !bubble.imageUrl?.endsWith("svg")
+                    ? bubble.previewImage
+                    : undefined
+                }
+                text={bubble.text}
+                color={bubble.color}
+                href={bubble.href}
+              />
+            </Column>
           ))}
-        </Grid>
+        </Row>
       </section>
     </ConditionalWrapper>
   );

@@ -6,6 +6,7 @@ import React, {
 } from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
+import { useBreakpoint } from "gatsby-plugin-breakpoints";
 
 import * as styles from "./header.module.scss";
 
@@ -25,6 +26,13 @@ const range = (
   y2: number,
   a: number
 ): number => lerp(x2, y2, invlerp(x1, y1, a));
+
+const MobileLogo = styled(Logo)`
+  position: absolute;
+  margin-top: 1.6875em;
+  margin-left: 2.875em;
+  height: 4.125em;
+`;
 
 const StyledLogo = styled(Logo)`
   position: absolute;
@@ -82,6 +90,7 @@ const Header: FunctionComponent<HeaderProps> = ({
   logoScrollEffect = false,
   navigationData,
 }) => {
+  const breakpoints = useBreakpoint();
   const [showDynamicLogo, setShowDynamicLogo] = useState(false);
 
   // Wait until after client-side hydration to show
@@ -94,13 +103,17 @@ const Header: FunctionComponent<HeaderProps> = ({
       <div className={styles.headerContent}>
         {/* only who scroll effect on front page */}
         {logoScrollEffect && showDynamicLogo ? (
-          <ScrollingLogo />
+          <>
+            {!breakpoints.sm && <ScrollingLogo />}
+            {breakpoints.sm && <MobileLogo />}
+          </>
         ) : (
           <Link to="/home">
-            <StyledLogoText percent={0} />
+            {!breakpoints.sm && <StyledLogoText percent={0} />}
+            {breakpoints.sm && <MobileLogo />}
           </Link>
         )}
-        <nav>
+        <nav style={{display: breakpoints.md ? "none" : "flex"}}>
           {navigationData.categories.map((category, i) =>
             category.links ? (
               <div className={styles.dropdown} key={i}>

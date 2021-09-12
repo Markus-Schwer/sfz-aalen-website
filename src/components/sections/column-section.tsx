@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { ColumnSection as ColumnSectionData } from "../../../gatsby-node";
 
 import FullWidthSection from "../full-width-section";
-import Grid from "../grid";
+import { Row, Column } from "../grid";
 import ConditionalWrapper from "../conditional-wrapper";
 
 import * as styles from "./column-section.module.scss";
@@ -48,54 +48,71 @@ const ColumnSection: FunctionComponent<ColumnSectionProps> = ({ data }) => {
             ) : null}
           </>
         )}
-        <Grid columns={data.numberColumns} gap={40}>
+        <Row>
           {data.columns?.map((column, index) => {
             switch (column.type) {
               case "image":
                 if (column.image)
                   return (
-                    <div key={index}>
+                    <Column
+                      sm={12}
+                      md={12}
+                      lg={(12 / data.numberColumns) as any}
+                      key={index}
+                    >
                       <GatsbyImage
                         image={getImage(column.image)!!}
                         alt={column.altText}
                       />
-                    </div>
+                    </Column>
                   );
                 else if (column.previewImage)
                   return (
-                    <div key={index}>
+                    <Column
+                      sm={12}
+                      md={12}
+                      lg={(12 / data.numberColumns) as any}
+                      key={index}
+                    >
                       <img
                         className={styles.previewImage}
                         src={column.previewImage}
                         alt={column.altText}
                       />
-                    </div>
+                    </Column>
                   );
                 break;
               case "paragraph":
                 return (
-                  <StyledReactMarkdown
-                    color={data.textColor}
-                    className={styles.paragraphColumn}
+                  <Column
+                    sm={12}
+                    md={12}
+                    lg={(12 / data.numberColumns) as any}
                     key={index}
                   >
-                    {column.text}
-                  </StyledReactMarkdown>
+                    <StyledReactMarkdown
+                      color={data.textColor}
+                      className={styles.paragraphColumn}
+                    >
+                      {column.text}
+                    </StyledReactMarkdown>
+                  </Column>
                 );
               case "divider":
                 return (
-                  <hr
-                    className={`${styles.divider} ${
-                      data.backgroundColor ? styles.inverted : null
-                    }`}
-                    key={index}
-                  />
+                  <Column sm={12} md={12} lg={12} key={index}>
+                    <hr
+                      className={`${styles.divider} ${
+                        data.backgroundColor ? styles.inverted : null
+                      }`}
+                    />
+                  </Column>
                 );
               default:
                 break;
             }
           })}
-        </Grid>
+        </Row>
       </section>
     </ConditionalWrapper>
   );

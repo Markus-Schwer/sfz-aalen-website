@@ -1,4 +1,4 @@
-.previewImage {
+.thumbnailImage {
   height: 100%;
   object-fit: cover;
   width: 100%;
@@ -7,18 +7,18 @@
 .mainContainer {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding-top: 40px;
+  padding-top: 2.5em;
   position: relative;
   // background-color: var(--background-color);
 
   main {
-    margin: 0 46px 100px 46px;
+    margin: 0 2.875em 6.25em 2.875em;
 
     hr {
       border-color: #b1b2b3;
       border-top: 0; // make hr 1px thick
-      margin-top: 40px;
-      margin-bottom: 40px;
+      margin-top: 2.5em;
+      margin-bottom: 2.5em;
 
       &.inverted {
         border-color: #d3ddf2ff;
@@ -45,6 +45,10 @@
         text-decoration: underline;
       }
     }
+
+    section {
+      overflow: hidden;
+    }
   }
 }
 
@@ -52,24 +56,26 @@
   display: inline;
   float: right;
   font-style: italic;
-  margin-right: 46px;
+  margin-right: 2.875em;
 }
 
 .mainTitle {
   position: relative;
-  margin-top: -80px;
-  height: 230px;
+  margin-top: -5em;
+  height: 14.375em;
   width: max-content;
 
   .mainTitleBackground {
     position: absolute;
     top: 0;
-    left: 12px;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 
   .mainTitleText {
     position: relative;
-    padding: 24px 42px;
+    padding: 1.5em 2.625em;
     width: max-content;
     text-transform: uppercase;
     line-height: 1;
@@ -79,6 +85,7 @@
     .mainTitleTertiary {
       display: block;
       font-family: "Kardia-Fat";
+      position: relative;
     }
 
     .mainTitlePrimary {
@@ -110,6 +117,6 @@
 .sectionAnchor {
   display: block;
   position: relative;
-  top: -150px;
+  top: -9em;
   visibility: hidden;
 }

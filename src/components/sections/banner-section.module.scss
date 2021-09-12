@@ -6,7 +6,9 @@
   position: relative;
   padding-top: 4em;
   padding-bottom: 1em;
-  margin: 120px 0;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin: 7.5em 0;
   border-radius: 1em;
 
   h1 {
@@ -101,4 +103,15 @@
 
 .bannerLink {
   text-decoration: none;
+}
+
+@media screen and (max-width: 40em) {
+  .banner {
+    h1 {
+      font-size: 2em !important;
+    }
+    h2 {
+      font-size: 1em !important;
+    }
+  }
 }

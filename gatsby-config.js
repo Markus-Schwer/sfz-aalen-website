@@ -71,6 +71,7 @@ module.exports = {
       __key: "static",
     },
     "gatsby-transformer-json",
+    "gatsby-plugin-breakpoints",
     {
       resolve: "gatsby-plugin-netlify-cms",
       options: {
