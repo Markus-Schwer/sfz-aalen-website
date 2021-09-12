@@ -12,8 +12,6 @@ type BubbleSectionProps = {
 };
 
 const BubbleSection: FunctionComponent<BubbleSectionProps> = ({ data }) => {
-  const numberOfColumns = data.numberColumns || 2;
-
   return (
     <ConditionalWrapper
       condition={!!data.backgroundColor}
