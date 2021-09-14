@@ -1,8 +1,16 @@
 import React, { FunctionComponent } from "react";
 import { PreviewTemplateComponentProps } from "netlify-cms-core";
+import { BreakpointProvider } from "gatsby-plugin-breakpoints";
 
 import { PageData } from "../../../gatsby-node";
 import PageTemplate from "../../templates/page-template";
+
+const defaultQueries = {
+  xs: '(max-width: 320px)',
+  sm: '(max-width: 720px)',
+  md: '(max-width: 1024px)',
+  l: '(max-width: 1536px)',
+};
 
 const PageTemplatePreview: FunctionComponent<PreviewTemplateComponentProps> = ({
   entry,
@@ -40,17 +48,19 @@ const PageTemplatePreview: FunctionComponent<PreviewTemplateComponentProps> = ({
   }
 
   return (
-    <PageTemplate
-      data={{ pagesJson: data }}
-      path={data.path}
-      location={dummy}
-      uri={dummy}
-      navigate={dummy}
-      children={dummy}
-      params={dummy}
-      pageResources={dummy}
-      pageContext={dummy}
-    />
+    <BreakpointProvider queries={defaultQueries}>
+      <PageTemplate
+        data={{ pagesJson: data }}
+        path={data.path}
+        location={dummy}
+        uri={dummy}
+        navigate={dummy}
+        children={dummy}
+        params={dummy}
+        pageResources={dummy}
+        pageContext={dummy}
+      />
+    </BreakpointProvider>
   );
 };
 
