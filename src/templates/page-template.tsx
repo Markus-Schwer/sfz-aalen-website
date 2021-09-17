@@ -84,6 +84,26 @@ export const query = graphql`
           type
           altText
           text
+          header {
+            mainHeader
+            subHeader
+            image {
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+              }
+            }
+          }
+          columns {
+            type
+            altText
+            text
+            image {
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+              }
+            }
+          }
+          numberColumns
         }
         numberColumns
         bubbles {

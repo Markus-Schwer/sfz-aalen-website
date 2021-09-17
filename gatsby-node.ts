@@ -38,6 +38,21 @@ export interface DividerColumn {
   divider: boolean;
 }
 
+export interface CardColumn {
+  type: "card";
+  header: {
+    mainHeader: string;
+    subHeader: string;
+    anchorId?: string;
+    image?: ImageDataLike;
+    imageUrl?: string;
+    previewImage?: string;
+    altText: string;
+  };
+  numberColumns: number;
+  columns: ImageColumn[] | ParagraphColumn[] | DividerColumn[];
+}
+
 export interface ColumnSection {
   type: "columnSection";
   backgroundColor?: string;
@@ -49,7 +64,7 @@ export interface ColumnSection {
     subHeader: string;
   };
   numberColumns: number;
-  columns: ImageColumn[] | ParagraphColumn[] | DividerColumn[];
+  columns: ImageColumn[] | ParagraphColumn[] | DividerColumn[] | CardColumn[];
 }
 
 export type BubbleSection = {
@@ -172,6 +187,21 @@ export const createPages: GatsbyNode["createPages"] = async ({
 export const createResolvers: GatsbyNode["createResolvers"] = ({
   createResolvers,
 }) => {
+  const imageResolver = {
+    type: "File",
+    resolve(source: any, args: any, context: any, info: any) {
+      return context.nodeModel.runQuery({
+        query: {
+          filter: {
+            relativePath: { eq: source.imageUrl },
+          },
+        },
+        type: "File",
+        firstOnly: true,
+      });
+    },
+  };
+
   createResolvers({
     PagesJson: {
       thumbnails: {
@@ -190,52 +220,19 @@ export const createResolvers: GatsbyNode["createResolvers"] = ({
       },
     },
     PagesJsonPageSectionsColumns: {
-      image: {
-        type: "File",
-        resolve(source: any, args: any, context: any, info: any) {
-          return context.nodeModel.runQuery({
-            query: {
-              filter: {
-                relativePath: { eq: source.imageUrl },
-              },
-            },
-            type: "File",
-            firstOnly: true,
-          });
-        },
-      },
+      image: imageResolver,
     },
     PagesJsonPageSectionsBubbles: {
-      image: {
-        type: "File",
-        resolve(source: any, args: any, context: any, info: any) {
-          return context.nodeModel.runQuery({
-            query: {
-              filter: {
-                relativePath: { eq: source.imageUrl },
-              },
-            },
-            type: "File",
-            firstOnly: true,
-          });
-        },
-      },
+      image: imageResolver,
     },
     PagesJsonPageSectionsItems: {
-      image: {
-        type: "File",
-        resolve(source: any, args: any, context: any, info: any) {
-          return context.nodeModel.runQuery({
-            query: {
-              filter: {
-                relativePath: { eq: source.imageUrl },
-              },
-            },
-            type: "File",
-            firstOnly: true,
-          });
-        },
-      },
+      image: imageResolver,
+    },
+    PagesJsonPageSectionsColumnsColumns: {
+      image: imageResolver,
+    },
+    PagesJsonPageSectionsColumnsHeader: {
+      image: imageResolver,
     },
   });
 };

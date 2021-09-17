@@ -1,22 +1,74 @@
-import React, { FunctionComponent } from "react";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import ReactMarkdown from "react-markdown";
-import styled from "styled-components";
+import React, { FunctionComponent, Key } from "react";
 
-import { ColumnSection as ColumnSectionData } from "../../../gatsby-node";
+import {
+  ColumnSection as ColumnSectionData,
+  ImageColumn as ImageColumnData,
+  ParagraphColumn as ParagraphColumnData,
+  DividerColumn as DividerColumnData,
+  CardColumn as CardColumnData,
+} from "../../../gatsby-node";
 
-import FullWidthSection from "../full-width-section";
 import { Row, Column } from "../grid";
+import FullWidthSection from "../full-width-section";
 import ConditionalWrapper from "../conditional-wrapper";
+import ImageColumn from "../columns/image-column";
+import ParagraphColumn from "../columns/paragraph-column";
+import CardColumn from "../columns/card-column";
 
 import * as styles from "./column-section.module.scss";
 import * as layoutStyles from "../layout.module.scss";
 
-const StyledReactMarkdown = styled(ReactMarkdown).attrs(
-  (props: { color: string }) => props
-)`
-  color: ${(props) => props.color};
-`;
+function renderColumn(
+  column:
+    | ImageColumnData
+    | ParagraphColumnData
+    | DividerColumnData
+    | CardColumnData,
+  key: Key,
+  numberColumns: number,
+  backgroundColor?: string
+) {
+  switch (column.type) {
+    case "image":
+      return (
+        <ImageColumn
+          columnData={column}
+          columnWidth={(12 / numberColumns) as any}
+          key={key}
+        />
+      );
+    case "paragraph":
+      return (
+        <ParagraphColumn
+          columnData={column}
+          columnWidth={(12 / numberColumns) as any}
+          key={key}
+        />
+      );
+    case "divider":
+      return (
+        <Column sm={12} md={12} lg={12} key={key}>
+          <hr
+            className={`${styles.divider} ${
+              backgroundColor ? styles.inverted : null
+            }`}
+          />
+        </Column>
+      );
+    case "card":
+      return (
+        <CardColumn columnData={column} columnWidth={12} key={key}>
+          <Row>
+            {column.columns?.map((cardColumn, index) =>
+              renderColumn(cardColumn, index, column.numberColumns, "#fff")
+            )}
+          </Row>
+        </CardColumn>
+      );
+    default:
+      break;
+  }
+}
 
 type ColumnSectionProps = {
   data: ColumnSectionData;
@@ -32,7 +84,7 @@ const ColumnSection: FunctionComponent<ColumnSectionProps> = ({ data }) => {
         </FullWidthSection>
       )}
     >
-      <section>
+      <section style={{ color: data.textColor }}>
         {data.header && (
           <>
             {data.header.sectionId && (
@@ -49,69 +101,14 @@ const ColumnSection: FunctionComponent<ColumnSectionProps> = ({ data }) => {
           </>
         )}
         <Row>
-          {data.columns?.map((column, index) => {
-            switch (column.type) {
-              case "image":
-                if (column.image)
-                  return (
-                    <Column
-                      sm={12}
-                      md={12}
-                      lg={(12 / data.numberColumns) as any}
-                      key={index}
-                    >
-                      <GatsbyImage
-                        image={getImage(column.image)!!}
-                        alt={column.altText}
-                      />
-                    </Column>
-                  );
-                else if (column.previewImage)
-                  return (
-                    <Column
-                      sm={12}
-                      md={12}
-                      lg={(12 / data.numberColumns) as any}
-                      key={index}
-                    >
-                      <img
-                        className={styles.previewImage}
-                        src={column.previewImage}
-                        alt={column.altText}
-                      />
-                    </Column>
-                  );
-                break;
-              case "paragraph":
-                return (
-                  <Column
-                    sm={12}
-                    md={12}
-                    lg={(12 / data.numberColumns) as any}
-                    key={index}
-                  >
-                    <StyledReactMarkdown
-                      color={data.textColor}
-                      className={styles.paragraphColumn}
-                    >
-                      {column.text}
-                    </StyledReactMarkdown>
-                  </Column>
-                );
-              case "divider":
-                return (
-                  <Column sm={12} md={12} lg={12} key={index}>
-                    <hr
-                      className={`${styles.divider} ${
-                        data.backgroundColor ? styles.inverted : null
-                      }`}
-                    />
-                  </Column>
-                );
-              default:
-                break;
-            }
-          })}
+          {data.columns?.map((column, index) =>
+            renderColumn(
+              column,
+              index,
+              data.numberColumns,
+              data.backgroundColor
+            )
+          )}
         </Row>
       </section>
     </ConditionalWrapper>

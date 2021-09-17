@@ -29,6 +29,16 @@ const PageTemplatePreview: FunctionComponent<PreviewTemplateComponentProps> = ({
           if (column.type === "image" && column.imageUrl) {
             column.previewImage = getAsset(column.imageUrl).url;
           }
+          if (column.type === "card") {
+            if (column.header.imageUrl)
+              column.header.previewImage = getAsset(column.header.imageUrl).url;
+
+            for (const cardColumn of column.columns) {
+              if (cardColumn.type === "image" && cardColumn.imageUrl) {
+                cardColumn.previewImage = getAsset(cardColumn.imageUrl).url;
+              }
+            }
+          }
         }
       } else if (section.type === "bubbleSection" && section.bubbles) {
         for (const bubble of section.bubbles) {

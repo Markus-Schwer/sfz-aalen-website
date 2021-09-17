@@ -66,9 +66,31 @@
         "divider": true,
         "sectionId": "ausstattung"
       },
-      "numberColumns": 2,
+      "numberColumns": 1,
       "backgroundColor": "#0069b4",
-      "textColor": "#ffffff"
+      "textColor": "#ffffff",
+      "columns": [
+        {
+          "type": "card",
+          "header": {
+            "mainHeader": "3D-Drucker",
+            "subHeader": "",
+            "imageUrl": ""
+          },
+          "numberColumns": 2,
+          "columns": [
+            {
+              "type": "paragraph",
+              "text": "Ein 3D-Drucker ist ein computergesteuertes Gerät, bei dem Material schichtweise aufgetragen wird. So entsteht nach und nach ein drei-dimensionales Objekt. Als Material werden meistens Kunststoffe eingesetzt.\n\nWir haben 6 Snapmaker 3-in-1 3D-Drucker und bald einen Prusa i3 MK3S mit einem Multi Material 2S upgrade kit.\n\nDer Snapmaker 3-in-1 3D-Drucker vereint 3D-Drucker, Lasergravierer und CNC-Fräse in einem Gerät. Dieser 3D-Drucker druckt Kunststoffobjekte mit einer Größe bis zu 12,5 x 12,5 x 12,5 cm.\\\nDer CNC-Fräsaufsatz bearbeitet Materialien wie Acryl, Holz und andere weiche bis mittelfeste Materialien mit einer Umdrehungsgeschwindigkeit von bis zu 16.000 U/min.\\\nUnd mit dem Lasermodul kann man Gravuren und Brennarbeiten in Holz, Kunststoff und dickem Papier vornehmen.\n\nDer Prusa i3 MK3S verfügt über einen umgebauten Extruder, zahlreiche Sensoren und verschiedene intelligente Funktionen sowie ein magnetisches Heizbett mit austauschbarem PEI-Federstahl-Druckblech. Er ist sehr zuverlässig und benutzerfreundlich. Mit dem Multi-Material Upgrade können verschiedene Materialien gleichzeitig gedruckt werden.\n\nVorrätig haben wir PLA-Kunststoffe in unterschiedlichen Farben."
+            },
+            {
+              "type": "image",
+              "imageUrl": "images/uploads/image_678_2010_snapmaker_mvaas__5_.jpg",
+              "altText": "Snapmaker"
+            }
+          ]
+        }
+      ]
     },
     {
       "type": "bannerSection",
