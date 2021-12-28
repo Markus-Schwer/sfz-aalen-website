@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import { BubbleSection as BubbleSectionData } from "../../../gatsby-node";
+import { BubbleSection as BubbleSectionData } from "../../page-data";
 
 import Bubble from "../bubble";
 import ConditionalWrapper from "../conditional-wrapper";

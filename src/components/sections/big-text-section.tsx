@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import { BigTextSection as BigTextSectionData } from "../../../gatsby-node";
+import { BigTextSection as BigTextSectionData } from "../../page-data";
 
 import * as styles from "./big-text-section.module.scss";
 

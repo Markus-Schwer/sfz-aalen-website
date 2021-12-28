@@ -1,30 +1,34 @@
 import React, { FunctionComponent } from "react";
 import { graphql, PageProps } from "gatsby";
 
-import Layout from "../components/layout";
-import { PageData } from "../../gatsby-node";
+import { PageData } from "../page-data";
 
-import BigHeaderSection from "../components/sections/big-header-section";
-import HeaderOnlySection from "../components/sections/header-only-section";
-import ColumnSection from "../components/sections/column-section";
-import BubbleSection from "../components/sections/bubble-section";
-import BigTextSection from "../components/sections/big-text-section";
-import GridSection from "../components/sections/grid-section";
-import BannerSection from "../components/sections/banner-section";
+import {
+  Layout,
+  BigHeaderSection,
+  HeaderOnlySection,
+  BubbleSection,
+  BigTextSection,
+  GridSection,
+  BannerSection,
+  ColumnSection,
+} from "../components";
 
 type PageTemplateProps = {
-  pagesJson: PageData
-}
+  pagesJson: PageData;
+};
 
-const PageTemplate: FunctionComponent<PageProps<PageTemplateProps>> = ({ data }) => {
+const PageTemplate: FunctionComponent<PageProps<PageTemplateProps>> = ({
+  data,
+}) => {
   return (
     <Layout pageData={data.pagesJson}>
       {data.pagesJson.pageSections?.map((section, index) => {
         switch (section.type) {
           case "bigHeaderSection":
             return <BigHeaderSection data={section} key={index} />;
-            case "bigTextSection":
-              return <BigTextSection data={section} key={index} />;
+          case "bigTextSection":
+            return <BigTextSection data={section} key={index} />;
           case "headerOnlySection":
             return <HeaderOnlySection data={section} key={index} />;
           case "columnSection":
@@ -33,8 +37,8 @@ const PageTemplate: FunctionComponent<PageProps<PageTemplateProps>> = ({ data })
             return <BubbleSection data={section} key={index} />;
           case "gridSection":
             return <GridSection data={section} key={index} />;
-            case "bannerSection":
-              return <BannerSection data={section} key={index} />;
+          case "bannerSection":
+            return <BannerSection data={section} key={index} />;
           default:
             break;
         }
@@ -85,8 +89,7 @@ export const query = graphql`
           altText
           text
           header {
-            mainHeader
-            subHeader
+            header
             image {
               childImageSharp {
                 gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
@@ -121,7 +124,11 @@ export const query = graphql`
         items {
           image {
             childImageSharp {
-              gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH, aspectRatio: 0.83)
+              gatsbyImageData(
+                placeholder: BLURRED
+                layout: FULL_WIDTH
+                aspectRatio: 0.83
+              )
             }
           }
           altText

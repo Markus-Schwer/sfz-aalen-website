@@ -73,16 +73,14 @@
         {
           "type": "card",
           "header": {
-            "mainHeader": "Holzwerkstatt\n"
+            "header": "# Holzwerkstatt"
           },
           "numberColumns": 1
         },
         {
           "type": "card",
           "header": {
-            "mainHeader": "3D-Drucker",
-            "subHeader": "",
-            "imageUrl": ""
+            "header": "# 3D-Drucker"
           },
           "numberColumns": 2,
           "columns": [
@@ -100,28 +98,28 @@
         {
           "type": "card",
           "header": {
-            "mainHeader": "Styropor-Schmelzmaschine Filocut"
+            "header": "# Styropor-Schmelzmaschine Filocut"
           },
           "numberColumns": 1
         },
         {
           "type": "card",
           "header": {
-            "mainHeader": "Lasercutter"
+            "header": "# Lasercutter"
           },
           "numberColumns": 1
         },
         {
           "type": "card",
           "header": {
-            "mainHeader": "Elektronikwerkstatt"
+            "header": "# Elektronikwerkstatt"
           },
           "numberColumns": 1
         },
         {
           "type": "card",
           "header": {
-            "mainHeader": "Metallwerkstatt"
+            "header": "# Metallwerkstatt"
           },
           "numberColumns": 1
         }

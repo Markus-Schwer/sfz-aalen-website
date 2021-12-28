@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import ReactMarkdown from 'react-markdown';
-import { GridSection as GridSectionData } from "../../../gatsby-node";
+import { GridSection as GridSectionData } from "../../page-data";
 
 import { Row, Column } from "../grid";
 

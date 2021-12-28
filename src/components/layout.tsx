@@ -2,7 +2,7 @@ import React, { FunctionComponent } from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 
-import { PageData } from "../../gatsby-node";
+import { PageData } from "../../page-data";
 import Header from "./header";
 import Footer from "./footer";
 import BubbleHeaderBackground from "../images/bubble-header-background.svg";

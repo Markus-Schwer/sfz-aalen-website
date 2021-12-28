@@ -15,20 +15,23 @@
     cursor: pointer;
 
     .headerText {
-      padding: 1.5em;
+      margin: 1.5em;
+      max-height: 8.5em;
+      overflow: hidden;
+
+      * {
+        color: #000;
+        font-size: 1em !important;
+        font-weight: normal;
+        font-style: italic;
+        white-space: pre-line;
+      }
 
       h1 {
         color: #0069b4;
         font-size: 1.625em !important;
         font-weight: normal;
-        white-space: pre-line;
-      }
-
-      h2 {
-        color: #000;
-        font-size: 1em !important;
-        font-weight: normal;
-        font-style: italic;
+        font-style: normal;
         white-space: pre-line;
       }
     }

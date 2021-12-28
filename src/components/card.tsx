@@ -1,14 +1,14 @@
 import React, { FunctionComponent, useState } from "react";
 import { GatsbyImage, getImage, ImageDataLike } from "gatsby-plugin-image";
 import Collapse from "@kunukn/react-collapse";
+import ReactMarkdown from "react-markdown";
 
 import DropdownIcon from "../images/dropdown-icon.svg";
 
 import * as styles from "./card.module.scss";
 
 type CardProps = {
-  mainHeader: string;
-  subHeader?: string;
+  header: string;
   anchorId?: string;
   imageData?: ImageDataLike;
   previewImage?: string;
@@ -42,8 +42,9 @@ const Card: FunctionComponent<CardProps> = (props) => {
             </div>
           )}
         <div className={styles.headerText}>
-          <h1>{props.mainHeader}</h1>
-          {props.subHeader && <h2>{props.subHeader}</h2>}
+          <ReactMarkdown>
+            {props.header}
+          </ReactMarkdown>
         </div>
         <div className={styles.dropdownIconContainer}>
           <DropdownIcon className={styles.dropdownIcon} />

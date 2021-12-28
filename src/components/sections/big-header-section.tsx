@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import { BigHeaderSection as BigHeaderSectionData } from "../../../gatsby-node";
+import { BigHeaderSection as BigHeaderSectionData } from "../../page-data";
 
 import * as styles from "./big-header-section.module.scss";
 

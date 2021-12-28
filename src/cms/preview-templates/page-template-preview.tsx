@@ -2,7 +2,7 @@ import React, { FunctionComponent } from "react";
 import { PreviewTemplateComponentProps } from "netlify-cms-core";
 import { BreakpointProvider } from "gatsby-plugin-breakpoints";
 
-import { PageData } from "../../../gatsby-node";
+import { PageData } from "../../page-data";
 import PageTemplate from "../../templates/page-template";
 
 const defaultQueries = {

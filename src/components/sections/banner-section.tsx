@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
 import { Link } from "gatsby";
 
-import { BannerSection as BannerSectionData } from "../../../gatsby-node";
+import { BannerSection as BannerSectionData } from "../../page-data";
 
 import BannerSymbols from "../../images/banner-symbols.svg";
 import ConditionalWrapper from "../conditional-wrapper";

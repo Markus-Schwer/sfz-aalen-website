@@ -1,0 +1,21 @@
+{
+  "title": "Manche mögen's kalt",
+  "header": "# Manche mögen's kalt –\n\n# Was ist die Wohlfühltemperatur moderner Materialien?\n\nFür Schüler von 13–18 Jahren, Termine nach individueller Absprache. Arum ea denimus sandaecta sus dis aut Sequae doleceri re voluptate sequasp erspit re ad exceaquiant porpor accatur apid quam.",
+  "thumbnail": {
+    "imageUrl": "images/uploads/adobe-stock_427045284_bearb.jpg",
+    "altText": "Eiswürfel"
+  },
+  "numberColumns": 2,
+  "columns": [
+    {
+      "type": "paragraph",
+      "text": "Viele technische Errungenschaften in unserer modernen Welt wurden erst durch den Einsatz hochentwickelter Materialien ermöglicht. Häufig ist die Leistungsfähigkeit der Materialien eng mit der Betriebstemperatur verknüpft, Batterien dürfen nicht zu warm werden, Schiffswände nicht zu kalt und supraleitende Spulen arbeiten sowieso nur, wenn es wirklich eiskalt ist. Warum das so ist, bekommen wir an Bespielen und Experimenten erklärt.\n\n\nIn diesem Workshop geht es auch darum, im eigenen Experiment die Eigenschaften von Materialien und Werkstoffen bei tiefen Temperaturen kennen zu lernen. Wir erfahren, was passiert, wenn man Dinge mit flüssigem Stickstoff auf -200 °C abkühlt. Wir konstruieren einen experimentellen Aufbau, mit dem Materialien bei sehr tiefen Temperaturen beobachtet werden können. Schließlich schauen wir uns an, was passiert, wenn man sehr kalten Dingen zu wenig Platz zur Verfügung stellt (Achtung: spektakulär!).\n\n\nNatürlich bietet dieses Thema viele Möglichkeiten, ein weiterführen des Schülerprojekt zu starten. Die Hochschule in Aalen ist ein ausgewiesener Ort für exzellente Materialforschung. Die Frage, wie sich moderne Materialien verhalten, wenn es heiß oder kalt wird, erlaubt viele interessante Forschungsprojekte, z. B. auch für Jugend forscht und Co."
+    },
+    {
+      "type": "image",
+      "imageUrl": "images/uploads/adobe-stock_427045284_bearb.jpg",
+      "altText": "Eiswürfel"
+    }
+  ],
+  "footer": "Für Schüler von 13-18\n150 Minuten\nProf. Dr. Joachim Albrecht und MSc Wadim Schulz\nFachbereiche: Oberflächentechnologie, Fino"
+}

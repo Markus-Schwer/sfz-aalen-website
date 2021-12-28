@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
 import ReactMarkdown from "react-markdown";
 
-import { ParagraphColumn as ParagraphColumnData } from "../../../gatsby-node";
+import { ParagraphColumn as ParagraphColumnData } from "../../page-data";
 
 import { Column, GridSizes } from "../grid";
 

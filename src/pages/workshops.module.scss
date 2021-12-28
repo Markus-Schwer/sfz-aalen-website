@@ -1,0 +1,16 @@
+.divider {
+  width: 100%;
+  margin: 1em 0 !important;
+  border-style: dashed;
+  border-color: #009ee3 !important;
+}
+
+.workshopInfo {
+  color: #009ee3;
+  white-space: pre-line;
+  line-height: 1.5;
+
+  * {
+    color: inherit;
+  }
+}

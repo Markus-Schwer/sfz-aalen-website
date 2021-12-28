@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
 import styled from "styled-components";
 
-import { CardColumn as CardColumnData } from "../../../gatsby-node";
+import { CardColumn as CardColumnData } from "../../page-data";
 import Card from "../card";
 
 import { Column, GridSizes } from "../grid";
@@ -24,8 +24,7 @@ const CardColumn: FunctionComponent<CardColumnProps> = ({
   return (
     <StyledColumn sm={12} md={12} lg={columnWidth}>
       <Card
-        mainHeader={columnData.header.mainHeader}
-        subHeader={columnData.header.subHeader}
+        header={columnData.header.header}
         anchorId={columnData.header.anchorId}
         imageData={columnData.header.image}
         previewImage={columnData.header.previewImage}

@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-import { ImageColumn as ImageColumnData } from "../../../gatsby-node";
+import { ImageColumn as ImageColumnData } from "../../page-data";
 
 import { Column, GridSizes } from "../grid";
 

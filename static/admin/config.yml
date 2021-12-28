@@ -12,8 +12,8 @@ collections:
     slug: "{{slug}}"
     extension: "json"
     fields:
-      - { name: "path", label: "URL", widged: "string" }
-      - { label: "Titel", name: "title", widged: "string" }
+      - { name: "path", label: "URL", widget: "string" }
+      - { label: "Titel", name: "title", widget: "string" }
       - label: "Motto"
         name: "motto"
         widget: "list"
@@ -120,8 +120,7 @@ collections:
                         name: "header"
                         widget: "object"
                         fields:
-                          - { label: "Karten Überschrift", name: "mainHeader", widget: "text", default: "Haupt Überschrift" }
-                          - { label: "Unter Überschrift", name: "subHeader", widget: "text", required: false }
+                          - { label: "Überschrift", name: "header", widget: "markdown", default: "# Überschrift" }
                           - { label: "Id (zum verlinken)", name: "anchorId", widget: "string", required: false }
                           - { label: "Bild", name: "imageUrl", widget: "image", required: false }
                           - { label: "Alternativ Text", name: "altText", widget: "text", required: false }
@@ -200,6 +199,43 @@ collections:
               - { label: "Haupt-Text", name: "mainText", widget: "text", default: "Erste Zeile\nzweite Zeile" }
               - { label: "Unter-Text", name: "subText", widget: "text", default: "Beschreibung" }
               - { label: "Link", name: "href", widget: "string", required: false }
+  - label: "Workshop"
+    name: "workshop"
+    folder: "content/workshops"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Überschrift", name: "header", widget: "markdown", default: "# Überschrift" }
+      - label: "Thumbnail"
+        name: "thumbnail"
+        widget: "object"
+        fields:
+          - { label: "Bild", name: "imageUrl", widget: "image" }
+          - { label: "Alternativ Text", name: "altText", widget: "text" }
+      - { label: "Spaltenanzahl", name: "numberColumns", widget: "number", default: 2 }
+      - label: "Spalten"
+        name: "columns"
+        widget: "list"
+        types:
+          - label: "Bild"
+            name: "image"
+            widget: "object"
+            fields:
+              - { label: "Bild", name: "imageUrl", widget: "image" }
+              - { label: "Alternativ Text", name: "altText", widget: "text" }
+          - label: "Paragraph"
+            name: "paragraph"
+            widget: "object"
+            fields:
+              - { label: "Text", name: "text", widget: "markdown" }
+          - label: "Trennstrich"
+            name: "divider"
+            widget: "object"
+            fields:
+              - { label: "Trennstrich", name: "divider", widget: "hidden", default: true }
+      - { label: "Fußzeile", name: "footer", widget: "markdown", default: "Altersgruppe\nDauer\nWorkshop Leiter\nFachbereiche" }
   - label: "Einstellungen"
     name: "settings"
     extension: "json"

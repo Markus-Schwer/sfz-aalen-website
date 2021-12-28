@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import { HeaderOnlySection as HeaderOnlySectionData } from "../../../gatsby-node";
+import { HeaderOnlySection as HeaderOnlySectionData } from "../../page-data";
 
 import * as layoutStyles from "../layout.module.scss";
 
