@@ -1,5 +1,4 @@
 import { GatsbyNode } from "gatsby";
-import { GatsbyIterable } from "gatsby/dist/datastore/common/iterable"
 import { resolve } from "path";
 import { PageData } from "./src/page-data";
 
