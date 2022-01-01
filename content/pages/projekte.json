@@ -75,7 +75,8 @@
           "header": {
             "header": "# Holzwerkstatt"
           },
-          "numberColumns": 1
+          "numberColumns": 1,
+          "width": 1
         },
         {
           "type": "card",
@@ -93,35 +94,40 @@
               "imageUrl": "images/uploads/image_678_2010_snapmaker_mvaas__5_.jpg",
               "altText": "Snapmaker"
             }
-          ]
+          ],
+          "width": 1
         },
         {
           "type": "card",
           "header": {
             "header": "# Styropor-Schmelzmaschine Filocut"
           },
-          "numberColumns": 1
+          "numberColumns": 1,
+          "width": 1
         },
         {
           "type": "card",
           "header": {
             "header": "# Lasercutter"
           },
-          "numberColumns": 1
+          "numberColumns": 1,
+          "width": 1
         },
         {
           "type": "card",
           "header": {
             "header": "# Elektronikwerkstatt"
           },
-          "numberColumns": 1
+          "numberColumns": 1,
+          "width": 1
         },
         {
           "type": "card",
           "header": {
             "header": "# Metallwerkstatt"
           },
-          "numberColumns": 1
+          "numberColumns": 1,
+          "width": 1
         }
       ]
     },
