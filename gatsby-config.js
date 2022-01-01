@@ -100,5 +100,6 @@ module.exports = {
         minify: true,
       },
     },
+    "gatsby-plugin-netlify",
   ],
 };
