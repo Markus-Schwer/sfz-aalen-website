@@ -1,13 +1,14 @@
 .card {
   position: relative;
-  background-color: white;
+  background-color: var(--foreground-color);
   border-radius: 1em;
   margin: 1em;
+  color: var(--text-color);
 
   .cardHeader {
     position: relative;
     margin: -1em;
-    background-color: #a1daf8;
+    background-color: #a1daf8; // dark: #0f2f3e
     border-radius: 0.75em;
     display: flex;
     flex-direction: row;
@@ -28,7 +29,7 @@
       }
 
       h1 {
-        color: #0069b4;
+        color: #0069b4; // dark: #009ee3
         font-size: 1.625em !important;
         font-weight: normal;
         font-style: normal;

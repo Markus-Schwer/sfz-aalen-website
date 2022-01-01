@@ -51,12 +51,14 @@
         {
           "text": "Workshops",
           "color": "secondary",
-          "imageUrl": "images/uploads/planet.svg"
+          "imageUrl": "images/uploads/planet.svg",
+          "href": "/workshops"
         },
         {
           "text": "Aktuelles",
           "imageUrl": "images/uploads/light-bulb.svg",
-          "color": "tertiary"
+          "color": "tertiary",
+          "href": "/aktuelles"
         }
       ]
     },
@@ -74,11 +76,13 @@
         {
           "type": "image",
           "imageUrl": "images/uploads/idea-offene-werkstatt.jpg",
-          "altText": "offene Werkstatt"
+          "altText": "offene Werkstatt",
+          "width": 1
         },
         {
           "type": "paragraph",
-          "text": "Bei uns geht die Beschäftigung mit MINT weit über den Schulunterricht hinaus und die Jugendlichen gehen selbstständig und eigenverantwortlich einer eigenen Forschungs-fragestellung auf den Grund. Sie entwickeln Problemstellungen und Hypothesen, planen Experimente und werten sie aus, erarbeiten Modelle, finden Erklärungen und hinterfragen diese kritisch.\n\nDie Jugendlichen arbeiten über längere Zeit in Teams zusammen und werden von kompetenten Mentoren unterstützt.\n\nGerade für Jüngere oder Neueinsteiger gibt es die Möglichkeit, bei bestehenden Teams mitzuarbeiten, die sich bereits mit einem Thema auseinandersetzen; dadurch kommen sie leichter ins selbständige Forschen."
+          "text": "Bei uns geht die Beschäftigung mit MINT weit über den Schulunterricht hinaus und die Jugendlichen gehen selbstständig und eigenverantwortlich einer eigenen Forschungs-fragestellung auf den Grund. Sie entwickeln Problemstellungen und Hypothesen, planen Experimente und werten sie aus, erarbeiten Modelle, finden Erklärungen und hinterfragen diese kritisch.\n\nDie Jugendlichen arbeiten über längere Zeit in Teams zusammen und werden von kompetenten Mentoren unterstützt.\n\nGerade für Jüngere oder Neueinsteiger gibt es die Möglichkeit, bei bestehenden Teams mitzuarbeiten, die sich bereits mit einem Thema auseinandersetzen; dadurch kommen sie leichter ins selbständige Forschen.",
+          "width": 1
         }
       ],
       "numberColumns": 2

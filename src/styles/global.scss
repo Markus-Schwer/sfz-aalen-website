@@ -20,19 +20,53 @@
   --tertiary-shade-3: #a1daf8;
   --tertiary-shade-4: #d4edfc;
 
-  --text-color: #000;
+  --text-color-light: #fff;
+  --text-color-dark: #000;
+  --text-color: var(--text-color-dark);
   --text-color-shade-1: #565656;
   --text-color-shade-2: #878786;
   --text-color-shade-3: #b1b2b3;
   --text-color-shade-4: #dadada;
 
   --background-color: #fff;
+  --foreground-color: #fff;
 
   --max-width: 1200px;
 }
 
-html * {
+body.dark-mode {
+  // --primary: #134094;
+  // --primary-shade-1: #192333;
+  // --primary-shade-2: #212937;
+  // --primary-shade-3: #292f3b;
+  // --primary-shade-4: #31353e;
+
+  // --secondary: #0068b4;
+  // --secondary-shade-1: #142738;
+  // --secondary-shade-2: #212c3b;
+  // --text-color-shade-3: #29313d;
+  // --text-color-shade-4: #29313d;
+
+  // --tertiary: #009ee3;
+  // --tertiary-shade-1: #0f2f3e;
+  // --tertiary-shade-2: #1d323f;
+  // --tertiary-shade-3: #313941;
+  // --tertiary-shade-4: #313941;
+
+  --text-color: var(--text-color-shade-1);
+  --text-color-shade-1: #e0e0e0;
+  --text-color-shade-2: #a0a0a0;
+  --text-color-shade-3: #6c6c6c;
+  --background-color: #12161d; // branded background color: 8% opacity primary on #121212 background
+  --foreground-color: #383b41; // material design 24dp elevation
+}
+
+body {
   color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+html * {
   font-family: "Open Sans", sans-serif;
 }
 

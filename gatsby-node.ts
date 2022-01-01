@@ -1,6 +1,7 @@
 import { GatsbyNode } from "gatsby";
+import { GatsbyIterable } from "gatsby/dist/datastore/common/iterable"
 import { resolve } from "path";
-import { PageData } from "./page-data";
+import { PageData } from "./src/page-data";
 
 interface QueryResult {
   allPagesJson: {
@@ -68,33 +69,32 @@ export const createResolvers: GatsbyNode["createResolvers"] = ({
 }) => {
   const imageResolver = {
     type: "File",
-    resolve(source: any, args: any, context: any, info: any) {
-      return context.nodeModel.runQuery({
+    resolve: async (source: any, args: any, context: any, info: any) => {
+      return source.imageUrl ? await context.nodeModel.findOne({
         query: {
           filter: {
             relativePath: { eq: source.imageUrl },
           },
         },
         type: "File",
-        firstOnly: true,
-      });
+      }) : undefined;
     },
   };
 
   createResolvers({
     PagesJson: {
       thumbnails: {
-        type: "[File]!",
-        resolve(source: any, args: any, context: any, info: any) {
-          return context.nodeModel.runQuery({
+        type: "[File]",
+        resolve: async (source: any, args: any, context: any, info: any) => {
+          const { entries } = await context.nodeModel.findAll({
             query: {
               filter: {
                 relativePath: { in: source.thumbnailUrls },
               },
             },
             type: "File",
-            firstOnly: false,
           });
+          return entries;
         },
       },
     },
@@ -119,5 +119,27 @@ export const createResolvers: GatsbyNode["createResolvers"] = ({
     WorkshopsJsonColumns: {
       image: imageResolver,
     },
+    ArticlesJsonThumbnail: {
+      image: imageResolver,
+    },
+    PagesJsonPageSections: {
+      childrenWorkshops: {
+        type: "[WorkshopsJson]",
+        resolve: async (source: any, args: any, context: any, info: any) => {
+          if (!source.workshops) return undefined;
+          const { entries } = await context.nodeModel.findAll({
+            query: {
+              filter: {
+                title: { in: source.workshops },
+              },
+            },
+            type: "WorkshopsJson",
+          }, {
+            connectionType: "WorkshopsJsonConnection"
+          });
+          return entries;
+        }
+      }
+    }
   });
 };

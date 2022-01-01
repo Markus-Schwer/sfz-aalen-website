@@ -3,7 +3,7 @@
 
   a {
     text-decoration: none;
-    color: var(--background-color);
+    color: var(--text-color-light);
     cursor: pointer;
 
     &:hover {
@@ -27,14 +27,14 @@
     padding: 1.25em;
     font-size: 1em;
     line-height: 1.5625;
-    color: var(--background-color);
+    color: var(--text-color-light);
 
     h1,
     span {
       margin: 0;
       font-size: 1em;
       line-height: 1.5625;
-      color: var(--background-color);
+      color: var(--text-color-light);
     }
 
     .logoContainer {
@@ -80,4 +80,9 @@
   .footerRow {
     margin: 0 -1.25em !important;
   }
+}
+
+.darkModeSwitch {
+  margin-right: auto;
+  cursor: pointer;
 }

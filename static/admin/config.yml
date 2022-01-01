@@ -49,6 +49,11 @@ collections:
         name: "pageSections"
         widget: "list"
         types:
+          - label: "Abstandshalter"
+            name: "spacerSection"
+            widget: "object"
+            fields:
+              - { label: "Abstandshalter", name: "spacer", widget: "hidden", default: true }
           - label: "Große Überschrift"
             name: "bigHeaderSection"
             widget: "object"
@@ -64,32 +69,29 @@ collections:
           - label: "Überschrift"
             name: "headerOnlySection"
             widget: "object"
+            summary: "{{fields.mainHeader}}"
             fields:
               - { label: "Haupt Überschrift", name: "mainHeader", widget: "text", default: "Haupt Überschrift" }
-              - { label: "Unter Überschrift", name: "subHeader", widget: "text", default: "Unter Überschrift" }
+              - { label: "Unter Überschrift", name: "subHeader", widget: "text", default: "Unter Überschrift", required: false }
               - { label: "Id (zum verlinken)", name: "sectionId", widget: "string", required: false }
               - { label: "Trennstrich", name: "divider", widget: "boolean", default: true }
           - label: "Abschnitt mit Spalten"
             name: "columnSection"
             widget: "object"
+            summary: "{{fields.header.mainHeader}}"
             fields:
               - label: "Überschrift"
                 name: "header"
                 widget: "object"
                 fields:
-                  - { label: "Haupt Überschrift", name: "mainHeader", widget: "text", default: "Haupt Überschrift" }
-                  - { label: "Unter Überschrift", name: "subHeader", widget: "text", default: "Unter Überschrift" }
+                  - { label: "Haupt Überschrift", name: "mainHeader", widget: "text", default: "Haupt Überschrift", required: false }
+                  - { label: "Unter Überschrift", name: "subHeader", widget: "text", default: "Unter Überschrift", required: false }
                   - { label: "Id (zum verlinken)", name: "sectionId", widget: "string", required: false }
                   - { label: "Trennstrich", name: "divider", widget: "boolean", default: true }
               - label: "Hintergrundfarbe"
                 name: "backgroundColor"
                 widget: "color"
                 required: false
-                allowInput: true
-              - label: "Textfarbe"
-                name: "textColor"
-                widget: "color"
-                default: "#000000"
                 allowInput: true
               - { label: "Spaltenanzahl", name: "numberColumns", widget: "number", default: 2 }
               - label: "Spalten"
@@ -102,11 +104,13 @@ collections:
                     fields:
                       - { label: "Bild", name: "imageUrl", widget: "image" }
                       - { label: "Alternativ Text", name: "altText", widget: "text" }
+                      - { label: "Breite in Spalten", name: "width", widget: "number", default: 1 }
                   - label: "Paragraph"
                     name: "paragraph"
                     widget: "object"
                     fields:
                       - { label: "Text", name: "text", widget: "markdown" }
+                      - { label: "Breite in Spalten", name: "width", widget: "number", default: 1 }
                   - label: "Trennstrich"
                     name: "divider"
                     widget: "object"
@@ -124,6 +128,7 @@ collections:
                           - { label: "Id (zum verlinken)", name: "anchorId", widget: "string", required: false }
                           - { label: "Bild", name: "imageUrl", widget: "image", required: false }
                           - { label: "Alternativ Text", name: "altText", widget: "text", required: false }
+                      - { label: "Breite in Spalten", name: "width", widget: "number", default: 1 }
                       - { label: "Spaltenanzahl", name: "numberColumns", widget: "number", default: 1 }
                       - label: "Spalten"
                         name: "columns"
@@ -145,7 +150,6 @@ collections:
                             widget: "object"
                             fields:
                               - { label: "Trennstrich", name: "divider", widget: "hidden", default: true }
-
           - label: "Icon Blasen Abschnitt"
             name: "bubbleSection"
             widget: "object"
@@ -187,6 +191,7 @@ collections:
           - label: "Banner Abschnitt"
             name: "bannerSection"
             widget: "object"
+            summary: "{{fields.mainText}}"
             fields:
               - label: "Farbe"
                 name: "color"
@@ -199,6 +204,27 @@ collections:
               - { label: "Haupt-Text", name: "mainText", widget: "text", default: "Erste Zeile\nzweite Zeile" }
               - { label: "Unter-Text", name: "subText", widget: "text", default: "Beschreibung" }
               - { label: "Link", name: "href", widget: "string", required: false }
+          - label: "Workshops Abschnitt"
+            name: "workshopsSection"
+            widget: "object"
+            fields:
+              - label: "Hintergrundfarbe"
+                name: "backgroundColor"
+                widget: "color"
+                required: false
+                allowInput: true
+              - label: "Workshops"
+                name: "workshops"
+                widget: "list"
+                summary: "{{fields.workshop}}"
+                field:
+                  label: "Workshop"
+                  name: "workshop"
+                  widget: "relation"
+                  collection: "workshop"
+                  search_fields: ["title", "header", "footer"]
+                  value_field: "title"
+                  display_fields: ["title"]
   - label: "Workshop"
     name: "workshop"
     folder: "content/workshops"
@@ -236,6 +262,32 @@ collections:
             fields:
               - { label: "Trennstrich", name: "divider", widget: "hidden", default: true }
       - { label: "Fußzeile", name: "footer", widget: "markdown", default: "Altersgruppe\nDauer\nWorkshop Leiter\nFachbereiche" }
+  - label: "Artikel"
+    name: "article"
+    folder: "content/articles"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "slug", name: "slug", widget: "hidden", default: "{{slug}}" }
+      - label: "Erstelldatum"
+        name: "creationDate"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: true
+        time_format: false
+      - { label: "Überschrift", name: "mainHeader", widget: "text", default: "Überschrift" }
+      - { label: "Unter Überschrift", name: "subHeader", widget: "text", default: "Unter Überschrift", required: false }
+      - label: "Thumbnail"
+        name: "thumbnail"
+        widget: "object"
+        required: false
+        fields:
+          - { label: "Bild", name: "imageUrl", widget: "image", required: false }
+          - { label: "Alternativ Text", name: "altText", widget: "text", required: false }
+      - { label: "Einführung / Zusammenfassung", name: "introduction", widget: "markdown", default: "Einführung", required: false }
+      - { label: "Text", name: "text", widget: "markdown" }
   - label: "Einstellungen"
     name: "settings"
     extension: "json"

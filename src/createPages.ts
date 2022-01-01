@@ -9,14 +9,7 @@ const createPages: GatsbyNode["createPages"] = async ({ actions, graphql }) => {
         edges {
           node {
             id
-            title
             path
-            breadcrumbs
-            motto {
-              text
-              size
-              color
-            }
           }
         }
       }

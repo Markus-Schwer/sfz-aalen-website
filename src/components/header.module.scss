@@ -32,6 +32,7 @@
     a,.dropdown {
       cursor: pointer;
       text-decoration: none;
+      color: var(--text-color);
 
       &:hover,
       &:active {

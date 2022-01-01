@@ -1,0 +1,66 @@
+{
+  "motto": [
+    {
+      "text": "Forsch",
+      "size": "medium",
+      "color": "primary"
+    },
+    {
+      "text": "Dir das mal",
+      "size": "small",
+      "color": "tertiary"
+    },
+    {
+      "text": "Rein!",
+      "size": "big",
+      "color": "secondary"
+    }
+  ],
+  "path": "kontakt",
+  "title": "Kontakt",
+  "thumbnailUrls": [
+    "images/uploads/front-page-2.jpg"
+  ],
+  "pageSections": [
+    {
+      "type": "columnSection",
+      "header": {
+        "mainHeader": "Kontakt",
+        "subHeader": "",
+        "divider": true
+      },
+      "numberColumns": 3,
+      "columns": [
+        {
+          "type": "image",
+          "altText": "Karte Hochschule Aalen",
+          "imageUrl": "images/uploads/bildschirmfoto-2021-03-22-um-12.19.44_bearb.jpeg",
+          "width": 3
+        },
+        {
+          "type": "divider",
+          "divider": true
+        },
+        {
+          "type": "paragraph",
+          "text": "**Adresse**\n\nSchülerforschungszentrum\\\nder Hochschule Aalen\\\nBeethovenstraße 1\\\n73430 Aalen\\\nBaden-Württemberg",
+          "width": 1
+        },
+        {
+          "type": "paragraph",
+          "text": "**Ansprechpartner**\n\nErika Lahnsteiner\\\n*Leitung*\n\nTelefon +49 7361 576-1802\\\nerika.lahnsteiner@hs-aalen.de",
+          "width": 1
+        },
+        {
+          "type": "image",
+          "imageUrl": "images/uploads/portrait-8.jpg",
+          "altText": "Erika Lahnsteiner",
+          "width": 1
+        }
+      ]
+    }
+  ],
+  "breadcrumbs": [
+    "Kontakt"
+  ]
+}

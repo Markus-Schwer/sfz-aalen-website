@@ -13,21 +13,10 @@ import * as styles from "./header.module.scss";
 import Logo from "../images/logo.svg";
 import LogoText from "../images/logo-text.svg";
 import DropdownCaret from "../images/dropdown-caret.svg";
-
-const lerp = (x: number, y: number, a: number): number => x * (1 - a) + y * a;
-const clamp = (a: number, min = 0, max = 1): number =>
-  Math.min(max, Math.max(min, a));
-const invlerp = (x: number, y: number, a: number): number =>
-  clamp((a - x) / (y - x));
-const range = (
-  x1: number,
-  y1: number,
-  x2: number,
-  y2: number,
-  a: number
-): number => lerp(x2, y2, invlerp(x1, y1, a));
+import { range } from "../utils";
 
 const MobileLogo = styled(Logo)`
+  fill: var(--text-color);
   position: absolute;
   margin-top: 1.6875em;
   margin-left: 2.875em;
@@ -35,6 +24,7 @@ const MobileLogo = styled(Logo)`
 `;
 
 const StyledLogo = styled(Logo)`
+  fill: var(--text-color);
   position: absolute;
   margin-top: ${(props) => range(1, 0, 64, 27, props.percent)}px;
   margin-left: ${(props) => range(1, 0, 16, 46, props.percent)}px;
@@ -43,6 +33,7 @@ const StyledLogo = styled(Logo)`
 `;
 
 const StyledLogoText = styled(LogoText)`
+  fill: var(--text-color);
   position: absolute;
   margin-top: 27px;
   margin-left: 46px;

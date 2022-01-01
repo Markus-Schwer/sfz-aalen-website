@@ -1,5 +1,7 @@
-import { Link } from "gatsby";
 import React, { FunctionComponent } from "react";
+import { Link } from "gatsby";
+import useDarkMode from "use-dark-mode";
+import { DarkModeSwitch } from "react-toggle-dark-mode";
 
 import * as styles from "./footer.module.scss";
 
@@ -8,6 +10,8 @@ import HSAalenLogo from "../images/hs-aalen-logo.svg";
 import { Column, Row } from "./grid";
 
 const Footer: FunctionComponent<any> = () => {
+  const darkMode = useDarkMode();
+
   return (
     <footer className={styles.footer}>
       <div className={styles.footerMain}>
@@ -16,38 +20,29 @@ const Footer: FunctionComponent<any> = () => {
             <Column sm={12} md={6} lg={3} className={styles.footerColumn}>
               <h1>Schülerforschungszentrum der Hochschule Aalen</h1>
               Beethovenstraße 1
-              <br/>
+              <br />
               73430 Aalen
-              <br/>
+              <br />
               Baden-Württemberg
-              <br/>
+              <br />
               Telefon +49 7361 576-1802
-              <br/>
+              <br />
               E-Mail info@sfz-aalen.de
-              <br/>
+              <br />
             </Column>
             <Column sm={12} md={6} lg={3} className={styles.footerColumn}>
               <h1>Öffnungszeiten</h1>
               Während der Schulzeit
-              <br/>
+              <br />
               Samstag 13.00 –17.00 Uhr
-              <br/>
+              <br />
             </Column>
             <Column sm={12} md={6} lg={3} className={styles.footerColumn}>
               <h1>
-                <Link to="#">
-                  FAQ
-                </Link>
+                <Link to="#">FAQ</Link>
               </h1>
               <h1>
-                <Link to="#">
-                  Unterstützen
-                </Link>
-              </h1>
-              <h1>
-                <Link to="#">
-                  Karriere
-                </Link>
+                <Link to="/unterstuetzen">Unterstützen / Karriere</Link>
               </h1>
             </Column>
             <Column sm={12} md={6} lg={3} className={styles.footerColumn}>
@@ -66,15 +61,16 @@ const Footer: FunctionComponent<any> = () => {
       </div>
       <div className={styles.footerBottom}>
         <div className={styles.footerBottomContainer}>
-          <Link to="#">
-              Impressum
-          </Link>
-          <Link to="#">
-              Datenschutz
-          </Link>
-          <Link to="#">
-              Haftungsausschluss
-          </Link>
+          <DarkModeSwitch
+            className={styles.darkModeSwitch}
+            checked={darkMode.value}
+            onChange={darkMode.toggle}
+            size={18}
+            sunColor="var(--text-color-light)"
+          />
+          <Link to="#">Impressum</Link>
+          <Link to="#">Datenschutz</Link>
+          <Link to="#">Haftungsausschluss</Link>
         </div>
       </div>
     </footer>

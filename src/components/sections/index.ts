@@ -5,4 +5,5 @@ export { default as BubbleSection } from "./bubble-section";
 export { default as ColumnSection } from "./column-section";
 export { default as GridSection } from "./grid-section";
 export { default as HeaderOnlySection } from "./header-only-section";
+export { default as WorkshopsSection } from "./workshops-section";
 export * from "./section-utils";

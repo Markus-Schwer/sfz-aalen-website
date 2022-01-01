@@ -1,6 +1,8 @@
 import React, { FunctionComponent } from "react";
+import useDarkMode from "use-dark-mode";
 
 import { ColumnSection as ColumnSectionData } from "../../page-data";
+import { calcBrightness, calcDarkModeBackground } from "../../utils";
 
 import { Row } from "../grid";
 import FullWidthSection from "../full-width-section";
@@ -15,16 +17,31 @@ type ColumnSectionProps = {
 };
 
 const ColumnSection: FunctionComponent<ColumnSectionProps> = ({ data }) => {
+  const darkMode = useDarkMode();
+
+  let backgroundColor = data.backgroundColor;
+  let textColor = "var(--text-color)";
+
+  if (backgroundColor) {
+    backgroundColor = darkMode.value
+      ? calcDarkModeBackground(backgroundColor)
+      : backgroundColor;
+    textColor =
+      calcBrightness(backgroundColor) > 125
+        ? "var(--text-color-dark)" // background is bright
+        : "var(--text-color-light)"; // background is dark
+  }
+
   return (
     <ConditionalWrapper
-      condition={!!data.backgroundColor}
+      condition={!!backgroundColor}
       wrapper={(children) => (
-        <FullWidthSection style={{ backgroundColor: data.backgroundColor }}>
+        <FullWidthSection style={{ backgroundColor: backgroundColor }}>
           {children}
         </FullWidthSection>
       )}
     >
-      <section style={{ color: data.textColor }}>
+      <section style={{ color: textColor }}>
         {data.header && (
           <>
             {data.header.sectionId && (
@@ -33,21 +50,16 @@ const ColumnSection: FunctionComponent<ColumnSectionProps> = ({ data }) => {
                 id={data.header.sectionId}
               ></a>
             )}
-            <h1 style={{ color: data.textColor }}>{data.header.mainHeader}</h1>
-            <h2 style={{ color: data.textColor }}>{data.header.subHeader}</h2>
+            <h1>{data.header.mainHeader}</h1>
+            <h2>{data.header.subHeader}</h2>
             {data.header.divider ? (
-              <hr className={data.backgroundColor ? styles.inverted : null} />
+              <hr className={backgroundColor ? styles.inverted : null} />
             ) : null}
           </>
         )}
         <Row>
           {data.columns?.map((column, index) =>
-            renderColumn(
-              column,
-              index,
-              data.numberColumns,
-              data.backgroundColor
-            )
+            renderColumn(column, index, data.numberColumns, backgroundColor)
           )}
         </Row>
       </section>

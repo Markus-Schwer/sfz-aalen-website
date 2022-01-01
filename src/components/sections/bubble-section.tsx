@@ -1,5 +1,8 @@
 import React, { FunctionComponent } from "react";
+import useDarkMode from "use-dark-mode";
+
 import { BubbleSection as BubbleSectionData } from "../../page-data";
+import { calcDarkModeBackground } from "../../utils";
 
 import Bubble from "../bubble";
 import ConditionalWrapper from "../conditional-wrapper";
@@ -12,11 +15,21 @@ type BubbleSectionProps = {
 };
 
 const BubbleSection: FunctionComponent<BubbleSectionProps> = ({ data }) => {
+  const darkMode = useDarkMode();
+
+  let backgroundColor = data.backgroundColor;
+
+  if (backgroundColor) {
+    backgroundColor = darkMode.value
+      ? calcDarkModeBackground(backgroundColor)
+      : backgroundColor;
+  }
+
   return (
     <ConditionalWrapper
-      condition={!!data.backgroundColor}
+      condition={!!backgroundColor}
       wrapper={(children) => (
-        <FullWidthSection style={{ backgroundColor: data.backgroundColor }}>
+        <FullWidthSection style={{ backgroundColor: backgroundColor }}>
           {children}
         </FullWidthSection>
       )}
@@ -24,7 +37,12 @@ const BubbleSection: FunctionComponent<BubbleSectionProps> = ({ data }) => {
       <section>
         <Row>
           {data.bubbles?.map((bubble, index) => (
-            <Column sm={12} md={6} lg={(12/data.numberColumns) as any} key={index}>
+            <Column
+              sm={12}
+              md={6}
+              lg={(12 / data.numberColumns) as any}
+              key={index}
+            >
               <Bubble
                 icon={
                   bubble.image?.extension === "svg"

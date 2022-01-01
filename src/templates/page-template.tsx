@@ -12,6 +12,7 @@ import {
   GridSection,
   BannerSection,
   ColumnSection,
+  WorkshopsSection,
 } from "../components";
 
 type PageTemplateProps = {
@@ -39,6 +40,10 @@ const PageTemplate: FunctionComponent<PageProps<PageTemplateProps>> = ({
             return <GridSection data={section} key={index} />;
           case "bannerSection":
             return <BannerSection data={section} key={index} />;
+          case "workshopsSection":
+            return <WorkshopsSection data={section} key={index} />;
+          case "spacerSection":
+            return <br style={{ lineHeight: "4em" }} key={index} />;
           default:
             break;
         }
@@ -72,7 +77,6 @@ export const query = graphql`
         mainHeader
         divider
         backgroundColor
-        textColor
         header {
           divider
           mainHeader
@@ -80,6 +84,7 @@ export const query = graphql`
           sectionId
         }
         columns {
+          width
           image {
             childImageSharp {
               gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
@@ -137,6 +142,36 @@ export const query = graphql`
         mainText
         subText
         color
+        workshopOrder: workshops
+        workshops: childrenWorkshops {
+          title
+          header
+          thumbnail {
+            altText
+            image {
+              childImageSharp {
+                gatsbyImageData(
+                  placeholder: BLURRED
+                  layout: CONSTRAINED
+                  aspectRatio: 1
+                  height: 184
+                )
+              }
+            }
+          }
+          numberColumns
+          columns {
+            type
+            altText
+            text
+            image {
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+              }
+            }
+          }
+          footer
+        }
       }
     }
   }

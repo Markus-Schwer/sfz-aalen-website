@@ -25,11 +25,13 @@ export interface ImageColumn {
   imageUrl?: string;
   previewImage?: string;
   altText: string;
+  width?: number;
 }
 
 export interface ParagraphColumn {
   type: "paragraph";
   text: string;
+  width?: number;
 }
 
 export interface DividerColumn {
@@ -47,6 +49,7 @@ export interface CardColumn {
     previewImage?: string;
     altText: string;
   };
+  width?: number;
   numberColumns: number;
   columns: ImageColumn[] | ParagraphColumn[] | DividerColumn[];
 }
@@ -54,7 +57,6 @@ export interface CardColumn {
 export interface ColumnSection {
   type: "columnSection";
   backgroundColor?: string;
-  textColor: string;
   header: {
     divider: boolean;
     sectionId?: string;
@@ -98,6 +100,37 @@ export interface BannerSection {
   href?: string;
 }
 
+export interface WorkshopsSection {
+  type: "workshopsSection";
+  backgroundColor?: string;
+  workshopOrder: string[];
+  workshops: {
+    title: string;
+    thumbnail: {
+      image?: ImageDataLike;
+      imageUrl?: string;
+      previewImage?: string;
+      altText: string;
+    };
+    header: string;
+    numberColumns: number;
+    columns: {
+      type: "image" | "paragraph";
+      altText: string;
+      image?: ImageDataLike;
+      imageUrl?: string;
+      previewImage?: string;
+      text: string;
+    }[];
+    footer: string;
+  }[];
+}
+
+export interface SpacerSection {
+  type: "spacerSection";
+  spacer: boolean;
+}
+
 export interface PageData {
   id?: string;
   title: string;
@@ -117,5 +150,7 @@ export interface PageData {
   ColumnSection[] |
   BubbleSection[] |
   GridSection[] |
-  BannerSection[];
+  BannerSection[] |
+  WorkshopsSection[] |
+  SpacerSection[];
 }

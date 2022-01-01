@@ -28,7 +28,7 @@ export function renderColumn(
       return (
         <ImageColumn
           columnData={column}
-          columnWidth={(12 / numberColumns) as any}
+          columnWidth={(12 * (column.width || 0) / numberColumns) as any}
           key={key}
         />
       );
@@ -36,7 +36,7 @@ export function renderColumn(
       return (
         <ParagraphColumn
           columnData={column}
-          columnWidth={(12 / numberColumns) as any}
+          columnWidth={(12* (column.width || 0) / numberColumns) as any}
           key={key}
         />
       );

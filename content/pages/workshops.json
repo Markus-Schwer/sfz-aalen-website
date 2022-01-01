@@ -1,0 +1,67 @@
+{
+  "motto": [
+    {
+      "text": "Hammer",
+      "size": "medium",
+      "color": "secondary"
+    },
+    {
+      "text": "Hightech",
+      "size": "big",
+      "color": "primary"
+    },
+    {
+      "text": "Begeistert!",
+      "size": "small",
+      "color": "tertiary"
+    }
+  ],
+  "path": "workshops",
+  "title": "Workshops",
+  "thumbnailUrls": [
+    "images/uploads/workshops-thumbnail.jpg"
+  ],
+  "breadcrumbs": [
+    "Workshops"
+  ],
+  "pageSections": [
+    {
+      "type": "columnSection",
+      "header": {
+        "mainHeader": "Aktuelle Workshops",
+        "subHeader": "Manchmal weiß man noch nicht genau, woran man forschen möchte. Eine Idee, in welche Richtung es gehen könnte, liefert vielleicht der Besuch eines Workshops.",
+        "divider": true,
+        "sectionId": "aktuelle-workshops"
+      },
+      "textColor": "#000000",
+      "numberColumns": 1,
+      "columns": [
+        {
+          "type": "paragraph",
+          "text": "Hier findet ihr Workshops, die nach Bedarf angeboten werden. Die Termine für die Workshops werden individuell abgesprochen"
+        }
+      ]
+    },
+    {
+      "type": "workshopsSection",
+      "workshops": [
+        "Manche mögen's kalt",
+        "Smart-Home mit dem Reaspberry Pi"
+      ],
+      "backgroundColor": "#d4edfc"
+    },
+    {
+      "type": "headerOnlySection",
+      "mainHeader": "Anmeldung",
+      "subHeader": "Bei Interesse an einem der Workshops könnt ihr euch über das Anmeldeformular anmelden. Wir nehmen dann Kontakt mit euch auf.",
+      "divider": true,
+      "sectionId": "anmeldung"
+    },
+    {
+      "type": "bannerSection",
+      "color": "primary",
+      "mainText": "ZUFÄLLIG HOLZ ODER\nBAUTEILE ÜBRIG?",
+      "subText": "Wir freuen uns über sämtliche Materialien oder gebrauchte Geräte!"
+    }
+  ]
+}

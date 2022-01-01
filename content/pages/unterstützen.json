@@ -1,0 +1,78 @@
+{
+  "motto": [
+    {
+      "text": "Wissen.",
+      "size": "medium",
+      "color": "primary"
+    },
+    {
+      "text": "Schafft.",
+      "size": "medium",
+      "color": "tertiary"
+    },
+    {
+      "text": "Spass!",
+      "size": "big",
+      "color": "secondary"
+    }
+  ],
+  "path": "unterstuetzen",
+  "title": "Unterstützen",
+  "thumbnailUrls": [
+    "images/uploads/front-page-1.jpg"
+  ],
+  "breadcrumbs": [
+    "Unterstützen"
+  ],
+  "pageSections": [
+    {
+      "type": "columnSection",
+      "header": {
+        "mainHeader": "Unterstützung gesucht!",
+        "subHeader": "Um unsere Kompetenzen auszuweiten, suchen wir weitere Unterstützung für unser Team in\nForm von neugierigen, offenen und engagierten Menschen, die Lust haben ihr Know-How\nund ihre Begeisterung für MINT-Themen mit Jugendlichen zu teilen.",
+        "divider": true
+      },
+      "numberColumns": 2,
+      "columns": [
+        {
+          "type": "paragraph",
+          "width": 1,
+          "text": "**Karriere**\n\nSie brennen für Naturwissenschaften oder Technik und möchten Ihr\nWissen und Ihre Leidenschaft gerne an junge Menschen weitergeben?\nSie haben in Ihrem Berufsleben selber geforscht und sind immer noch\nneugierig und offen für neue Fragen geblieben? Dann kommen Sie zu\nuns ins Schülerforschungszentrum und tüfteln, experimentieren und\nforschen gemeinsam mit motivierten und interessierten Jugendlichen."
+        },
+        {
+          "type": "paragraph",
+          "width": 1,
+          "text": "Bei Interesse melden Sie sich bitte per email bei\\\n[erika.lahnsteiner@hs-aalen.de.](mailto:erika.lahnsteiner@hs-aalen.de) Wir freuen uns auf Sie!"
+        },
+        {
+          "type": "divider",
+          "divider": true
+        },
+        {
+          "type": "paragraph",
+          "width": 1,
+          "text": "**Forschungsmaterial**\n\nWir freuen uns aber auch über Holz, gebrauchte, aber funktionsfähige\nGeräte, elektronische Bauteile und noch viel mehr."
+        },
+        {
+          "type": "paragraph",
+          "width": 1,
+          "text": "Bei Interesse melden Sie sich bitte per email bei\\\n[erika.lahnsteiner@hs-aalen.de.](mailto:erika.lahnsteiner@hs-aalen.de) Wir freuen uns auf Sie!"
+        },
+        {
+          "type": "divider",
+          "divider": true
+        },
+        {
+          "type": "paragraph",
+          "width": 1,
+          "text": "**Workshop**\n\nSie möchten einen Workshop anbieten oder stehen mit ihrer Expertise\nzur Verfügung, wenn Fragen zu ihrem Fachgebiet auftauchen. Die Mög-\nlichkeiten zur Unterstützung sind vielfältig."
+        },
+        {
+          "type": "paragraph",
+          "width": 1,
+          "text": "Bei Interesse melden Sie sich bitte per email bei\\\n[erika.lahnsteiner@hs-aalen.de.](mailto:erika.lahnsteiner@hs-aalen.de) Wir freuen uns auf Sie!"
+        }
+      ]
+    }
+  ]
+}

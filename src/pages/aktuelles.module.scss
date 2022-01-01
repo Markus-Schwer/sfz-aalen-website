@@ -1,0 +1,38 @@
+.divider {
+  width: 100%;
+  margin: 1em 0 !important;
+  border-style: dashed;
+  border-color: var(--text-color-light) !important;
+}
+
+.creationDate {
+  font-weight: bold;
+}
+
+.seeMoreLink {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: var(--secondary-shade-2);
+  box-shadow: -0.5em 0 3px var(--secondary-shade-2);
+  clip-path: inset(0px 0px 0px -1em);
+  color: var(--text-color-light) !important;
+  font-style: italic;
+}
+
+.articleCard {
+  background-color: var(--secondary-shade-2);
+  color: var(--text-color-light);
+
+  .thumbnail {
+    position: relative;
+  }
+
+  .cardHeadline {
+    font-size: 1.5em;
+  }
+
+  .cardBody {
+    padding: 1em 1.5em 1.5em 1.5em;
+  }
+}

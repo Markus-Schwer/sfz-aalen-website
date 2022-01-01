@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://sft-aalen.netlify.app",
     title: "SFZ Aalen",
   },
   plugins: [
@@ -13,7 +13,6 @@ module.exports = {
         icon: "src/images/icon.png",
       },
     },
-    "gatsby-transformer-remark",
     "gatsby-plugin-sharp",
     {
       resolve: "gatsby-transformer-sharp",
@@ -65,8 +64,15 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: "./content/workshops/",
-        name: "workshops",
+        path: "./content/articles/",
+        name: "articles",
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: "./content",
+        name: "content",
       },
     },
     {
@@ -85,6 +91,14 @@ module.exports = {
         modulePath: "./src/cms/netlify-cms.ts",
       },
     },
-    "gatsby-plugin-netlify", // make sure to keep it last in the array
+    {
+      resolve: 'gatsby-plugin-use-dark-mode',
+      options: {
+        classNameDark: 'dark-mode',
+        classNameLight: 'light-mode',
+        storageKey: 'darkMode',
+        minify: true,
+      },
+    },
   ],
 };
