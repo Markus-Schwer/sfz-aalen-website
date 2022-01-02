@@ -137,10 +137,12 @@ const Article: FunctionComponent<{ article: ArticleData }> = ({ article }) => {
     <div className={styles.articleCard}>
       <div className={styles.thumbnail}>
         {article.thumbnail.image && (
-          <GatsbyImage
-            image={getImage(article.thumbnail.image) as IGatsbyImageData}
-            alt={article.thumbnail.altText}
-          />
+          <Link to={article.fields.slug.substring(1)}>
+            <GatsbyImage
+              image={getImage(article.thumbnail.image) as IGatsbyImageData}
+              alt={article.thumbnail.altText}
+            />
+          </Link>
         )}
       </div>
       <div className={styles.cardBody}>
