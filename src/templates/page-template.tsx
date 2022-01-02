@@ -171,6 +171,9 @@ export const query = graphql`
             }
           }
           footer
+          fields {
+            slug
+          }
         }
       }
     }

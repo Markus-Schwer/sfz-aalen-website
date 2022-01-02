@@ -1,6 +1,5 @@
 import { ImageDataLike } from "gatsby-plugin-image";
 
-
 export interface BigHeaderSection {
   type: "bigHeaderSection";
   text: string;
@@ -73,7 +72,7 @@ export type BubbleSection = {
   backgroundColor?: string;
   bubbles: {
     text: string;
-    image?: { publicURL: string; extension: string; } & ImageDataLike;
+    image?: { publicURL: string; extension: string } & ImageDataLike;
     imageUrl?: string;
     previewImage?: string;
     color: "primary" | "secondary" | "tertiary";
@@ -123,6 +122,9 @@ export interface WorkshopsSection {
       text: string;
     }[];
     footer: string;
+    fields: {
+      slug: string;
+    };
   }[];
 }
 
@@ -144,13 +146,32 @@ export interface PageData {
     size: string;
     color: string;
   }[];
-  pageSections: BigHeaderSection[] |
-  BigTextSection[] |
-  HeaderOnlySection[] |
-  ColumnSection[] |
-  BubbleSection[] |
-  GridSection[] |
-  BannerSection[] |
-  WorkshopsSection[] |
-  SpacerSection[];
+  pageSections:
+    | BigHeaderSection[]
+    | BigTextSection[]
+    | HeaderOnlySection[]
+    | ColumnSection[]
+    | BubbleSection[]
+    | GridSection[]
+    | BannerSection[]
+    | WorkshopsSection[]
+    | SpacerSection[];
+}
+
+export interface ArticleData {
+  id: string;
+  title: string;
+  thumbnail: {
+    image?: ImageDataLike;
+    previewImage?: string;
+    altText: string;
+  };
+  mainHeader: string;
+  subHeader?: string;
+  introduction?: string;
+  creationDate: string; // YYYY-MM-DD
+  text: string;
+  fields: {
+    slug: string;
+  };
 }

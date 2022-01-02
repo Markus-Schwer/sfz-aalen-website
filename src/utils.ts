@@ -1,3 +1,5 @@
+import { ColumnSection } from "./page-data";
+
 export const lerp = (x: number, y: number, a: number): number =>
   x * (1 - a) + y * a;
 
@@ -85,3 +87,50 @@ export const rgba2hex = (rgba: string) =>
         .replace("NaN", "")
     )
     .join("")}`;
+
+export function mapPreviewColumns(
+  columns: any,
+  getAsset: (asset: string) => {
+    url: string;
+    path: string;
+    field?: any;
+    fileObj: File;
+  }
+): ColumnSection["columns"][0] {
+  return columns?.map(
+    (column: any) =>
+      ({
+        ...column,
+        previewImage: column.imageUrl ? getAsset(column.imageUrl).url : null,
+        header:
+          column.header != null
+            ? {
+                ...column.header,
+                previewImage: column.header.imageUrl
+                  ? getAsset(column.header.imageUrl).url
+                  : null,
+              }
+            : null,
+        columns: mapPreviewColumns(column.columns, getAsset),
+      } as ColumnSection["columns"][0])
+  );
+}
+
+export function mapPreviewImage<T extends { imageUrl?: string }>(
+  objectWithImage: T,
+  getAsset: (asset: string) => {
+    url: string;
+    path: string;
+    field?: any;
+    fileObj: File;
+  }
+): (T & { previewImage?: string }) | undefined {
+  return objectWithImage
+    ? {
+        ...objectWithImage,
+        previewImage: objectWithImage.imageUrl
+          ? getAsset(objectWithImage.imageUrl).url
+          : undefined,
+      }
+    : undefined;
+}

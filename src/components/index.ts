@@ -1,4 +1,4 @@
-export * from "./columns"
+export * from "./columns";
 export * from "./sections";
 export { default as Bubble } from "./bubble";
 export { default as Card } from "./card";
@@ -9,3 +9,4 @@ export * from "./grid";
 export { default as Header } from "./header";
 export { default as InlineHeader } from "./inline-header";
 export { default as Layout } from "./layout";
+export { default as Button } from "./button";

@@ -223,7 +223,7 @@ collections:
                   widget: "relation"
                   collection: "workshop"
                   search_fields: ["title", "header", "footer"]
-                  value_field: "title"
+                  value_field: "/{{slug}}"
                   display_fields: ["title"]
   - label: "Workshop"
     name: "workshop"

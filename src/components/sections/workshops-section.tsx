@@ -44,8 +44,8 @@ const WorkshopsSection: FunctionComponent<WorkshopsSectionProps> = ({
           {data.workshops
             .sort(
               (a, b) =>
-                data.workshopOrder.indexOf(a.title) -
-                data.workshopOrder.indexOf(b.title)
+                data.workshopOrder.indexOf(a.fields.slug) -
+                data.workshopOrder.indexOf(b.fields.slug)
             )
             .map((workshop, index) => (
               <Column sm={12} md={12} lg={12} key={index}>

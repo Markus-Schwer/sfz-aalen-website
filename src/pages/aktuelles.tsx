@@ -8,27 +8,16 @@ import {
 } from "gatsby-plugin-image";
 import Clamp from "react-multiline-clamp";
 
-import { PageData } from "../page-data";
+import { PageData, ArticleData } from "../page-data";
 import * as styles from "./aktuelles.module.scss";
 
 import { Layout, HeaderOnlySection, Column, Row, Card } from "../components";
 
-type Article = {
-  title: string;
-  thumbnail: {
-    image?: ImageDataLike;
-    altText: string;
-  };
-  mainHeader: string;
-  subHeader?: string;
-  introduction?: string;
-  creationDate: string; // YYYY-MM-DD
-  text: string;
-};
-
 type ArticlesQuery = {
   allArticlesJson: {
-    nodes: Article[];
+    edges: {
+      node: ArticleData;
+    }[];
   };
   thumbnails?: {
     nodes: ImageDataLike[];
@@ -38,21 +27,31 @@ type ArticlesQuery = {
 const ARTICLES_QUERY = graphql`
   query ArticlesQuery {
     allArticlesJson {
-      nodes {
-        title
-        thumbnail {
-          altText
-          image {
-            childImageSharp {
-              gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH, aspectRatio: 2)
+      edges {
+        node {
+          id
+          title
+          thumbnail {
+            altText
+            image {
+              childImageSharp {
+                gatsbyImageData(
+                  placeholder: BLURRED
+                  layout: FULL_WIDTH
+                  aspectRatio: 2
+                )
+              }
             }
           }
+          mainHeader
+          subHeader
+          introduction
+          creationDate
+          text
+          fields {
+            slug
+          }
         }
-        mainHeader
-        subHeader
-        introduction
-        creationDate
-        text
       }
     }
     thumbnails: allFile(
@@ -108,11 +107,13 @@ const Articles: FunctionComponent = () => {
       />
       <section>
         <Row>
-          {data.allArticlesJson.nodes.map((article, index) => (
-            <Column sm={12} md={12} lg={6} key={index}>
-              <Article article={article} />
-            </Column>
-          ))}
+          {data.allArticlesJson.edges
+            .map((edge) => edge.node)
+            .map((article, index) => (
+              <Column sm={12} md={12} lg={6} key={index}>
+                <Article article={article} />
+              </Column>
+            ))}
         </Row>
       </section>
       <br style={{ lineHeight: 3 }} />
@@ -131,7 +132,7 @@ const Articles: FunctionComponent = () => {
 
 export default Articles;
 
-const Article: FunctionComponent<{ article: Article }> = ({ article }) => {
+const Article: FunctionComponent<{ article: ArticleData }> = ({ article }) => {
   return (
     <div className={styles.articleCard}>
       <div className={styles.thumbnail}>
@@ -150,7 +151,10 @@ const Article: FunctionComponent<{ article: Article }> = ({ article }) => {
             lines={3}
             withToggle
             showMoreElement={() => (
-              <Link className={styles.seeMoreLink} to="#">
+              <Link
+                className={styles.seeMoreLink}
+                to={article.fields.slug.substring(1)}
+              >
                 mehr erfahren...
               </Link>
             )}

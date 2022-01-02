@@ -1,10 +1,14 @@
 import { GatsbyNode } from "gatsby";
+import { createFilePath } from "gatsby-source-filesystem";
 import { resolve } from "path";
-import { PageData } from "./src/page-data";
+import { ArticleData, PageData } from "./src/page-data";
 
 interface QueryResult {
   allPagesJson: {
     nodes: PageData[];
+  };
+  allArticlesJson: {
+    nodes: ArticleData[];
   };
 }
 
@@ -26,6 +30,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
 
   // Ensure the path now points to TSX template
   const pageTemplate = resolve(`./src/templates/page-template.tsx`);
+  const articleTemplate = resolve(`./src/templates/article-template.tsx`);
 
   /**
    * Pass the query structure generic for complete type-check coverage
@@ -37,6 +42,15 @@ export const createPages: GatsbyNode["createPages"] = async ({
           id
           title
           path
+        }
+      }
+      allArticlesJson {
+        nodes {
+          id
+          title
+          fields {
+            slug
+          }
         }
       }
     }
@@ -61,6 +75,19 @@ export const createPages: GatsbyNode["createPages"] = async ({
       },
     });
   });
+
+  const articles = result.data.allArticlesJson.nodes;
+
+  articles.forEach((article) => {
+    createPage({
+      path: "aktuelles" + article.fields.slug,
+      component: articleTemplate,
+      context: {
+        id: article.id,
+        slug: article.fields.slug
+      },
+    });
+  });
 };
 
 export const createResolvers: GatsbyNode["createResolvers"] = ({
@@ -69,14 +96,16 @@ export const createResolvers: GatsbyNode["createResolvers"] = ({
   const imageResolver = {
     type: "File",
     resolve: async (source: any, args: any, context: any, info: any) => {
-      return source.imageUrl ? await context.nodeModel.findOne({
-        query: {
-          filter: {
-            relativePath: { eq: source.imageUrl },
-          },
-        },
-        type: "File",
-      }) : undefined;
+      return source.imageUrl
+        ? await context.nodeModel.findOne({
+            query: {
+              filter: {
+                relativePath: { eq: source.imageUrl },
+              },
+            },
+            type: "File",
+          })
+        : undefined;
     },
   };
 
@@ -126,19 +155,58 @@ export const createResolvers: GatsbyNode["createResolvers"] = ({
         type: "[WorkshopsJson]",
         resolve: async (source: any, args: any, context: any, info: any) => {
           if (!source.workshops) return undefined;
-          const { entries } = await context.nodeModel.findAll({
-            query: {
-              filter: {
-                title: { in: source.workshops },
+          const { entries } = await context.nodeModel.findAll(
+            {
+              query: {
+                filter: {
+                  fields: { slug: { in: source.workshops } },
+                },
               },
+              type: "WorkshopsJson",
             },
-            type: "WorkshopsJson",
-          }, {
-            connectionType: "WorkshopsJsonConnection"
-          });
+            {
+              connectionType: "WorkshopsJsonConnection",
+            }
+          );
           return entries;
-        }
-      }
-    }
+        },
+      },
+    },
   });
+};
+
+export const onCreateNode: GatsbyNode["onCreateNode"] = ({
+  node,
+  getNode,
+  actions,
+}) => {
+  const { createNodeField } = actions;
+  switch (node.internal.type) {
+    case "ArticlesJson":
+      createNodeField({
+        node,
+        name: "slug",
+        value: createFilePath({
+          node,
+          getNode,
+          basePath: "articles",
+          trailingSlash: false,
+        }),
+      });
+      break;
+    case "WorkshopsJson":
+      createNodeField({
+        node,
+        name: "slug",
+        value: createFilePath({
+          node,
+          getNode,
+          basePath: "workshops",
+          trailingSlash: false,
+        }),
+      });
+      break;
+    default:
+      break;
+  }
 };

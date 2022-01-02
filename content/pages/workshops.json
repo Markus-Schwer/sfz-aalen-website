@@ -38,15 +38,16 @@
       "columns": [
         {
           "type": "paragraph",
-          "text": "Hier findet ihr Workshops, die nach Bedarf angeboten werden. Die Termine für die Workshops werden individuell abgesprochen"
+          "text": "Hier findet ihr Workshops, die nach Bedarf angeboten werden. Die Termine für die Workshops werden individuell abgesprochen",
+          "width": 1
         }
       ]
     },
     {
       "type": "workshopsSection",
       "workshops": [
-        "Manche mögen's kalt",
-        "Smart-Home mit dem Reaspberry Pi"
+        "/manche-mögens-kalt",
+        "/smart-home-mit-dem-reaspberry-pi"
       ],
       "backgroundColor": "#d4edfc"
     },
