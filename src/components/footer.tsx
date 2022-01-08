@@ -44,6 +44,9 @@ const Footer: FunctionComponent<any> = () => {
               <h1>
                 <Link to="/unterstuetzen">Unterstützen / Karriere</Link>
               </h1>
+              <h1>
+                <a href="/admin">CMS</a>
+              </h1>
             </Column>
             <Column sm={12} md={6} lg={3} className={styles.footerColumn}>
               <h1>Partner</h1>
