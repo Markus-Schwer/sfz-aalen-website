@@ -133,6 +133,14 @@ export interface SpacerSection {
   spacer: boolean;
 }
 
+export interface AccordionSection {
+  type: "accordionSection";
+  items: {
+    header: string;
+    text: string;
+  }[];
+}
+
 export interface PageData {
   id?: string;
   title: string;
@@ -155,7 +163,8 @@ export interface PageData {
     | GridSection[]
     | BannerSection[]
     | WorkshopsSection[]
-    | SpacerSection[];
+    | SpacerSection[]
+    | AccordionSection[];
 }
 
 export interface ArticleData {

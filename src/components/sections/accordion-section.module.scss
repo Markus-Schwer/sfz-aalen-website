@@ -1,0 +1,58 @@
+.dropdownIcon {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  padding-left: 8px;
+  stroke: var(--text-color);
+  float: right;
+  transition: transform .3s ease-in-out;
+}
+
+.accordionItem {
+  > summary {
+    font-size: 1.625em;
+    line-height: 1em;
+    font-weight: normal;
+    cursor: pointer;
+    list-style: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  &[open] > summary {
+    margin-bottom: 1em;
+
+    .dropdownIcon {
+      transform: rotate(180deg);
+    }
+
+    ~ * {
+      animation: sweep 0.3s ease-in-out;
+    }
+
+    @keyframes sweep {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+
+  .text * {
+    color: inherit;
+  }
+}
+
+.accordionSeparator {
+  margin-top: 1.5em !important;
+  margin-bottom: 1.5em !important;
+}
+
+.accordionColumn {
+  padding-top: 0;
+  padding-bottom: 0;
+}

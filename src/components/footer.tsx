@@ -39,7 +39,7 @@ const Footer: FunctionComponent<any> = () => {
             </Column>
             <Column sm={12} md={6} lg={3} className={styles.footerColumn}>
               <h1>
-                <Link to="#">FAQ</Link>
+                <Link to="/faq">FAQ</Link>
               </h1>
               <h1>
                 <Link to="/unterstuetzen">Unterstützen / Karriere</Link>
@@ -68,9 +68,9 @@ const Footer: FunctionComponent<any> = () => {
             size={18}
             sunColor="var(--text-color-light)"
           />
-          <Link to="#">Impressum</Link>
-          <Link to="#">Datenschutz</Link>
-          <Link to="#">Haftungsausschluss</Link>
+          <Link to="/impressum">Impressum</Link>
+          <Link to="/datenschutz">Datenschutz</Link>
+          <Link to="/haftungsausschluss">Haftungsausschluss</Link>
         </div>
       </div>
     </footer>

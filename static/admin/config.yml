@@ -225,6 +225,17 @@ collections:
                   search_fields: ["title", "header", "footer"]
                   value_field: "/{{slug}}"
                   display_fields: ["title"]
+          - label: "Akkordeon Abschnitt"
+            name: "accordionSection"
+            widget: "object"
+            fields:
+              - label: "Elemente"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.header}}"
+                fields:
+                  - { label: "Überschrift", name: "header", widget: "text", default: "Überschrift" }
+                  - { label: "Text", name: "text", widget: "markdown" }
   - label: "Workshop"
     name: "workshop"
     folder: "content/workshops"

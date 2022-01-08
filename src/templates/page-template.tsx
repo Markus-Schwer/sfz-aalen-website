@@ -14,6 +14,7 @@ import {
   ColumnSection,
   WorkshopsSection,
 } from "../components";
+import AccordionSection from "../components/sections/accordion-section";
 
 type PageTemplateProps = {
   pagesJson: PageData;
@@ -44,6 +45,8 @@ const PageTemplate: FunctionComponent<PageProps<PageTemplateProps>> = ({
             return <WorkshopsSection data={section} key={index} />;
           case "spacerSection":
             return <br style={{ lineHeight: "4em" }} key={index} />;
+          case "accordionSection":
+            return <AccordionSection data={section} key={index} />
           default:
             break;
         }
@@ -138,6 +141,8 @@ export const query = graphql`
           }
           altText
           description
+          header
+          text
         }
         mainText
         subText

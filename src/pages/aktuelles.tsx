@@ -11,10 +11,21 @@ import Clamp from "react-multiline-clamp";
 import { PageData, ArticleData } from "../page-data";
 import * as styles from "./aktuelles.module.scss";
 
-import { Layout, HeaderOnlySection, Column, Row, Card } from "../components";
+import {
+  Layout,
+  HeaderOnlySection,
+  Column,
+  Row,
+  AccordionSection,
+} from "../components";
 
 type ArticlesQuery = {
-  allArticlesJson: {
+  currentArticles: {
+    edges: {
+      node: ArticleData;
+    }[];
+  };
+  archivedArticles: {
     edges: {
       node: ArticleData;
     }[];
@@ -26,33 +37,11 @@ type ArticlesQuery = {
 
 const ARTICLES_QUERY = graphql`
   query ArticlesQuery {
-    allArticlesJson {
-      edges {
-        node {
-          id
-          title
-          thumbnail {
-            altText
-            image {
-              childImageSharp {
-                gatsbyImageData(
-                  placeholder: BLURRED
-                  layout: FULL_WIDTH
-                  aspectRatio: 2
-                )
-              }
-            }
-          }
-          mainHeader
-          subHeader
-          introduction
-          creationDate
-          text
-          fields {
-            slug
-          }
-        }
-      }
+    currentArticles: allArticlesJson(limit: 4) {
+      ...Articles
+    }
+    archivedArticles: allArticlesJson(skip: 4, limit: 10) {
+      ...Articles
     }
     thumbnails: allFile(
       filter: { relativePath: { eq: "images/uploads/front-page-1.jpg" } }
@@ -60,6 +49,35 @@ const ARTICLES_QUERY = graphql`
       nodes {
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+        }
+      }
+    }
+  }
+
+  fragment Articles on ArticlesJsonConnection {
+    edges {
+      node {
+        id
+        title
+        thumbnail {
+          altText
+          image {
+            childImageSharp {
+              gatsbyImageData(
+                placeholder: BLURRED
+                layout: FULL_WIDTH
+                aspectRatio: 2
+              )
+            }
+          }
+        }
+        mainHeader
+        subHeader
+        introduction
+        creationDate
+        text
+        fields {
+          slug
         }
       }
     }
@@ -107,7 +125,7 @@ const Articles: FunctionComponent = () => {
       />
       <section>
         <Row>
-          {data.allArticlesJson.edges
+          {data.currentArticles.edges
             .map((edge) => edge.node)
             .map((article, index) => (
               <Column sm={12} md={12} lg={6} key={index}>
@@ -124,6 +142,22 @@ const Articles: FunctionComponent = () => {
           subHeader: "",
           divider: true,
           sectionId: "archiv",
+        }}
+      />
+      <AccordionSection
+        data={{
+          type: "accordionSection",
+          items: data.archivedArticles.edges
+            .map((edge) => edge.node)
+            .map((article) => ({
+              header: article.mainHeader,
+              text:
+                (article.subHeader ? `### ${article.subHeader}\n\n` : "") +
+                `${article.text.substring(
+                  0,
+                  422
+                )} [mehr erfahren...](/aktuelles${article.fields.slug})`,
+            })),
         }}
       />
     </Layout>

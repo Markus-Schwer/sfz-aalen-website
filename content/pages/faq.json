@@ -1,0 +1,92 @@
+{
+  "motto": [
+    {
+      "text": "Wissen.",
+      "size": "medium",
+      "color": "primary"
+    },
+    {
+      "text": "Schafft.",
+      "size": "medium",
+      "color": "tertiary"
+    },
+    {
+      "text": "Spass!",
+      "size": "big",
+      "color": "secondary"
+    }
+  ],
+  "path": "faq",
+  "title": "FAQ",
+  "thumbnailUrls": [
+    "images/uploads/front-page-1.jpg"
+  ],
+  "breadcrumbs": [
+    "FAQ"
+  ],
+  "pageSections": [
+    {
+      "type": "headerOnlySection",
+      "mainHeader": "FAQ",
+      "subHeader": "",
+      "divider": true
+    },
+    {
+      "type": "accordionSection",
+      "items": [
+        {
+          "header": "Was kosten die Workshops?",
+          "text": "Was kosten die Workshops?"
+        },
+        {
+          "header": "Muss ich mich für die Workshops anmelden?",
+          "text": "Ja, du musst dich für die Workshops anmelden. Nach der Anmeldung über\ndie Homepage erhältst du eine Mail mit den weiteren Details."
+        },
+        {
+          "header": "Wann finden die Workshops statt?",
+          "text": "Wann finden die Workshops statt?"
+        },
+        {
+          "header": "Muss ich mich für das SFZ anmelden?",
+          "text": "Muss ich mich für das SFZ anmelden?"
+        },
+        {
+          "header": "Kann ich mitmachen, auch wenn ich kein eigenes Projekt habe?",
+          "text": "Kann ich mitmachen, auch wenn ich kein eigenes Projekt habe?"
+        },
+        {
+          "header": "Kann ich mit jedem Projekt teilnehmen?",
+          "text": "Kann ich mit jedem Projekt teilnehmen?"
+        },
+        {
+          "header": "Was ist, wenn ich nicht jeden Samstag Zeit habe?",
+          "text": "Was ist, wenn ich nicht jeden Samstag Zeit habe?"
+        },
+        {
+          "header": "Kostet die Teilnahme am SFZ was?",
+          "text": "Kostet die Teilnahme am SFZ was?"
+        },
+        {
+          "header": "Warum muss ich die Einverständniserklärung unterschreiben bzw. unterschreiben lassen?",
+          "text": "Warum muss ich die Einverständniserklärung unterschreiben bzw. unterschreiben lassen?"
+        },
+        {
+          "header": "Muss ich das ganze Schuljahr teilnehmen?",
+          "text": "Muss ich das ganze Schuljahr teilnehmen?"
+        },
+        {
+          "header": "Kann ich auch nur einmal kommen, wenn ich für mein Projekt etwas machen muss?",
+          "text": "Kann ich auch nur einmal kommen, wenn ich für mein Projekt etwas machen muss?"
+        },
+        {
+          "header": "Kann ich zum Schnuppern kommen?",
+          "text": "Kann ich zum Schnuppern kommen?"
+        },
+        {
+          "header": "Bekomme ich das Material für mein Projekt bezahlt?",
+          "text": "Bekomme ich das Material für mein Projekt bezahlt?"
+        }
+      ]
+    }
+  ]
+}
