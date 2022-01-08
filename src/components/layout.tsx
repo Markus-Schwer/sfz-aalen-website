@@ -1,25 +1,18 @@
 import React, { FunctionComponent } from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import styled from "styled-components";
+import { useBreakpoint } from "gatsby-plugin-breakpoints";
+import Slider from "react-slick";
 
 import { PageData } from "../page-data";
 import Header from "./header";
 import Footer from "./footer";
 import BubbleHeaderBackground from "../images/bubble-header-background.svg";
 
+import "slick-carousel/slick/slick.scss";
+import "slick-carousel/slick/slick-theme.scss";
 import * as styles from "./layout.module.scss";
 
 import NavigationData from "../../content/navigation.json";
-import { useBreakpoint } from "gatsby-plugin-breakpoints";
-
-const MainImageContainer = styled.div.attrs(
-  (props: { height: number }) => props
-)`
-  position: relative;
-  height: ${(props) => props.height}em;
-  overflow: hidden;
-  margin-top: 7.5em;
-`;
 
 const mainTitleColorMap: any = {
   primary: styles.mainTitlePrimary,
@@ -46,22 +39,39 @@ const Layout: FunctionComponent<LayoutProps> = ({ pageData, children }) => {
         logoScrollEffect={pageData.path === "home"}
         navigationData={NavigationData}
       />
-      <MainImageContainer height={pageData.path === "home" ? 41 : 28}>
-        {pageData.thumbnails ? (
-          <GatsbyImage
-            className={styles.thumbnailImage}
-            image={getImage(pageData.thumbnails[0])!!}
-            alt=""
-          />
-        ) : (
-          pageData.previewThumbnails && (
+      <div
+        className={[
+          styles.mainImageContainer,
+          pageData.path === "home" ? styles.home : undefined,
+        ].join(" ")}
+      >
+        <Slider
+          dots={false}
+          infinite={true}
+          autoplay={true}
+          autoplaySpeed={10000}
+          slidesToShow={1}
+          slidesToScroll={1}
+          adaptiveHeight={true}
+          className="overflow-hidden"
+        >
+          {pageData.thumbnails?.map((thumbnail, index) => (
+            <GatsbyImage
+              className={styles.thumbnailImage}
+              image={getImage(thumbnail)!!}
+              alt=""
+              key={index}
+            />
+          ))}
+          {pageData.previewThumbnails?.map((thumbnail, index) => (
             <img
               className={styles.thumbnailImage}
-              src={pageData.previewThumbnails[0]}
+              src={thumbnail}
+              key={index}
             />
-          )
-        )}
-      </MainImageContainer>
+          ))}
+        </Slider>
+      </div>
       <div className={styles.mainContainer}>
         {!breakpoints.sm && (
           <span className={styles.currentPageName}>
@@ -73,7 +83,7 @@ const Layout: FunctionComponent<LayoutProps> = ({ pageData, children }) => {
         {pageData.motto?.length === 3 ? (
           <div className={styles.mainTitle}>
             <div className={styles.mainTitleText}>
-              <BubbleHeaderBackground className={styles.mainTitleBackground}/>
+              <BubbleHeaderBackground className={styles.mainTitleBackground} />
               {pageData.motto.map(
                 (
                   motto: { text: string; size: string; color: string },

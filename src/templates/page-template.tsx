@@ -65,7 +65,7 @@ export const query = graphql`
       breadcrumbs
       thumbnails {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+          gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH, quality: 100)
         }
       }
       motto {

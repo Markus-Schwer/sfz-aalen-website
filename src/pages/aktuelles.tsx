@@ -48,7 +48,7 @@ const ARTICLES_QUERY = graphql`
     ) {
       nodes {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+          gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH, quality: 100)
         }
       }
     }

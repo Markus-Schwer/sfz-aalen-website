@@ -96,7 +96,7 @@ export const query = graphql`
         altText
         image {
           childImageSharp {
-            gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+            gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH, quality: 100)
           }
         }
       }
@@ -114,7 +114,7 @@ export const query = graphql`
     ) {
       nodes {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+          gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH, quality: 100)
         }
       }
     }
