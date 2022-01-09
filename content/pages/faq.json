@@ -36,15 +36,15 @@
       "items": [
         {
           "header": "Was kosten die Workshops?",
-          "text": "Was kosten die Workshops?"
+          "text": "Die Workshops sind kostenlos."
         },
         {
           "header": "Muss ich mich für die Workshops anmelden?",
-          "text": "Ja, du musst dich für die Workshops anmelden. Nach der Anmeldung über\ndie Homepage erhältst du eine Mail mit den weiteren Details."
+          "text": "Ja, du musst dich für die Workshops anmelden. Derzeit ist eine Anmeldung nur direkt über Erika Lahnsteiner ([erika.lahnsteiner@hs-aalen.de](mailto:erika.lahnsteiner@hs-aalen.de)) möglich."
         },
         {
           "header": "Wann finden die Workshops statt?",
-          "text": "Wann finden die Workshops statt?"
+          "text": "Wenn genug Teilnehmer für einen Workshop zusammenkommen wird der Termin in Abstimmung mit dem Kursleiter und den Teilnehmern vereinbart."
         },
         {
           "header": "Muss ich mich für das SFZ anmelden?",
