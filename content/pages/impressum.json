@@ -1,0 +1,45 @@
+{
+  "motto": [
+    {
+      "text": "Wissen.",
+      "size": "medium",
+      "color": "primary"
+    },
+    {
+      "text": "Schafft.",
+      "size": "medium",
+      "color": "tertiary"
+    },
+    {
+      "text": "Spass!",
+      "size": "big",
+      "color": "secondary"
+    }
+  ],
+  "path": "impressum",
+  "title": "Impressum",
+  "breadcrumbs": [
+    "Impressum"
+  ],
+  "thumbnailUrls": [
+    "images/uploads/front-page-1.jpg"
+  ],
+  "pageSections": [
+    {
+      "type": "columnSection",
+      "header": {
+        "mainHeader": "Impressum",
+        "subHeader": "",
+        "divider": true
+      },
+      "numberColumns": 1,
+      "columns": [
+        {
+          "type": "paragraph",
+          "width": 1,
+          "text": "Hier könnte ihre Werbung stehen!"
+        }
+      ]
+    }
+  ]
+}
