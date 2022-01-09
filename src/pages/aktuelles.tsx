@@ -144,7 +144,7 @@ const Article: FunctionComponent<{ article: ArticleData }> = ({ article }) => {
             showMoreElement={() => (
               <Link
                 className={styles.seeMoreLink}
-                to={article.fields.slug.substring(1)}
+                to={article.fields.slug}
               >
                 mehr erfahren...
               </Link>
