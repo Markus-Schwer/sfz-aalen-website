@@ -61,6 +61,7 @@ const Layout: FunctionComponent<LayoutProps> = ({ pageData, children }) => {
               image={getImage(thumbnail)!!}
               alt=""
               key={index}
+              loading={index === 0 ? "eager" : undefined}
             />
           ))}
           {pageData.previewThumbnails?.map((thumbnail, index) => (

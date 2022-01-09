@@ -5,7 +5,13 @@ import ReactMarkdown from "react-markdown";
 import { PageData, ArticleData } from "../page-data";
 
 import { Button, HeaderOnlySection, Layout, SEO } from "../components";
-import { GatsbyImage, getImage, ImageDataLike } from "gatsby-plugin-image";
+import {
+  GatsbyImage,
+  getImage,
+  getSrc,
+  IGatsbyImageData,
+  ImageDataLike,
+} from "gatsby-plugin-image";
 
 export type PageTemplateProps = {
   file: {
@@ -48,22 +54,19 @@ const PageTemplate: FunctionComponent<PageProps<PageTemplateProps>> = ({
     pageSections: [],
   };
 
-  const thumbnailData =
-    data.file.article.thumbnail.image != undefined
-      ? getImage(data.file.article.thumbnail.image)
-      : undefined;
-
   return (
     <>
-      <SEO
-        title={pageData.title}
-        description={data.file.article.introduction}
-        image={thumbnailData?.images?.fallback?.src}
-        article={{
-          first_publication_date: data.file.birthTime,
-          last_publication_date: data.file.modifiedTime,
-        }}
-      />
+      {data.file.article.thumbnail.image && (
+        <SEO
+          title={pageData.title}
+          description={data.file.article.introduction}
+          image={getSrc(data.file.article.thumbnail.image)}
+          article={{
+            first_publication_date: data.file.birthTime,
+            last_publication_date: data.file.modifiedTime,
+          }}
+        />
+      )}
       <Layout pageData={pageData}>
         <HeaderOnlySection
           data={{
@@ -73,9 +76,11 @@ const PageTemplate: FunctionComponent<PageProps<PageTemplateProps>> = ({
             divider: true,
           }}
         />
-        {thumbnailData && (
+        {data.file.article.thumbnail.image && (
           <GatsbyImage
-            image={thumbnailData}
+            image={
+              getImage(data.file.article.thumbnail.image) as IGatsbyImageData
+            }
             alt={data.file.article.thumbnail.altText}
           />
         )}
