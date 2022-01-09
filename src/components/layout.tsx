@@ -34,7 +34,7 @@ const Layout: FunctionComponent<LayoutProps> = ({ pageData, children }) => {
   const breakpoints = useBreakpoint();
 
   return (
-    <div>
+    <>
       <Header
         logoScrollEffect={pageData.path === "home"}
         navigationData={NavigationData}
@@ -106,7 +106,7 @@ const Layout: FunctionComponent<LayoutProps> = ({ pageData, children }) => {
         <main>{children}</main>
       </div>
       <Footer />
-    </div>
+    </>
   );
 };
 

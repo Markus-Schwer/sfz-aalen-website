@@ -13,6 +13,7 @@ import {
   BannerSection,
   ColumnSection,
   WorkshopsSection,
+  SEO,
 } from "../components";
 import AccordionSection from "../components/sections/accordion-section";
 
@@ -24,34 +25,37 @@ const PageTemplate: FunctionComponent<PageProps<PageTemplateProps>> = ({
   data,
 }) => {
   return (
-    <Layout pageData={data.pagesJson}>
-      {data.pagesJson.pageSections?.map((section, index) => {
-        switch (section.type) {
-          case "bigHeaderSection":
-            return <BigHeaderSection data={section} key={index} />;
-          case "bigTextSection":
-            return <BigTextSection data={section} key={index} />;
-          case "headerOnlySection":
-            return <HeaderOnlySection data={section} key={index} />;
-          case "columnSection":
-            return <ColumnSection data={section} key={index} />;
-          case "bubbleSection":
-            return <BubbleSection data={section} key={index} />;
-          case "gridSection":
-            return <GridSection data={section} key={index} />;
-          case "bannerSection":
-            return <BannerSection data={section} key={index} />;
-          case "workshopsSection":
-            return <WorkshopsSection data={section} key={index} />;
-          case "spacerSection":
-            return <br style={{ lineHeight: "4em" }} key={index} />;
-          case "accordionSection":
-            return <AccordionSection data={section} key={index} />
-          default:
-            break;
-        }
-      })}
-    </Layout>
+    <>
+      <SEO title={data.pagesJson.title} />
+      <Layout pageData={data.pagesJson}>
+        {data.pagesJson.pageSections?.map((section, index) => {
+          switch (section.type) {
+            case "bigHeaderSection":
+              return <BigHeaderSection data={section} key={index} />;
+            case "bigTextSection":
+              return <BigTextSection data={section} key={index} />;
+            case "headerOnlySection":
+              return <HeaderOnlySection data={section} key={index} />;
+            case "columnSection":
+              return <ColumnSection data={section} key={index} />;
+            case "bubbleSection":
+              return <BubbleSection data={section} key={index} />;
+            case "gridSection":
+              return <GridSection data={section} key={index} />;
+            case "bannerSection":
+              return <BannerSection data={section} key={index} />;
+            case "workshopsSection":
+              return <WorkshopsSection data={section} key={index} />;
+            case "spacerSection":
+              return <br style={{ lineHeight: "4em" }} key={index} />;
+            case "accordionSection":
+              return <AccordionSection data={section} key={index} />;
+            default:
+              break;
+          }
+        })}
+      </Layout>
+    </>
   );
 };
 
@@ -65,7 +69,11 @@ export const query = graphql`
       breadcrumbs
       thumbnails {
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH, quality: 100)
+          gatsbyImageData(
+            placeholder: BLURRED
+            layout: FULL_WIDTH
+            quality: 100
+          )
         }
       }
       motto {

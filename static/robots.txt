@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+sitemap: https://sft-aalen.netlify.app/sitemap/sitemap-index.xml

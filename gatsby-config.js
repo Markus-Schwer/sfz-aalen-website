@@ -1,16 +1,92 @@
+const siteUrl = process.env.URL || "https://sfz-aalen.netlify.app";
+
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://sft-aalen.netlify.app",
     title: "SFZ Aalen",
+    titleTemplate: "%s | SFZ Aalen",
+    headline: "Das Schülerforschungszentrum der Hochschule Aalen",
+    description:
+      "Interessierst du dich dafür, wie Dinge funktionieren? Tüftelst, experimentierst und forscht du gerne? Dann bist du bei uns richtig!",
+    siteUrl,
+    image: "/logo.png",
+    organization: "SFZ Aalen",
+    siteLanguage: "de",
   },
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
+        name: "SFZ Aalen",
+        short_name: "SFZ Aalen",
+        start_url: "/home",
+        theme_color: "#134094",
+        display: "standalone",
         icon: "src/images/icon.png",
+        cache_busting_mode: "name",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        query: `
+        {
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+          siteBuildMetadata {
+            buildTime
+          }
+          allFile(
+            filter: {sourceInstanceName: {in: ["pages", "articles"]}, extension: {eq: "json"}}
+          ) {
+            nodes {
+              birthTime
+              modifiedTime
+              page: childPagesJson {
+                path
+              }
+              article: childArticlesJson {
+                fields {
+                  slug
+                }
+              }
+            }
+          }
+        }        
+      `,
+        resolveSiteUrl: () => siteUrl,
+        resolvePages: ({
+          allSitePage: { nodes: allPages },
+          siteBuildMetadata: { buildTime },
+          allFile: { nodes: allNodes },
+        }) => {
+          const nodeMap = allNodes.reduce((acc, node) => {
+            if (node.page) {
+              acc["/" + node.page.path] = node;
+            } else if (node.article) {
+              acc["/aktuelles" + node.article.fields.slug] = node;
+            }
+
+            return acc;
+          }, {});
+
+          return allPages.map((page) => {
+            return {
+              ...page,
+              ...(nodeMap[page.path] || { modifiedTime: buildTime }),
+            };
+          });
+        },
+        serialize: ({ path, modifiedTime }) => {
+          return {
+            url: path,
+            lastmod: modifiedTime,
+          };
+        },
       },
     },
     "gatsby-plugin-sharp",
@@ -92,11 +168,11 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-use-dark-mode',
+      resolve: "gatsby-plugin-use-dark-mode",
       options: {
-        classNameDark: 'dark-mode',
-        classNameLight: 'light-mode',
-        storageKey: 'darkMode',
+        classNameDark: "dark-mode",
+        classNameLight: "light-mode",
+        storageKey: "darkMode",
         minify: true,
       },
     },

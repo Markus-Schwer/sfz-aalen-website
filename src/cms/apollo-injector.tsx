@@ -6,7 +6,7 @@ const client = new ApolloClient({
   link: new HttpLink({ uri: "/__graphql" })
 });
 
-export default function withStyledComponentsRendered(Comp: FunctionComponent<any>) {
+export function withApollo(Comp: FunctionComponent<any>) {
   return (props: any) => (
     <ApolloProvider client={client}>
       <Comp {...props} />

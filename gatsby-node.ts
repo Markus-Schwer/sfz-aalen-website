@@ -80,11 +80,11 @@ export const createPages: GatsbyNode["createPages"] = async ({
 
   articles.forEach((article) => {
     createPage({
-      path: "aktuelles" + article.fields.slug,
+      path: "aktuelles/" + article.fields.slug,
       component: articleTemplate,
       context: {
         id: article.id,
-        slug: article.fields.slug
+        slug: article.fields.slug,
       },
     });
   });
@@ -191,7 +191,7 @@ export const onCreateNode: GatsbyNode["onCreateNode"] = ({
           getNode,
           basePath: "articles",
           trailingSlash: false,
-        }),
+        }).substring(1), // remove leading slash
       });
       break;
     case "WorkshopsJson":

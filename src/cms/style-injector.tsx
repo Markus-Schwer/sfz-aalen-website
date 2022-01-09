@@ -17,7 +17,7 @@ const StyleInjector: FunctionComponent = ({ children }) => {
   );
 };
 
-export default function withStyledComponentsRendered(Comp: FunctionComponent<any>) {
+export function withStyledComponentsRendered(Comp: FunctionComponent<any>) {
   return (props: any) => (
     <StyleInjector>
       <Comp {...props} />
