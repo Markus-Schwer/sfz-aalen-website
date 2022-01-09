@@ -77,13 +77,13 @@
       "columns": [
         {
           "type": "image",
-          "imageUrl": "images/uploads/idea-offene-werkstatt.jpg",
+          "imageUrl": "images/uploads/2008_hackathon_elahnsteiner-8-.jpg",
           "altText": "offene Werkstatt",
           "width": 1
         },
         {
           "type": "paragraph",
-          "text": "Bei uns geht die Beschäftigung mit MINT weit über den Schulunterricht hinaus und die Jugendlichen gehen selbstständig und eigenverantwortlich einer eigenen Forschungs-fragestellung auf den Grund. Sie entwickeln Problemstellungen und Hypothesen, planen Experimente und werten sie aus, erarbeiten Modelle, finden Erklärungen und hinterfragen diese kritisch.\n\nDie Jugendlichen arbeiten über längere Zeit in Teams zusammen und werden von kompetenten Mentoren unterstützt.\n\nGerade für Jüngere oder Neueinsteiger gibt es die Möglichkeit, bei bestehenden Teams mitzuarbeiten, die sich bereits mit einem Thema auseinandersetzen; dadurch kommen sie leichter ins selbständige Forschen.",
+          "text": "Bei uns geht die Beschäftigung mit MINT weit über den Schulunterricht hinaus und die Jugendlichen gehen selbstständig und eigenverantwortlich einer eigenen Forschungsfragestellung auf den Grund. Sie entwickeln Problemstellungen und Hypothesen, planen Experimente und werten sie aus, erarbeiten Modelle, finden Erklärungen und hinterfragen diese kritisch.\n\nDie Jugendlichen arbeiten über längere Zeit in Teams zusammen und werden von kompetenten Mentoren unterstützt.\n\nGerade für Jüngere oder Neueinsteiger gibt es die Möglichkeit, bei bestehenden Teams mitzuarbeiten, die sich bereits mit einem Thema auseinandersetzen; dadurch kommen sie leichter ins selbständige Forschen.",
           "width": 1
         }
       ],
@@ -92,7 +92,7 @@
     {
       "type": "headerOnlySection",
       "mainHeader": "Unser Team",
-      "subHeader": "Unser Team besteht aus Schülern, Azubis, Lehrern, wissenschaftlichen Mitarbeitern und manchmal auch Studierenden, die ehrenamtlich für das SFZ tätig sind. Wir können euch in den Bereichen Informatik, 3D-Druck, Holz-/Metallbearbeitung, Physik und noch einiges mehr Unterstützung bieten. Wenn eure Fragen über unser Wissen und Können hinausge- hen, können wir Experten vermitteln.",
+      "subHeader": "Unser Team besteht aus Schülern, Azubis, Lehrern, wissenschaftlichen Mitarbeitern und manchmal auch Studierenden, die ehrenamtlich für das SFZ tätig sind. Wir können euch in den Bereichen Informatik, 3D-Druck, Holz-/Metallbearbeitung, Physik und noch einiges mehr Unterstützung bieten. Wenn eure Fragen über unser Wissen und Können hinausgehen, können wir Experten vermitteln.",
       "divider": true,
       "sectionId": "team"
     },
@@ -102,42 +102,7 @@
         {
           "imageUrl": "images/uploads/portrait-8.jpg",
           "altText": "Erika Lahnsteiner",
-          "description": "__Erika Lahnsteiner__  \n_Leitung_  \nTelefon +49 7361 576-1802  \nerika.lahnsteiner@hs-aalen.de"
-        },
-        {
-          "imageUrl": "images/uploads/portrait-2.png",
-          "altText": "Max Mustermann",
-          "description": "**Max Mustermann**\\\n*Mitarbeiter*\\\nTelefon +49 7361 576-1802\\\nmax.mustermann@sfz-aalen.de"
-        },
-        {
-          "description": "**Maxi Musterfrau**\\\n*Mitarbeiter*\\\nTelefon +49 7361 576-1802\\\nmaxi.musterfrau@sfz-aalen.de",
-          "altText": "Maxi Musterfrau",
-          "imageUrl": "images/uploads/portrait-1.png"
-        },
-        {
-          "altText": "Max Mustermann",
-          "description": "**Max Mustermann**\\\n*Mitarbeiter*\\\nTelefon +49 7361 576-1802\\\nmax.mustermann@sfz-aalen.de",
-          "imageUrl": "images/uploads/portrait-4.png"
-        },
-        {
-          "description": "**Max Mustermann**\\\n*Mitarbeiter*\\\nTelefon +49 7361 576-1802\\\nmax.mustermann@sfz-aalen.de",
-          "altText": "Max Mustermann",
-          "imageUrl": "images/uploads/portrait-3.png"
-        },
-        {
-          "description": "**Maxi Musterfrau**\\\n*Mitarbeiter*\\\nTelefon +49 7361 576-1802\\\nmaxi.musterfrau@sfz-aalen.de",
-          "altText": "Maxi Musterfrau",
-          "imageUrl": "images/uploads/portrait-5.png"
-        },
-        {
-          "description": "**Max Mustermann**\\\n*Mitarbeiter*\\\nTelefon +49 7361 576-1802\\\nmax.mustermann@sfz-aalen.de",
-          "altText": "Max Mustermann",
-          "imageUrl": "images/uploads/portrait-6.png"
-        },
-        {
-          "description": "**Maxi Musterfrau**\\\n*Mitarbeiter*\\\nTelefon +49 7361 576-1802\\\nmaxi.musterfrau@sfz-aalen.de",
-          "altText": "Maxi Musterfrau",
-          "imageUrl": "images/uploads/portrait-7.png"
+          "description": "**Dr. Erika Lahnsteiner**\\\n*Leitung*\\\nTelefon +49 7361 576-1802\\\nerika.lahnsteiner@hs-aalen.de"
         }
       ]
     }
