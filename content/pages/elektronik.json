@@ -26,14 +26,33 @@
   ],
   "pageSections": [
     {
-      "type": "bigHeaderSection",
-      "text": "Elektronik"
-    },
-    {
-      "type": "headerOnlySection",
-      "mainHeader": "Haupt Überschrift",
-      "subHeader": "Unter Überschrift",
-      "divider": true
+      "type": "columnSection",
+      "header": {
+        "mainHeader": "Elektronik",
+        "subHeader": "Wir haben viele elektronische Bauteile, Sensoren, Mikrocontroller, Raspberry Pis und auch viele ausgediente elektronische Geräte, aus denen du für dein Projekt wählen kannst. Mehrere Lötstationen stehen dir zur Verfügung. ",
+        "divider": true,
+        "sectionId": "Elektronik"
+      },
+      "numberColumns": 2,
+      "columns": [
+        {
+          "type": "image",
+          "width": 2,
+          "imageUrl": "images/uploads/mys_material_hliebel-31-.jpg",
+          "altText": "Breadboard"
+        },
+        {
+          "type": "image",
+          "width": 1,
+          "imageUrl": "images/uploads/mys_material_hliebel-14-.jpg",
+          "altText": "Calliope mini"
+        },
+        {
+          "type": "paragraph",
+          "width": 2,
+          "text": "Egal ob du einen einfachen Schaltkreis oder eine komplizierte Schaltung machen möchtest, bei uns findest du den richtigen Ansprechpartner. Und wenn wir nicht weiter wissen, sind wir gerne bereit uns zusammen mit dir schlauc zu machen."
+        }
+      ]
     }
   ]
 }
