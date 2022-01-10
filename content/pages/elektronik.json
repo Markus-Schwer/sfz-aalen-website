@@ -17,8 +17,23 @@
     }
   ],
   "path": "mitmachen/elektronik",
-  "title": "Elektronik",
+  "title": "Mitmachen/Elektronik",
   "thumbnailUrls": [
     "images/uploads/pexels-jã©shoots-4316-technik.jpg"
+  ],
+  "breadcrumbs": [
+    "Mitmachen/Elektronik"
+  ],
+  "pageSections": [
+    {
+      "type": "bigHeaderSection",
+      "text": "Elektronik"
+    },
+    {
+      "type": "headerOnlySection",
+      "mainHeader": "Haupt Überschrift",
+      "subHeader": "Unter Überschrift",
+      "divider": true
+    }
   ]
 }
