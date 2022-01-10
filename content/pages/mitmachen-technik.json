@@ -30,19 +30,22 @@
       "header": {
         "mainHeader": "Technik",
         "subHeader": "Du kannst bei uns verschiedene Arbeitstechniken erlernen oder auch Geräte und Maschinen nutzen, die dir zu Hause oder in der Schule nicht zur Verfügung stehen, wie z. B. Dreh- und Fräsmaschine, 3D-Drucker oder Lasercutter.",
-        "divider": true
+        "divider": true,
+        "sectionId": "Technik"
       },
       "numberColumns": 2,
       "textColor": "#000000",
       "columns": [
         {
           "type": "paragraph",
-          "text": "Mi, volupta turectur? Inctati cum ea de cum venducit occus. Ut remquameniet quaspe id maio incit aut ulparch itiosam faccus expellabor as restionet reremoluptas pellenes quuntiist, si re doloreh endantemped quam fugiae. Runt occus et et poruptatem laboremperum dolendaector sitatium quodia consername autempo reptat.\n\nAlitati aestium remque verum exerro odio. Ni dolupta consequis essim ant, culparios esequas ut molor re rerument. Aperunto is aut la volorum quiscia voluptius.\n\nXimagnam fuga. Derspie ndendanda et rerfero illit utaqui doluptatur, offic to voluptatur accusda ndunt.vent volor rerovidus et estius as vidigen ditatus ipsam volumet asped que ipientu stioressimos sinum is maion porupta volupta erissim olorerit fuga. As aspelit, quiberi tiundelitis sandel isimporiti de coriae nons"
+          "text": "Du brauchst für dein Projekt ein Teil aus dem 3D-Drucker, hast aber zu Hause und in der Schule keine Möglichkeit zum 3D-Drucken, dann komm vorbei. Wir haben viele Geräte, die dir sonst nicht zur verfügung stehen, und auch Menschen, die dir zeigen, wie du sie bedienen kannst und die dir auch sonst mit Rat und Tat zur Seite stehen. Außerdem kannst du dich mit anderen austauschen, die dir Tipps geben können.",
+          "width": 1
         },
         {
           "type": "image",
           "imageUrl": "images/uploads/_dsc4145.jpg",
-          "altText": "Offene Werkstatt Technik"
+          "altText": "Offene Werkstatt Technik",
+          "width": 1
         }
       ]
     }
