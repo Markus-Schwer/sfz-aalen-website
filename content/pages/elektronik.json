@@ -1,0 +1,24 @@
+{
+  "motto": [
+    {
+      "text": "Wissen.",
+      "size": "medium",
+      "color": "primary"
+    },
+    {
+      "text": "Schafft.",
+      "size": "medium",
+      "color": "tertiary"
+    },
+    {
+      "text": "Spass!",
+      "size": "big",
+      "color": "secondary"
+    }
+  ],
+  "path": "mitmachen/elektronik",
+  "title": "Elektronik",
+  "thumbnailUrls": [
+    "images/uploads/pexels-jã©shoots-4316-technik.jpg"
+  ]
+}
