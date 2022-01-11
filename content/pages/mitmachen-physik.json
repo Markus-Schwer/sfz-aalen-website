@@ -40,7 +40,7 @@
         },
         {
           "type": "paragraph",
-          "width": 2,
+          "width": 1,
           "text": "Physik interessiert dich, aber du hast keine Idee für ein eigenes Projekt. Wir haben Projektideen oder unterstützen dich beim Finden deiner eigenen Idee. \n\nEine Idee ist der Bau eines Holografie-Mikroskops. Den Begriff Holografie habt ihr vielleicht schon mal gehört. Aber was bedeutet dieser Begriff im Zusammenhang mit Mikroskopie?\nBei herkömmlichen Lichtmikroskopen muss man die zu untersuchenden Proben meist färben. Daher müssen diese Proben oft aufwändig fixiert und präpariert werden und sind daher nicht mehr lebendig. Mit digital-holographischen Mikroskopen lassen sich aber lebende, durchsichtige Objekte untersuchen, und das mit einem sehr einfachen Aufbau – im Extremfall kann man sogar auf die Optik komplett verzichten!\nWir wollen ein kostengünstiges Holografie-Mikroskop nach Anleitung eines Open Source Projektes des Fraunhofer-Instituts für Physikalische Messtechnik, das in der Zeitschrift Make (make-magazin.de/x687) veröffentlicht wurde, nachbauen und uns mit dieser spannenden Technik auseinandersetzen. Dieses Projekt bietet vielfältige Forschungsmöglichkeiten, z.B. in der Biologie, Optik, aber auch in der digitalen Bildverarbeitung."
         }
       ]
