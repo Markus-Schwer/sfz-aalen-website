@@ -63,7 +63,8 @@
         {
           "text": "Biologie",
           "color": "tertiary",
-          "imageUrl": "images/uploads/pexels-egor-kamelev-920157_biologie.jpg"
+          "imageUrl": "images/uploads/pexels-egor-kamelev-920157_biologie.jpg",
+          "href": "/mitmachen/biologie"
         },
         {
           "text": "Chemie",
