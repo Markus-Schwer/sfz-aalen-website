@@ -57,7 +57,8 @@
         {
           "text": "Informatik",
           "color": "secondary",
-          "imageUrl": "images/uploads/pexels-markus-spiske-1921326_kl.jpg"
+          "imageUrl": "images/uploads/pexels-markus-spiske-1921326_kl.jpg",
+          "href": "/mitmachen/informatik"
         },
         {
           "text": "Biologie",
