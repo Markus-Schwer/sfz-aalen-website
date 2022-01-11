@@ -1,0 +1,52 @@
+{
+  "motto": [
+    {
+      "text": "Forschen.",
+      "size": "medium",
+      "color": "primary"
+    },
+    {
+      "text": "macht.",
+      "size": "medium",
+      "color": "tertiary"
+    },
+    {
+      "text": "Spass!",
+      "size": "big",
+      "color": "secondary"
+    }
+  ],
+  "path": "mitmachen/biologie",
+  "title": "Mitmachen/ Biologie",
+  "thumbnailUrls": [
+    "images/uploads/pexels-cdc-3992930_bearb.jpg"
+  ],
+  "breadcrumbs": [
+    "Biologie"
+  ],
+  "pageSections": [
+    {
+      "type": "columnSection",
+      "header": {
+        "mainHeader": "Biologie",
+        "subHeader": "Dich fasziniert die Welt im Kleinen oder du möchtest die Geheimnisse des Lebens erkunden? Wir warten auf deine Fragen und möchten dir helfen sie zu lösen. ",
+        "divider": true,
+        "sectionId": "Biologie"
+      },
+      "numberColumns": 2,
+      "columns": [
+        {
+          "type": "image",
+          "width": 1,
+          "imageUrl": "images/uploads/_dsc3167.jpg",
+          "altText": "Mikroskopieren"
+        },
+        {
+          "type": "paragraph",
+          "width": 1,
+          "text": "Du mikroskopierst gerne, interessierst dich für Pflanzen und Tiere und möchtest die Geheimnisse des Lebens erforschen? Wir unterstützen dich gerne bei deinen Forscherfragen und geben dir Tipps, wie du biologischen Fragestellungen mit wenig Aufwand nachgehen kannst."
+        }
+      ]
+    }
+  ]
+}
