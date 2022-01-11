@@ -102,7 +102,7 @@
       "type": "columnSection",
       "header": {
         "mainHeader": "Jugend forscht",
-        "subHeader": "Jugend forscht gilt als Deutschlands bekanntester Nachwuchswettbewerb im Bereich Na-\nturwissenschaft und Technik. Jugend forscht wurde 1965 von Henri Nannen initiiert.",
+        "subHeader": "Jugend forscht gilt als Deutschlands bekanntester Nachwuchswettbewerb im Bereich Naturwissenschaft und Technik. Jugend forscht wurde 1965 von Henri Nannen initiiert.",
         "divider": true,
         "sectionId": "jugend-forscht"
       },
@@ -114,7 +114,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Anmelden kann man sich in jedem Jahr bis zum 30. November.\\\nDie Anmeldung erfolgt online unter: [www.jugend-forscht.de](https://www.jugend-forscht.de)\\\nHier sind auch alle wichtigen Informationen zum Wettbewerb zu finden.\n\n![Jugend forscht plakat 2021](images/uploads/image_200_jufo2021_plakat.jpg \"Jugend forscht plakat 2021\")",
+          "text": "Anmelden kann man sich in jedem Jahr bis zum 30. November.\\\nDie Anmeldung erfolgt online unter: [www.jugend-forscht.de](https://www.jugend-forscht.de)\\\nHier sind auch alle wichtigen Informationen zum Wettbewerb zu finden.\n\n![Jugend forscht Plakat 2022](images/uploads/jf_2021-2022_poster_dina1_ohneanmeldefrist.jpg \"Jugend forscht plakat 2021\")",
           "width": 1
         },
         {
