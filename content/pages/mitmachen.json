@@ -69,7 +69,8 @@
         {
           "text": "Chemie",
           "color": "secondary",
-          "imageUrl": "images/uploads/pexels-chokniti-khongchum-2280549_chemie.jpg"
+          "imageUrl": "images/uploads/pexels-chokniti-khongchum-2280549_chemie.jpg",
+          "href": "/mitmachen/chemie"
         }
       ],
       "backgroundColor": "#d4edfc"
