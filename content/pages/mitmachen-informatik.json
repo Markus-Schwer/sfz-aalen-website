@@ -37,25 +37,25 @@
       "columns": [
         {
           "type": "image",
-          "width": 3,
+          "width": 1,
           "imageUrl": "images/uploads/_DSC3625.jpg",
           "altText": "Virtual Reality Brille"
         },
         {
           "type": "image",
-          "width": 3,
+          "width": 1,
           "imageUrl": "images/uploads/2010_offene-werkstatt_elahnsteiner-21-.jpg",
           "altText": "Arduino"
         },
         {
           "type": "image",
-          "width": 3,
+          "width": 1,
           "imageUrl": "images/uploads/_dsc3810.jpg",
           "altText": "Programmieren"
         },
         {
           "type": "paragraph",
-          "width": 1,
+          "width": 3,
           "text": "[](www.makeyourschool.de)Vom Game Design über  das Programmieren von Mikrocontrollern, von Scratch über Bitsy bis Python, alles ist möglich. Wir unterstützen dich bei den ersten Schritten in der Informatik genauso wie bei komplexeren Problemen. Außerdem findest du bei uns Gleichgesinnte, mit denen du fachsimpeln kannst und die deine Begeisterung für Bits und Bytes teilen. Du kannst bei uns aus einer Vielzahl an Sensoren und Aktoren aus dem Materialkoffer-Set von [Make Your School](www.makeyourschool.de) wählen, die Expertise von jungen IT´lern nutzen oder dir von Mitarbeitern der Hochschule Know-How in Workshops vermitteln lassen."
         }
       ]
