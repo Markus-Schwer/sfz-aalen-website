@@ -17,5 +17,42 @@
     }
   ],
   "path": "mitmachen/informatik",
-  "title": "Mitmachen/ Informatik"
+  "title": "Mitmachen/ Informatik",
+  "thumbnailUrls": [
+    "images/uploads/pexels-markus-spiske-2004161_informatik.jpg"
+  ],
+  "breadcrumbs": [
+    "Informatik"
+  ],
+  "pageSections": [
+    {
+      "type": "columnSection",
+      "header": {
+        "mainHeader": "Informatik",
+        "subHeader": "Du willst programmieren lernen oder bist schon recht fit, brauchst aber Anregungen und suchst Gleichgesinnte? Arduino, Raspberry Pi, Python und Linux sind keine Unbekannten und du suchst nach Herausforderungen? Komm zu uns und erforsche die virtuelle Welt. ",
+        "divider": true,
+        "sectionId": "Informatik"
+      },
+      "numberColumns": 2,
+      "columns": [
+        {
+          "type": "image",
+          "width": 2,
+          "imageUrl": "images/uploads/_DSC3625.jpg",
+          "altText": "Virtual Reality Brille"
+        },
+        {
+          "type": "image",
+          "width": 2,
+          "imageUrl": "images/uploads/2010_offene-werkstatt_elahnsteiner-21-.jpg",
+          "altText": "Arduino"
+        },
+        {
+          "type": "paragraph",
+          "width": 1,
+          "text": "Vom Game Design über  das Programmieren von Mikrocontrollern, von Scratch über Bitsy bis Python, alles ist möglich. Wir unterstützen dich bei den ersten Schritten in der Informatik genauso wie bei komplexeren Problemen. Außerdem findest du bei uns Gleichgesinnte, mit denen du fachsimpeln kannst und die deine Begeisterung für Bits und Bytes teilen."
+        }
+      ]
+    }
+  ]
 }
