@@ -1,0 +1,58 @@
+{
+  "motto": [
+    {
+      "text": "Forsch.",
+      "size": "medium",
+      "color": "primary"
+    },
+    {
+      "text": "dir das mal.",
+      "size": "medium",
+      "color": "tertiary"
+    },
+    {
+      "text": "rein.",
+      "size": "big",
+      "color": "secondary"
+    }
+  ],
+  "path": "mitmachen/chemie",
+  "title": "Mitmachen/ Chemie",
+  "thumbnailUrls": [
+    "images/uploads/pexels-chokniti-khongchum-2280549_chemie.jpg"
+  ],
+  "breadcrumbs": [
+    "Reagenzgläser"
+  ],
+  "pageSections": [
+    {
+      "type": "columnSection",
+      "header": {
+        "mainHeader": "Chemie",
+        "subHeader": "Mischen, lösen, analysieren – das ist genau dein Ding? In den Laboren der Hochschule Aalen kannst du vielen chemischen Fragestellungen nachgehen.",
+        "divider": true,
+        "sectionId": "Chemie"
+      },
+      "numberColumns": 2,
+      "columns": [
+        {
+          "type": "image",
+          "width": 2,
+          "imageUrl": "images/uploads/_dsc4392.jpg",
+          "altText": "Analysieren"
+        },
+        {
+          "type": "image",
+          "width": 2,
+          "imageUrl": "images/uploads/_dsc4344.jpg",
+          "altText": "Genau schauen"
+        },
+        {
+          "type": "paragraph",
+          "width": 1,
+          "text": "Für deine chemischen Untersuchungen stehen dir mehrere Chemiker mit Know-How und die Labore der Hochschule zur Verfügung. Außerdem kannst du dich über unsere Workshops inspirieren lassen, in welche Richtung dein Forschungsprojekt gehen könnte."
+        }
+      ]
+    }
+  ]
+}
