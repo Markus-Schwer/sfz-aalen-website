@@ -51,7 +51,8 @@
         {
           "text": "Physik",
           "imageUrl": "images/uploads/pexels-pixabay-60582_physik.jpg",
-          "color": "primary"
+          "color": "primary",
+          "href": "/mitmachen/physik"
         },
         {
           "text": "Informatik",
