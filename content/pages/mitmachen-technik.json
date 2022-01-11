@@ -22,7 +22,7 @@
     "images/uploads/pexels-pixabay-414860_technik.jpg"
   ],
   "breadcrumbs": [
-    "Mitmachen / Technik"
+    "Technik"
   ],
   "pageSections": [
     {
@@ -46,6 +46,12 @@
           "imageUrl": "images/uploads/_dsc4145.jpg",
           "altText": "Offene Werkstatt Technik",
           "width": 1
+        },
+        {
+          "type": "image",
+          "width": 1,
+          "imageUrl": "images/uploads/_dsc3298.jpg",
+          "altText": "Prusa"
         }
       ]
     }
