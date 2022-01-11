@@ -16,6 +16,37 @@
       "color": "secondary"
     }
   ],
-  "path": "Mitmachen / Physik",
-  "title": "mitmachen/physik"
+  "path": "mitmachen/physik",
+  "title": "Mitmachen/ Physik",
+  "breadcrumbs": [
+    "Mitmachen/Physik"
+  ],
+  "pageSections": [
+    {
+      "type": "columnSection",
+      "header": {
+        "mainHeader": "Physik",
+        "subHeader": "Du interessierst dich für Physik und möchtest im Team an einem Projekt arbeiten? Brauchst du noch fachlichen Input oder kompetente Ansprechpartner für deine Fachfragen? Wir haben die richtigen Kontakte.",
+        "divider": true,
+        "sectionId": "Physik"
+      },
+      "numberColumns": 2,
+      "columns": [
+        {
+          "type": "paragraph",
+          "width": 2,
+          "text": "Physik interessiert dich, aber du hast keine Idee für ein eigenes Projekt. Wir haben Projektideen oder unterstützen dich beim Finden deiner eigenen Idee."
+        },
+        {
+          "type": "image",
+          "width": 2,
+          "imageUrl": "images/uploads/adobe-stock_115299443_bearb.jpg",
+          "altText": "Steinschleuder"
+        }
+      ]
+    }
+  ],
+  "thumbnailUrls": [
+    "images/uploads/pexels-pixabay-60582_physik.jpg"
+  ]
 }
