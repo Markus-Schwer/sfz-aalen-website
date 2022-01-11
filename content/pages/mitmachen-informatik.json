@@ -1,0 +1,21 @@
+{
+  "motto": [
+    {
+      "text": "Voll.",
+      "size": "medium",
+      "color": "primary"
+    },
+    {
+      "text": "Virtuell.",
+      "size": "medium",
+      "color": "tertiary"
+    },
+    {
+      "text": "am Start!",
+      "size": "big",
+      "color": "secondary"
+    }
+  ],
+  "path": "mitmachen/informatik",
+  "title": "Mitmachen/ Informatik"
+}
