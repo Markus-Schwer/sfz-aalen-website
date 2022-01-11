@@ -33,7 +33,7 @@
         "divider": true,
         "sectionId": "Informatik"
       },
-      "numberColumns": 2,
+      "numberColumns": 3,
       "columns": [
         {
           "type": "image",
