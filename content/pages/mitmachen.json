@@ -76,11 +76,21 @@
       "backgroundColor": "#d4edfc"
     },
     {
-      "type": "headerOnlySection",
-      "mainHeader": "Anmeldung",
-      "subHeader": "Die Teilnahme an allen Angeboten des SFZ ist kostenlos. Damit wir wissen, wie wir dich un-\nterstützen können, musst du dich anmelden. Wir nehmen dann Kontakt mit dir auf.",
-      "divider": true,
-      "sectionId": "anmelden"
+      "type": "columnSection",
+      "header": {
+        "mainHeader": "Anmeldung",
+        "subHeader": "Die Teilnahme an allen Angeboten des SFZ ist kostenlos. Damit wir wissen, wie wir dich unterstützen können, musst du dich anmelden. Wir nehmen dann Kontakt mit dir auf.",
+        "divider": true,
+        "sectionId": "anmelden"
+      },
+      "numberColumns": 2,
+      "columns": [
+        {
+          "type": "paragraph",
+          "width": 1,
+          "text": "Das SFZ ist an allen Samstagen während der Schulzeit geöffnet. Du kannst gerne einfach mal vorbeikommen und schauen, was wir hier machen. Wenn du ein konkretes Projekt hast, für das du Unterstützung suchst, solltest du dich vorher bei [Dr. Erika Lahnsteiner](mailto:erika.lahnsteiner@hs-aalen.de) anmelden, damit wir uns darauf vorbereiten können. Gerne stehen wir dir auch außerhalb dieser Öffnungszeiten zur Verfügung. Schreibe einfach eine Mail an [Dr. Erika Lahnsteiner](mailto:erika.lahnsteiner@hs-aalen.de), dann können wir einen Termin vereinbaren."
+        }
+      ]
     },
     {
       "type": "bannerSection",
