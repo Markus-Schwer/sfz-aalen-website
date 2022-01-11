@@ -37,7 +37,7 @@
       "columns": [
         {
           "type": "image",
-          "width": 2,
+          "width": 1,
           "imageUrl": "images/uploads/mys_material_hliebel-31-.jpg",
           "altText": "Breadboard"
         },
@@ -50,7 +50,7 @@
         {
           "type": "paragraph",
           "width": 2,
-          "text": "Egal ob du einen einfachen Schaltkreis oder eine komplizierte Schaltung machen möchtest, bei uns findest du den richtigen Ansprechpartner. Und wenn wir nicht weiter wissen, sind wir gerne bereit uns zusammen mit dir schlauc zu machen."
+          "text": "Egal ob du einen einfachen Schaltkreis oder eine komplizierte Schaltung machen möchtest, bei uns findest du den richtigen Ansprechpartner. Und wenn wir nicht weiter wissen, sind wir gerne bereit uns zusammen mit dir schlau zu machen."
         }
       ]
     }
