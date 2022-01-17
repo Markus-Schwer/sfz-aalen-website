@@ -17,5 +17,30 @@
     }
   ],
   "path": "projekte/corona-warnchip",
-  "title": "Projekte/ Corona-Warnchip"
+  "title": "Projekte/ Corona-Warnchip",
+  "thumbnailUrls": [
+    "images/uploads/pexels-pixabay-459411.jpg"
+  ],
+  "breadcrumbs": [
+    "Corona-Warnchip"
+  ],
+  "pageSections": [
+    {
+      "type": "columnSection",
+      "header": {
+        "mainHeader": "Corona-Warnchip",
+        "subHeader": "Die Corona-Warnapp war gestern - jetzt kommt der Corona-Warnchip!",
+        "divider": true,
+        "sectionId": "corona-warnchip"
+      },
+      "numberColumns": 2,
+      "columns": [
+        {
+          "type": "paragraph",
+          "width": 2,
+          "text": "Im Rahmen der Coding Challenge 2020, einem zweiwöchigen Online-Hackathon der Initiative Kindermedienland Baden-Württemberg, wurde an der Entwicklung eines Corona-Warn-Chips gearbeitet. Dieser Chip soll einen Zugang zur Corona-Warn-App der Bundesregierung auch ohne Smartphone ermöglichen. Mit einem solchen Chip sollen auch Menschen ohne passendes Smartphone die Chance erhalten, an dem Corona-Warn-Projekt teilzunehmen. Über Bluetooth soll der Corona-Warn-Chip mit Smartphones kommunizieren, und den Benutzer bei Erkennung einer Risiko-Begegnung über eine LED warnen. Damit das Gerät mit der bereits bestehenden Warn-App kompatibel ist, soll auf die bereits existierende Infrastruktur zurückgegriffen werden.\n\nDiese Idee wollen wir weiter verfolgen. Es gibt bereits eine erweiterte Idee, um die Registrierung und Kontaktnachverfolgung in Restaurants einfacher und effektiver zu gestalten."
+        }
+      ]
+    }
+  ]
 }
