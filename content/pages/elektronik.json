@@ -29,7 +29,7 @@
       "type": "columnSection",
       "header": {
         "mainHeader": "Elektronik",
-        "subHeader": "Wir haben viele elektronische Bauteile, Sensoren, Mikrocontroller, Raspberry Pis und auch viele ausgediente elektronische Geräte, aus denen du für dein Projekt wählen kannst. Mehrere Lötstationen stehen dir zur Verfügung. ",
+        "subHeader": "Wir haben viele elektronische Bauteile, Sensoren, Mikrocontroller, Raspberry Pis und auch viele ausgediente elektronische Geräte, aus denen du für dein Projekt wählen kannst. Mehrere Lötstationen stehen dir ebenfalls zur Verfügung. ",
         "divider": true,
         "sectionId": "Elektronik"
       },
