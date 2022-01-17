@@ -22,7 +22,7 @@
     "images/uploads/pexels-chokniti-khongchum-2280549_chemie.jpg"
   ],
   "breadcrumbs": [
-    "Reagenzgläser"
+    "Chemie"
   ],
   "pageSections": [
     {
@@ -37,19 +37,19 @@
       "columns": [
         {
           "type": "image",
-          "width": 2,
+          "width": -1,
           "imageUrl": "images/uploads/_dsc4392.jpg",
           "altText": "Analysieren"
         },
         {
           "type": "image",
-          "width": 2,
+          "width": 1,
           "imageUrl": "images/uploads/_dsc4344.jpg",
           "altText": "Genau schauen"
         },
         {
           "type": "paragraph",
-          "width": 1,
+          "width": 2,
           "text": "Für deine chemischen Untersuchungen stehen dir mehrere Chemiker mit Know-How und die Labore der Hochschule zur Verfügung. Außerdem kannst du dich über unsere Workshops inspirieren lassen, in welche Richtung dein Forschungsprojekt gehen könnte."
         }
       ]
