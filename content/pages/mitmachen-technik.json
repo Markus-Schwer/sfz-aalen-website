@@ -38,8 +38,8 @@
       "columns": [
         {
           "type": "paragraph",
-          "text": "Du brauchst für dein Projekt ein Teil aus dem 3D-Drucker, hast aber zu Hause und in der Schule keine Möglichkeit zum 3D-Drucken, dann komm vorbei. Wir haben viele Geräte, die dir sonst nicht zur verfügung stehen, und auch Menschen, die dir zeigen, wie du sie bedienen kannst und die dir auch sonst mit Rat und Tat zur Seite stehen. Außerdem kannst du dich mit anderen austauschen, die dir Tipps geben können.",
-          "width": 1
+          "text": "Du brauchst für dein Projekt ein Teil aus dem 3D-Drucker, hast aber zu Hause und in der Schule keine Möglichkeit zum 3D-Drucken? Dann komm vorbei und schau, was wir dir bieten. Wir haben viele Geräte, die dir sonst nicht zur Verfügung stehen, sowie Menschen, die dir zeigen, wie du sie bedienen kannst und die dir auch sonst mit Rat und Tat zur Seite stehen. Außerdem kannst du dich mit anderen austauschen, die dir auch Tipps geben können.",
+          "width": 2
         },
         {
           "type": "image",
