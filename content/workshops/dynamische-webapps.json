@@ -1,0 +1,16 @@
+{
+  "header": "# Dynamische Webapps - mit Python, HTML und Javascript",
+  "numberColumns": 2,
+  "footer": "Altersgruppe\nDauer\nWorkshop Leiter\nFachbereiche",
+  "thumbnail": {
+    "imageUrl": "images/uploads/800px-python-logo-notext.svg.png",
+    "altText": "Python Logo"
+  },
+  "columns": [
+    {
+      "type": "paragraph",
+      "text": "Wenn Du schon immer mal wissen wolltest, wie das Internet funktioniert, dann bist Du hier richtig. Wir erkunden die Grundlagen von Webseiten und Browsern und benutzen Python, HTML und Javascript, um interaktive Webapps zu erstellen."
+    }
+  ],
+  "title": "Dynamische Webapps"
+}
