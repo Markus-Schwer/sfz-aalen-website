@@ -1,0 +1,16 @@
+{
+  "header": "# Bringe dem Computer bei Bilder zu erkennen",
+  "numberColumns": 2,
+  "footer": "Altersgruppe\nDauer\nWorkshop Leiter\nFachbereiche",
+  "thumbnail": {
+    "imageUrl": "images/uploads/_DSC3625.jpg",
+    "altText": "Bilder erkennen"
+  },
+  "columns": [
+    {
+      "type": "paragraph",
+      "text": "Für Menschen ist es ganz leicht einen Hund von einer Katze zu unterscheiden. Kann das auch ein Computer. In diesem Workshop entdecken wir gemeinsam die Grundlagen von künstlicher Intelligenz und bauen Schritt für Schritt einen Bild-Erkenner. Dabei ist es Euch überlassen, was Ihr dem Computer beibringt."
+    }
+  ],
+  "title": "Bringe dem Computer bei Bilder zu erkennen"
+}
