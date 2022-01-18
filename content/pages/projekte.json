@@ -1,18 +1,18 @@
 {
   "motto": [
     {
-      "text": "voll",
-      "size": "medium",
+      "text": "forschen",
+      "size": "big",
       "color": "secondary"
     },
     {
-      "text": "Virtuell",
-      "size": "big",
+      "text": "ist voll",
+      "size": "small",
       "color": "tertiary"
     },
     {
-      "text": "Am Start",
-      "size": "small",
+      "text": "mein Ding",
+      "size": "medium",
       "color": "primary"
     }
   ],
@@ -22,7 +22,8 @@
     "Projekte"
   ],
   "thumbnailUrls": [
-    "images/uploads/_DSC3625.jpg"
+    "images/uploads/_DSC3625.jpg",
+    "images/uploads/_dsc3167.jpg"
   ],
   "pageSections": [
     {
