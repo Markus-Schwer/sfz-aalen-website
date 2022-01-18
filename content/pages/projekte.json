@@ -159,7 +159,7 @@
             "header": "# Elektronikwerkstatt"
           },
           "numberColumns": 4,
-          "width": 1,
+          "width": 2,
           "columns": [
             {
               "type": "paragraph",
