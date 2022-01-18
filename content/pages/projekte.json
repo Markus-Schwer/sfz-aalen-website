@@ -138,8 +138,19 @@
           "header": {
             "header": "# Lasercutter"
           },
-          "numberColumns": 1,
-          "width": 1
+          "numberColumns": 2,
+          "width": 1,
+          "columns": [
+            {
+              "type": "paragraph",
+              "text": "Mit einem Lasercutter kann man unterschiedlichste Materialien wie Kunststoffe, Holz, Leder, Karton und Papier markieren, gravieren und schneiden.\n\nWir benutzen den Speedy 300 von Trotec Laser GmbH."
+            },
+            {
+              "type": "image",
+              "imageUrl": "images/uploads/image_678_speedy300-co2-lasergravierer.jpg",
+              "altText": "Lasercutter"
+            }
+          ]
         },
         {
           "type": "card",
