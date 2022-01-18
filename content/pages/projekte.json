@@ -39,7 +39,8 @@
         {
           "text": "Corona\nWarn Chip",
           "imageUrl": "images/uploads/pexels-pixabay-459411.jpg",
-          "color": "tertiary"
+          "color": "tertiary",
+          "href": "projekte/corona-warnchip"
         },
         {
           "text": "»Schleuder-Physik«",
