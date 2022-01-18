@@ -1,17 +1,17 @@
 {
   "motto": [
     {
-      "text": "Wissen.",
+      "text": "mach.",
       "size": "medium",
       "color": "primary"
     },
     {
-      "text": "Schafft.",
+      "text": "dein.",
       "size": "medium",
       "color": "tertiary"
     },
     {
-      "text": "Spass!",
+      "text": "ding!",
       "size": "big",
       "color": "secondary"
     }
