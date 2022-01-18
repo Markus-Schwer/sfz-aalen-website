@@ -173,6 +173,11 @@
               "type": "image",
               "imageUrl": "images/uploads/2010_arduino_mvaas-4-.jpg",
               "altText": "Arduino"
+            },
+            {
+              "type": "image",
+              "imageUrl": "images/uploads/2010_raspberry_mvaas-4-.jpg",
+              "altText": "Raspberry Pi"
             }
           ]
         },
