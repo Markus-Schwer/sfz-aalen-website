@@ -109,13 +109,14 @@
       "columns": [
         {
           "type": "paragraph",
-          "text": "Die Teilnehmer werden in zwei Altersgruppen eingeteilt: Schüler experimentieren (< 15 Jahre) und Jugend forscht (≥ 15 Jahre).\\\nDie Wettbewerbsteilnehmer präsentieren ihre Arbeit in schriftlicher und mündlicher Form einer Jury. Diese setzt sich aus Lehrern sowie Vertretern aus Hochschulen und Industrie zusammen.\\\nArbeiten können in einem der sieben Fachgebiete abgegeben werden:\n\n* **Arbeitswelt**\n* **Biologie**\n* **Chemie**\n* **Geo- und Raumwissenschaften**\n* **Mathematik/Informatik**\n* **Physik und**\n* **Technik**",
+          "text": "Die Teilnehmer werden in zwei Altersgruppen eingeteilt: Schüler experimentieren (< 15 Jahre) und Jugend forscht (≥ 15 Jahre).\\\nDie Wettbewerbsteilnehmer präsentieren ihre Arbeit in schriftlicher und mündlicher Form einer Jury. Diese setzt sich aus Lehrern sowie Vertretern aus Hochschulen und Industrie zusammen.\\\nArbeiten können in einem der sieben Fachgebiete abgegeben werden:\n\n* **Arbeitswelt**\n* **Biologie**\n* **Chemie**\n* **Geo- und Raumwissenschaften**\n* **Mathematik/Informatik**\n* **Physik und**\n* **Technik**\n\nAnmelden kann man sich in jedem Jahr bis zum 30. November.\\\nDie Anmeldung erfolgt online unter: [www.jugend-forscht.de](https://www.jugend-forscht.de)\\\nHier sind auch alle wichtigen Informationen zum Wettbewerb zu finden.",
           "width": 1
         },
         {
-          "type": "paragraph",
-          "text": "Anmelden kann man sich in jedem Jahr bis zum 30. November.\\\nDie Anmeldung erfolgt online unter: [www.jugend-forscht.de](https://www.jugend-forscht.de)\\\nHier sind auch alle wichtigen Informationen zum Wettbewerb zu finden.\n\n![Jugend forscht Plakat 2022](images/uploads/jf_2021-2022_poster_dina1_ohneanmeldefrist_srgb.png \"Jugend forscht plakat 2021\")",
-          "width": 1
+          "type": "image",
+          "width": 1,
+          "imageUrl": "images/uploads/jf_2021-2022_poster_dina1_ohneanmeldefrist_srgb.png",
+          "altText": "Jugend forscht Plakat 2022"
         },
         {
           "type": "divider",
