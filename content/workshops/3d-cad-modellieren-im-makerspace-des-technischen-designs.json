@@ -1,0 +1,16 @@
+{
+  "header": "# 3D CAD Modellieren im Makerspace des Technischen Designs",
+  "numberColumns": 2,
+  "footer": "Für Schüler*innen ab 15 Jahren\n3 - 9 Stunden (abhängig vom Interesse)\nProf. Dr. Martin Pietzsch\nProfessor für Technisches Design,** [Maschinenbau/Entwicklung: Design und Simulation](https://www.hs-aalen.de/de/courses/102)**",
+  "thumbnail": {
+    "imageUrl": "images/uploads/image_678_20161122_banner_website2.png",
+    "altText": "Technisches Design"
+  },
+  "columns": [
+    {
+      "type": "paragraph",
+      "text": "Du modellierst gern im CAD und möchtest einmal mit einer professionellen Software wie Siemens NX arbeiten, Dein CAD Modell in Blender rendern, einen Roboterarm animieren oder anderes, dann melde Dich bei uns mit einer kurzen Beschreibung Deiner Kenntnisse in diesem Bereich und Deinem Wunsch. Wir bieten Dir einen passenden Workshop im Umfang von 3-9 Stunden.\n\nHier bekommst du einen Eindruck, was der Studiengang Maschinenbau/Entwicklung: Design und Simulation [macht](https://youtu.be/TkOCvmODiMs)  bzw. was du [machen kanns](https://youtu.be/tdZNMLy3GQY)t."
+    }
+  ],
+  "title": "3D CAD Modellieren im Makerspace des Technischen Designs"
+}
