@@ -1,0 +1,45 @@
+{
+  "motto": [
+    {
+      "text": "Physik.",
+      "size": "medium",
+      "color": "primary"
+    },
+    {
+      "text": "ist.",
+      "size": "medium",
+      "color": "tertiary"
+    },
+    {
+      "text": "cool!",
+      "size": "big",
+      "color": "secondary"
+    }
+  ],
+  "path": "projekte/schleuder-physik",
+  "title": "Projekte/ Schleuder-Physik",
+  "breadcrumbs": [
+    "Schleuder-Physik"
+  ],
+  "thumbnailUrls": [
+    "images/uploads/adobe-stock_115299443_bearb.jpg"
+  ],
+  "pageSections": [
+    {
+      "type": "columnSection",
+      "header": {
+        "mainHeader": "\"Schleuder-Physik\"",
+        "subHeader": "Mit einer selbstgebauten Schleuder, auch Zwille genannt, auf leere Kartons zu schießen, macht Spaß. Aber eine Schleuder ist viel mehr als ein Kinderspielzeug. Sie kann als Einstieg in Physik und Technik dienen.",
+        "divider": true
+      },
+      "numberColumns": 2,
+      "columns": [
+        {
+          "type": "paragraph",
+          "width": 2,
+          "text": "Um eine ordentliche Schleuder zu bauen, hilft Mathematik und Technik. Die Auswahl des Materials für das elastische Band, die Kraft, mit der man am Gummi zieht, der Winkel, in dem man den Schleuderkörper abschießt, all das bietet Gelegenheit zum Forschen. Mit dem Abschuss tritt die Ballistik in den Vordergrund: Beschleunigung, Luftwiderstand und Schwerkraft bestimmen die Flugbahn.\n\nHast du Lust dem Geheimnis der Schleuder auf den Grund zu gehen? Dann komm vorbei und mache mit."
+        }
+      ]
+    }
+  ]
+}
