@@ -48,7 +48,8 @@
       "workshops": [
         "/manche-mögens-kalt",
         "/smart-home-mit-dem-reaspberry-pi",
-        "/3d-cad-modellieren-im-makerspace-des-technischen-designs"
+        "/3d-cad-modellieren-im-makerspace-des-technischen-designs",
+        "/bringe-dem-computer-bei-bilder-zu-erkennen"
       ],
       "backgroundColor": "#d4edfc"
     },
