@@ -166,7 +166,18 @@
             "header": "# Metallwerkstatt"
           },
           "numberColumns": 1,
-          "width": 1
+          "width": 1,
+          "columns": [
+            {
+              "type": "paragraph",
+              "text": "Drehen und Fräsen\n\nFür die Metallbearbeitung steht uns eine Präzisionsdrehmaschine Proxxon PD 400 mit einer Bohr- und Fräseinrichtung PF 230 zur Verfügung, sowie eine CNC Frse High-Z S-1000 von CNC Step."
+            },
+            {
+              "type": "image",
+              "imageUrl": "images/uploads/dreh-und-fräsmaschiene-3-.jpg",
+              "altText": "Drehmaschine"
+            }
+          ]
         }
       ]
     },
