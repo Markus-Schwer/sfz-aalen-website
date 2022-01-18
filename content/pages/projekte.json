@@ -146,8 +146,19 @@
           "header": {
             "header": "# Elektronikwerkstatt"
           },
-          "numberColumns": 1,
-          "width": 1
+          "numberColumns": 2,
+          "width": 1,
+          "columns": [
+            {
+              "type": "paragraph",
+              "text": "Es stehen mehrere Arduino, Raspberry Pi, Calliope mini und BOB3 sowie viele Sensoren dafür zur Verfügung.\n\nDer „Arduino“ ist ein sogenanntes Mikrocontroller-Board (im weiteren Verlauf „Board“ genannt). Also im Grunde eine Leiterplatte (Board) mit jeder Menge Elektronik rund um den eigentlichen Mikrocontroller. Am Rand des Boards befinden sich viele Steckplätze (Pins genannt), an denen man die unterschiedlichsten Dinge anschließen kann. Dazu gehören: Schalter, LEDs, Ultraschallsensoren, Temperatursensoren, Drehregler, Displays, Motoren, Servos usw.\n\n\nRaspberry Pi\n\n\nDer Raspberry Pi ist ein kleiner Computer, mit dem man viele spannende Dinge tun kann.\n\nIm Prinzip kann man den Raspberry Pi nach dem Anschluss eines Bildschirms per HDMI und einer Tastatur und Maus per USB sofort in Betrieb nehmen. Das Betriebssystem wird von einer SD-Speicherkarte gestartet und muss dazu zuerst auf die Speicherkarte geschrieben werden.\n\n\nCalliope mini\n\nBei dem Calliope mini handelt sich um einen Kleinstcomputer auf einer Platine, mit dem schon Grundschulkinder lernen können, wie IT funktioniert.\n\nDer Calliope mini ist rund sieben mal acht Zentimeter groß, hat ein Display aus 25 LEDs, einen bluetoothfähigen Prozessor und vier Input-Output-Kontakte zum Basteln, von denen zwei touchsensitiv sind. Er hat zudem einen Lage- und Beschleunigungssensor, einen Mikro-USB-Anschluss und zwei Grove-Anschlüsse für externe Geräte wie zum Beispiel Lautsprecher oder ein Mikrofon. Ein Bluetooth-Modul ermöglicht es dem Calliope mini mit anderen Geräten zu kommunizieren.\n\nB O B 3\n\nB·O·B·3 ist ein Mikrocontrollersystem in Roboterform und besteht aus dem BOB3-Roboter, einem Programmieradapter mit USB-Anschluss (ProgBob – in Form eines Astronautenhelms), und dem webbasierten ProgBob-Programmiertutorial. Der Roboter verfügt über einen Infrarotsensor, einen Temperatursensor und sechs Berührungssensoren als Eingänge sowie einer Infrarot-LED, zwei Multicolor-LEDs und zwei weißen LEDs als Ausgänge. In Form einer webbasierten Lernumgebung kann man Schritt für Schritt die textuelle C/C++-Programmierung kennenlernen.\n\nAußerdem haben wir noch mehrere Lötstationen und viele elektronische Bauteile."
+            },
+            {
+              "type": "image",
+              "imageUrl": "images/uploads/2010_löten_mvaas-6-.jpg",
+              "altText": "Löten"
+            }
+          ]
         },
         {
           "type": "card",
