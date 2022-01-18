@@ -1,0 +1,16 @@
+{
+  "header": "# Erschaffung von virtuellen Welten am PC mit Unity",
+  "numberColumns": 2,
+  "footer": "Für Jugendliche ab 14 Jahren\n3 - 9 Stunden (abhängig vom Interesse)\nMSc Camil Pogolski\nMedieninformatiker",
+  "title": "Erschaffung von virtuellen Welten",
+  "thumbnail": {
+    "imageUrl": "images/uploads/_dsc3769.jpg",
+    "altText": "virtuelle Welten"
+  },
+  "columns": [
+    {
+      "type": "paragraph",
+      "text": "In diesem Workshop tauchen wir ein in die fantastische Realität von virtuellen Welten. Gestaltet Räume oder Welten nach euren Vorstellungen und entdeckt das Potenzial, das sich hinter virtuellen Welten versteckt. Wir nutzen dafür zum größten Teil vorgefertigte Assets in der Spiel-Engine Unity, können aber auch mithilfe von Blender eigene Modelle erstellen."
+    }
+  ]
+}
