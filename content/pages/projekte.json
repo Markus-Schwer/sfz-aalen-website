@@ -189,6 +189,25 @@
               "altText": "Drehmaschine"
             }
           ]
+        },
+        {
+          "type": "card",
+          "header": {
+            "header": "# Kreativwerkstatt"
+          },
+          "width": 1,
+          "numberColumns": 2,
+          "columns": [
+            {
+              "type": "paragraph",
+              "text": "Der Kreativität sind keine Grenzen gesetzt. Wir haben Nähmaschinen, Material zum Schmuck machen und eine Secabo TC7 LITE modulare Transferpresse zur individuellen Gestaltung von T-Shirts und anderen Kleidungsstücken."
+            },
+            {
+              "type": "image",
+              "imageUrl": "images/uploads/t-shirt-presse.jpg",
+              "altText": "T-Shirt Presse"
+            }
+          ]
         }
       ]
     },
