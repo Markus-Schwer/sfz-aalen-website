@@ -168,6 +168,11 @@
               "type": "image",
               "imageUrl": "images/uploads/2010_löten_mvaas-6-.jpg",
               "altText": "Löten"
+            },
+            {
+              "type": "image",
+              "imageUrl": "images/uploads/2010_arduino_mvaas-4-.jpg",
+              "altText": "Arduino"
             }
           ]
         },
