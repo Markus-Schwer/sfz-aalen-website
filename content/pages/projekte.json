@@ -79,7 +79,7 @@
           "header": {
             "header": "# Holzwerkstatt"
           },
-          "numberColumns": 1,
+          "numberColumns": 2,
           "width": 1,
           "columns": [
             {
@@ -119,8 +119,19 @@
           "header": {
             "header": "# Styropor-Schmelzmaschine Filocut"
           },
-          "numberColumns": 1,
-          "width": 1
+          "numberColumns": 2,
+          "width": 1,
+          "columns": [
+            {
+              "type": "paragraph",
+              "text": "Das FiloCut/FiloCAM-System ist ein sehr einfach zu bedienendes CNC- Schmelzschneidesystem für Polystyrolschaum.Die FiloCAM Software, das CAD/CAM-Programm für die FiloCUT3-Maschine, ist eine leicht zu bedienende, konfigurierbare Benutzeroberfläche, mit deren Hilfe man rasch Teile zeichnen und dann anschließend aus Styropor oder Styrodur „ausschneiden“ kann. So können rasch dreidimensionale Objekte aus Polystyrolschaum gefertigt werden.\n"
+            },
+            {
+              "type": "image",
+              "imageUrl": "images/uploads/140319_bilder-kurs-girls-day-academy-5-.jpg",
+              "altText": "Filocut"
+            }
+          ]
         },
         {
           "type": "card",
