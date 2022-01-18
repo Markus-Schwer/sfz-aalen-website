@@ -1,0 +1,45 @@
+{
+  "motto": [
+    {
+      "text": "Wissen.",
+      "size": "medium",
+      "color": "primary"
+    },
+    {
+      "text": "Schafft.",
+      "size": "medium",
+      "color": "tertiary"
+    },
+    {
+      "text": "Spass!",
+      "size": "big",
+      "color": "secondary"
+    }
+  ],
+  "path": "projekte/holografie-mikroskop",
+  "title": "Projekte/ Holografie-Mokroskop",
+  "thumbnailUrls": [
+    "images/uploads/pexels-cdc-3992930_bearb.jpg"
+  ],
+  "breadcrumbs": [
+    "Holografie-Mikroskop"
+  ],
+  "pageSections": [
+    {
+      "type": "columnSection",
+      "header": {
+        "mainHeader": "Holografie-Mikroskop",
+        "subHeader": "Den Begriff Holografie habt ihr vielleicht schon mal gehört. Aber was bedeutet dieser Begriff im Zusammenhang mit Mikroskopie?",
+        "divider": true
+      },
+      "numberColumns": 2,
+      "columns": [
+        {
+          "type": "paragraph",
+          "width": 2,
+          "text": "Bei herkömmlichen Lichtmikroskopen muss man die zu untersuchenden Proben meist färben. Daher müssen diese Proben oft aufwändig fixiert und präpariert werden und sind daher nicht mehr lebendig. Mit digital-holographischen Mikroskopen lassen sich aber lebende, durchsichtige Objekte untersuchen, und das mit einem sehr einfachen Aufbau – im Extremfall kann man sogar auf die Optik komplett verzichten!\n\nWir wollen ein kostengünstiges Holografie-Mikroskop nach Anleitung eines Open Source Projektes des Fraunhofer-Instituts für Physikalische Messtechnik, das in der Zeitschrift Make (make-magazin.de/x687) veröffentlicht wurde, nachbauen und uns mit dieser spannenden Technik auseinandersetzen. Dieses Projekt bietet vielfältige Forschungsmöglichkeiten, z.B. in der Biologie, Optik, aber auch in der digitalen Bildverarbeitung.\n\n[Hier](https://github.com/holmos-mikroskop/holmos) findet ihr nähere Informationen zu diesem Projekt."
+        }
+      ]
+    }
+  ]
+}
