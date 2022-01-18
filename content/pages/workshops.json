@@ -28,7 +28,7 @@
     {
       "type": "columnSection",
       "header": {
-        "mainHeader": "Aktuelle Workshops",
+        "mainHeader": "Aktuelle Workshops und Clubs",
         "subHeader": "Manchmal weiß man noch nicht genau, woran man forschen möchte. Eine Idee, in welche Richtung es gehen könnte, liefert vielleicht der Besuch eines Workshops.",
         "divider": true,
         "sectionId": "aktuelle-workshops"
@@ -38,7 +38,7 @@
       "columns": [
         {
           "type": "paragraph",
-          "text": "Hier findet ihr Workshops, die nach Bedarf angeboten werden. Die Termine für die Workshops werden individuell abgesprochen",
+          "text": "Hier findet ihr Workshops, die nach Bedarf angeboten werden. Die Termine für die Workshops werden individuell abgesprochen. Bei Interesse an einem der Workshops könnt ihr euch über das Anmeldeformular anmelden. Wir nehmen dann Kontakt mit euch auf.\n\nVielleicht möchtest du dich auch regelmäßig mit einem bestimmten Fachgebiet auseinandersetzen, hast aber keine Lust an einem Projekt zu arbeiten, dann ist ein Club das richtige für dich. ",
           "width": 1
         }
       ]
