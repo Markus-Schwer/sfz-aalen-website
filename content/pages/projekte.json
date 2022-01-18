@@ -40,25 +40,25 @@
           "text": "Corona\nWarn Chip",
           "imageUrl": "images/uploads/pexels-pixabay-459411.jpg",
           "color": "tertiary",
-          "href": "projekte/corona-warnchip"
+          "href": "/projekte/corona-warnchip"
         },
         {
           "text": "»Schleuder-Physik«",
           "color": "primary",
           "imageUrl": "images/uploads/adobe-stock_115299443_bearb.jpg",
-          "href": "projekte/schleuder-physik"
+          "href": "/projekte/schleuder-physik"
         },
         {
           "text": "Süssigkeiten-Box auf Rädern",
           "color": "secondary",
           "imageUrl": "images/uploads/image_678_suessigkeitenbox_auf_raedern.jpg",
-          "href": "projekte/süssigkeitenbox"
+          "href": "/projekte/süssigkeitenbox"
         },
         {
           "text": "Holografie-Mikroskop",
           "color": "tertiary",
           "imageUrl": "images/uploads/pexels-cdc-3992930_bearb.jpg",
-          "href": "projekte/holografie-mikroskop"
+          "href": "/projekte/holografie-mikroskop"
         }
       ]
     },
