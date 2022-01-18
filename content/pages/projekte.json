@@ -66,7 +66,7 @@
       "type": "columnSection",
       "header": {
         "mainHeader": "Ausstattung",
-        "subHeader": "Hier seht ihr unsere Austattung, die wir euch für eure Projekte zur Verfügung stellen. Damit habt die Möglichkeit zu experimentieren und eure Forschung voranzutreiben.",
+        "subHeader": "Hier seht ihr unsere Austattung, die wir euch für eure Projekte zur Verfügung stellen können. Damit habt ihr die Möglichkeit zu experimentieren und eure Forschung voranzutreiben. Wir erweitern unsere Ausstattung fortlaufend.",
         "divider": true,
         "sectionId": "ausstattung"
       },
@@ -139,7 +139,7 @@
       "type": "bannerSection",
       "color": "secondary",
       "mainText": "Workshops geben\nIst dein Ding?",
-      "subText": "Dann bereichere uns mit deiner Expertiese. Hier Informieren!"
+      "subText": "Dann bereichere uns mit deiner Expertise. Hier informieren!"
     }
   ]
 }
