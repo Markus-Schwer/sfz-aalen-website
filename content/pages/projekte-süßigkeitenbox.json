@@ -1,0 +1,45 @@
+{
+  "motto": [
+    {
+      "text": "Wissen.",
+      "size": "medium",
+      "color": "primary"
+    },
+    {
+      "text": "Schafft.",
+      "size": "medium",
+      "color": "tertiary"
+    },
+    {
+      "text": "Spass!",
+      "size": "big",
+      "color": "secondary"
+    }
+  ],
+  "path": "projekte/süssigkeitenbox",
+  "title": "Projekte/ Süßigkeitenbox",
+  "thumbnailUrls": [
+    "images/uploads/image_678_suessigkeitenbox_auf_raedern.jpg"
+  ],
+  "breadcrumbs": [
+    "Süßigkeitenbox auf Rädern"
+  ],
+  "pageSections": [
+    {
+      "type": "columnSection",
+      "header": {
+        "mainHeader": "Süßigkeitenbox auf Rädern",
+        "subHeader": "Hast du manchmal Lust auf Süßigkeiten, möchtest aber nicht zum Schrank gehen um sie selbst zu holen? Dann lass sie dir doch einfach bringen!",
+        "divider": true
+      },
+      "numberColumns": 2,
+      "columns": [
+        {
+          "type": "paragraph",
+          "width": 2,
+          "text": "Im Rahmen der Coding Challenge von der Initiative Hack To The Future des Kindermedienlandes Baden-Württemberg im August 2020 haben wir ein Projekt gestartet, das wir gerne erweitern wollen. Die erste Idee war eine Süßigkeitenbox auf Rädern, die kommt, wenn man Lust auf Süßigkeiten hat, aber zu faul ist, um die Süßigkeiten zu holen. Die Süßigkeitenbox wurde auf ein Fahrgestell montiert, das einer schwarzen Linie folgen kann. Die Box enthält Süßigkeiten, die man nur erhält, wenn man den „richtigen“ Transponder hat. Damit kann man auch kontrollieren, wer wie oft Süßigkeiten erhält. Diese Box lässt sich in vieler Hinsicht erweitern, der Fantasie sind keine Grenzen gesetzt. Falls ihr Lust habt euch in diesem Team einzubringen, meldet euch."
+        }
+      ]
+    }
+  ]
+}
