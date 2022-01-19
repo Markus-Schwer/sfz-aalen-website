@@ -28,8 +28,8 @@
     {
       "type": "columnSection",
       "header": {
-        "mainHeader": "Datenschutz",
-        "subHeader": "",
+        "mainHeader": "Datenschutzerklärung",
+        "subHeader": "Für den Datenschutz des Schülerforschungszentrums gilt die Datenschutzerklärung der Hochschule Aalen.",
         "divider": true
       },
       "numberColumns": 1,
@@ -37,7 +37,7 @@
         {
           "type": "paragraph",
           "width": 1,
-          "text": "Hier könnte ihre Werbung stehen!"
+          "text": "Da das Schülerforschungszentrum eine Einrichtung der Hochschule ist, gilt die Datenschutzerklärung der Hochschule, die Sie [hier](https://www.hs-aalen.de/de/pages/datenschutzerklaerung) finden."
         }
       ]
     }
