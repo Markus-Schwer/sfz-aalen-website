@@ -1,0 +1,13 @@
+{
+  "slug": "{{slug}}",
+  "mainHeader": "Schülerforschungszentrum bei regio TV",
+  "subHeader": "Am 12.01.2021 kam ein Beitrag über das Schülerforschungszentrum bei regio TV Schwaben. ",
+  "introduction": "In dem Beitrag wird die Rolle des SFZ bei der Projektarbeit von Noel Mang beschrieben.",
+  "creationDate": "2022-01-19",
+  "title": "Schülerforschungszentrum bei regio TV",
+  "thumbnail": {
+    "imageUrl": "images/uploads/image_678_regio_tv.png",
+    "altText": "regio TV"
+  },
+  "text": "Der Aalener Schüler experimentiert aktuell an einer Innovation für die Bekämpfung des Corona-Virus. Zum dritten Mal will er damit am Jugend forscht Regionalwettbewerb Ostwürttemberg teilnehmen, der dieses Jahr erstmalig von der Hochschule Aalen gemeinsam mit ZEISS ausgerichtet wird. [Hier](https://www.regio-tv.de/mediathek/video/schueler-die-die-welt-verbessern/) können Sie den Beitrag sehen."
+}
