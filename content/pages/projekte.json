@@ -254,6 +254,11 @@
         {
           "type": "divider",
           "divider": true
+        },
+        {
+          "type": "paragraph",
+          "width": 2,
+          "text": "**Workshop**\n\nSie möchten einen Workshop anbieten oder stehen mit ihrer Expertise\nzur Verfügung, wenn Fragen zu ihrem Fachgebiet auftauchen. Die Mög-\nlichkeiten zur Unterstützung sind vielfältig."
         }
       ]
     }
