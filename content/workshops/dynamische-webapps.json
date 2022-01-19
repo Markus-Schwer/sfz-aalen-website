@@ -1,7 +1,7 @@
 {
-  "header": "# Dynamische Webapps - mit Python, HTML und Javascript",
+  "header": "# Dynamische Webapps - mit Python, HTML und Javascript\n\nFür Jugendliche ab 14 Jahren. Termine nach individueller Absprache.",
   "numberColumns": 2,
-  "footer": "Für Schüler*innen ab 14 Jahren\nInsgesamt 8 Stunden\nMSc Matthias Nutz\nInformatiker",
+  "footer": "Für Jugendliche ab 14 Jahren\nInsgesamt 8 Stunden\nMSc Matthias Nutz\nInformatiker",
   "thumbnail": {
     "imageUrl": "images/uploads/800px-python-logo-notext.svg.png",
     "altText": "Python Logo"
