@@ -241,6 +241,19 @@
           "type": "paragraph",
           "width": 2,
           "text": "Sie brennen für Naturwissenschaften oder Technik und möchten Ihr Wissen und Ihre Leidenschaft gerne an junge Menschen weitergeben? Sie haben in Ihrem Berufsleben selber geforscht und sind immer noch neugierig und offen für neue Fragen geblieben? Dann kommen Sie zu uns ins Schülerforschungszentrum und tüfteln, experimentieren und forschen gemeinsam mit motivierten und interessierten Jugendlichen.\n\nBei Interesse melden Sie sich bitte per email bei [Dr. Erika Lahnsteiner](mailto:erika.lahnsteiner@hs-aalen.de). Wir freuen uns auf Sie!"
+        },
+        {
+          "type": "divider",
+          "divider": true
+        },
+        {
+          "type": "paragraph",
+          "width": 2,
+          "text": "**Forschungsmaterial**\n\nWir freuen uns aber auch über Holz, gebrauchte, aber funktionsfähige\nGeräte, elektronische Bauteile und noch viel mehr."
+        },
+        {
+          "type": "divider",
+          "divider": true
         }
       ]
     }
