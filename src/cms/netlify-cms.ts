@@ -12,3 +12,31 @@ CMS.registerPreviewTemplate('page', withRouter(withApollo(withStyledComponentsRe
 CMS.registerPreviewTemplate('workshop', withRouter(withStyledComponentsRendered(WorkshopPreview)));
 CMS.registerPreviewTemplate('article', withRouter(withStyledComponentsRendered(ArticlePreview)));
 CMS.registerPreviewTemplate('navigation', withStyledComponentsRendered(NavigationPreview));
+
+CMS.registerEditorComponent({
+  id: "download-link",
+  label: "Download Link",
+  fields: [
+    {
+      name: 'text',
+      label: 'Text',
+      widget: 'string'
+    },
+    {
+      name: 'file',
+      label: 'Dateiname',
+      widget: 'file'
+    }
+  ],
+  pattern: /<a href="(.*?)" download(?:=".*?")?>(.*?)<\/a>/,
+  fromBlock: (match: any) => ({
+    file: match[1],
+    text: match[2]
+  }),
+  toBlock: (data) => {
+    return `<a href="${data.file || ""}" download>${data.text || ""}</a>`;
+  },
+  toPreview: (data) => {
+    return `<a href="${data.file || ""}" download>${data.text || ""}</a>`;
+  }
+});

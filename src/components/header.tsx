@@ -105,20 +105,32 @@ const Header: FunctionComponent<HeaderProps> = ({
           </Link>
         )}
         <nav style={{display: breakpoints.md ? "none" : "flex"}}>
-          {navigationData.categories.map((category, i) =>
+          {navigationData.categories.map((category, i) => 
             category.links ? (
-              <div className={styles.dropdown} key={i}>
-                {category.href && (
-                  <Link to={category.href}>{category.name}</Link>
-                )}
-                {!category.href && <a>{category.name}</a>}
-                <DropdownCaret className={styles.dropdownIcon} />
-                <div className={styles.dropdownContent}>
-                  {category.links.map((link, j) => (
-                    <Link to={link.href} key={j}>{link.name}</Link>
-                  ))}
-                </div>
-              </div>
+              category.href ? (
+                <div className={styles.dropdown} key={i}>
+                  <Link to={category.href}>
+                    {category.name}
+                    <DropdownCaret className={styles.dropdownIcon} />
+                  </Link>
+                  <div className={styles.dropdownContent} key={i}>
+                    {category.links.map((link, j) => (
+                      <Link to={link.href} key={j}>{link.name}</Link>
+                    ))}
+                  </div>
+                </div >
+                ) : (
+                  <div className={styles.dropdown} key={i}>
+                    <a>
+                      {category.name}
+                    </a>
+                    <div className={styles.dropdownContent} key={i}>
+                      {category.links.map((link, j) => (
+                        <Link to={link.href} key={j}>{link.name}</Link>
+                      ))}
+                    </div>
+                  </div>
+                )
             ) : (
               <Link to={category.href!!} key={i}>
                 {category.name}

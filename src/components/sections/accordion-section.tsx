@@ -20,7 +20,7 @@ const AccordionSection: FunctionComponent<AccordionSectionProps> = ({
       {data.items?.map((item, index) => (
         <Column className={styles.accordionColumn} sm={12} md={12} lg={12} key={index}>
           <details className={styles.accordionItem}>
-            <summary>
+            <summary className={styles.summary}>
               {item.header}
               <DropdownIcon className={styles.dropdownIcon} />
             </summary>

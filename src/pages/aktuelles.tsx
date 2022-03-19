@@ -110,7 +110,7 @@ const Articles: FunctionComponent = () => {
                   `${article.text.substring(
                     0,
                     422
-                  )} [mehr erfahren...](/aktuelles${article.fields.slug})`,
+                  )} [mehr erfahren...](/aktuelles/${article.fields.slug})`,
               })),
           }}
         />

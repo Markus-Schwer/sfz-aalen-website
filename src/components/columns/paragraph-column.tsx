@@ -1,5 +1,7 @@
 import React, { FunctionComponent } from "react";
 import ReactMarkdown from "react-markdown";
+import rehypeSlug from 'rehype-slug';
+import rehypeRaw from 'rehype-raw';
 
 import { ParagraphColumn as ParagraphColumnData } from "../../page-data";
 
@@ -19,7 +21,7 @@ const ParagraphColumn: FunctionComponent<ParagraphColumnProps> = ({ columnData, 
       md={12}
       lg={columnWidth}
     >
-      <ReactMarkdown className={styles.paragraphColumn}>
+      <ReactMarkdown className={styles.paragraphColumn} rehypePlugins={[rehypeRaw, rehypeSlug] as any[]} skipHtml={false} allowElement={() => true}>
         {columnData.text}
       </ReactMarkdown>
     </Column>

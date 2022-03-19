@@ -1,11 +1,16 @@
-.dropdownIcon {
+.summary {
   position: relative;
+  padding-right: 40px;
+}
+
+.dropdownIcon {
+  position: absolute;
   width: 1em;
   height: 1em;
-  padding-left: 8px;
   stroke: var(--text-color);
-  float: right;
   transition: transform .3s ease-in-out;
+  right: 0;
+  top: 0.25em;
 }
 
 .accordionItem {
